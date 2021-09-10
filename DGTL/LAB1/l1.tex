@@ -1,0 +1,212 @@
+\documentclass[a4paper,14pt]{extreport}
+	\usepackage[left=1.5cm,right=1.5cm,
+	    top=1.5cm,bottom=2cm,bindingoffset=0cm]{geometry}
+	\usepackage{scrextend}
+	\usepackage[T1,T2A]{fontenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english,russian,ukrainian]{babel}
+	\usepackage{tabularx}
+	\linespread{1.5}
+	\usepackage{amssymb}
+	\usepackage{fp}
+	\usepackage{color}
+	\usepackage{amsmath}
+	\usepackage{mathrsfs}
+	\usepackage{listings}
+	\usepackage{graphicx}
+	\graphicspath{ {./images/} }
+	\usepackage{lipsum}
+	\usepackage{xcolor}
+	\usepackage{multirow}
+	%\usepackage[table,xcdraw]{xcolor}
+	\usepackage{hyperref}
+	\usepackage{tcolorbox}
+	\usepackage{tikz}
+	\usepackage[framemethod=TikZ]{mdframed}
+	\usepackage{wrapfig,boxedminipage,lipsum}
+	\mdfdefinestyle{MyFrame}{%
+	linecolor=blue,outerlinewidth=2pt,roundcorner=20pt,innertopmargin=\baselineskip,innerbottommargin=\baselineskip,innerrightmargin=20pt,innerleftmargin=20pt,backgroundcolor=gray!50!white}
+	 \usepackage{csvsimple}
+	 \usepackage{supertabular}
+	\usepackage{pdflscape}
+	\usepackage{fancyvrb}
+	%\usepackage{comment}
+	\definecolor{ggreen}{rgb}{0.4,1,0}
+	\definecolor{rred}{rgb}{1,0.1,0.1}
+	\definecolor{aquamarine}{rgb}{0.5, 1.0, 0.83}
+	\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+	\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+	\definecolor{buff}{rgb}{0.94, 0.86, 0.51}
+	\definecolor{internationalorange}{rgb}{1.0, 0.31, 0.0}
+	\definecolor{lightmauve}{rgb}{0.86, 0.82, 1.0}
+	\definecolor{mediumaquamarine}{rgb}{0.4, 0.8, 0.67}
+	\usepackage{array,tabularx}
+	\usepackage{colortbl}
+	
+	\usepackage{varwidth}
+	\tcbuselibrary{skins}
+	\usepackage{fancybox}
+
+	\usetikzlibrary{calc}
+	\makeatletter
+	\newlength{\mylength}
+	\xdef\CircleFactor{1.1}
+	\setlength\mylength{\dimexpr\f@size pt}
+	\newsavebox{\mybox}
+	\newcommand*\circled[2][draw=blue]{\savebox\mybox{\vbox{\vphantom{WL1/}#1}}\setlength\mylength{\dimexpr\CircleFactor\dimexpr\ht\mybox+\dp\mybox\relax\relax}\tikzset{mystyle/.style={circle,#1,minimum height={\mylength}}}
+	\tikz[baseline=(char.base)]
+	\node[mystyle] (char) {#2};}
+	\makeatother
+	\usepackage{pgfplots}
+    \pgfplotsset{compat=1.9}
+
+
+	\usepackage{float}
+	\usepackage{wrapfig}
+	\usepackage{framed}
+	%for nice Code{
+	\lstdefinestyle{customc}{
+	  belowcaptionskip=1\baselineskip,
+	  breaklines=true,
+	  frame=L,
+	  xleftmargin=\parindent,
+	  language=C,
+	  showstringspaces=false,
+	  basicstyle=\small\ttfamily,
+	  keywordstyle=\bfseries\color{green!40!black},
+	  commentstyle=\itshape\color{purple!40!black},
+	  identifierstyle=\color{blue},
+	  stringstyle=\color{orange},
+	}
+	\lstset{escapechar=@,style=customc}
+	\usepackage{enumitem}
+%}
+
+
+\begin{document}
+\newtcbox{\xmybox}[1][red]{on line, arc=7pt,colback=#1!10!white,colframe=#1!50!black, before upper={\rule[-3pt]{0pt}{10pt}},boxrule=1pt, boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
+\pagecolor{white}
+\begin{titlepage}
+	\begin{center}
+	\large
+	Національний технічний університет України \\ "Київський політехнічний інститут імені Ігоря Сікорського"
+
+
+	Факультет Електроніки
+
+	Кафедра мікроелектроніки
+	\vfill
+
+	\textsc{ЗВІТ}\\
+
+	{\Large Про виконання лабораторної роботи №1\\
+	з дисципліни: «Схемотехніка-2. Цифрова схемотехніка»\\[1cm]
+
+	ЕЛЕКТРОННІ КЛЮЧІ
+
+
+	}
+	\bigskip
+	\end{center}
+	\vfill
+
+	\newlength{\ML}
+	\settowidth{\ML}{«\underline{\hspace{0.4cm}}» \underline{\hspace{2cm}}}
+	\hfill
+	\begin{minipage}{1\textwidth}
+	Виконавець:\\
+	Студент 4-го курсу \hspace{4cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm}А.\,С.~Мнацаканов\\
+
+
+	Перевірила: \hspace{5.9cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm}Г.\,С.~Порева\\
+
+	\end{minipage}
+
+	\vfill
+
+	\begin{center}
+	2021
+	\end{center}
+\end{titlepage}
+
+
+
+
+
+\begin{center}
+\fbox{ПЕРЕМИКАЧ НАПРУГИ НА БІПОЛЯРНОМУ ТРАНЗИСТОРІ}
+\end{center}
+
+\begin{figure}[h]
+	\center{\includegraphics[width=0.7\linewidth]{1.png}}
+	\caption{Перемикачі напруги на біполярному транзисторі та на МДН-транзисторі з індукованим каналом.}
+	\label{ris1}
+\end{figure}
+
+\textbf{Мета роботи} - дослідити статичні та динамічні характеристики
+електронного ключа на біполярному транзисторі (БТ) та схемні прийоми
+покращення параметрів цього типу електронного ключа.
+
+\begin{figure}[h]
+	\center{\includegraphics[width=0.5\linewidth]{2.png}}
+	\caption{Перемикачі напруги на біполярному транзисторі.}
+	\label{ris2}
+\end{figure}
+
+
+\begin{center}
+\textbf{Робоче завдання}
+\end{center}
+Встановити лабораторний стенд «ИМПУЛЬС-М» в режим «ЛАБ-1» за допомогою перемикача лабораторних робіт, який знаходиться на задній панелі стенда. 
+Ввімкнути кнопку «СЕТЬ» .
+I. За допомогою генератора Ген. подати на вхід ключа позитивний прямокутний імпульс тривалістю 200 мкс з частотою 1кГц. 
+Зняти й побудувати передавальну характеристику. За допомогою цієї характеристики визначити статичні параметри ключа: $U_2^0$та $U_1^2$. Для цього потрібно змінювати амплітуду вхідного імпульсу $U_1$та визначати відповідну амплітуду сигналу на виході $U_2$. 
+Виконати вимірювання для наступних режимів роботи:
+\begin{enumerate}
+	\item Схемі із відключеними компонентами: діодом , конденсаторами  і  та опором  (П1-П4 ). 
+    \item Схема із підключеним діодом  (натиснути П1).
+    \item Схема із підключеним конденсатором  (натиснути П2).
+    \item Схема із підключеним резистором  (натиснути П4).
+\end{enumerate}
+ 
+		Результати зазначений вимірювань занести в табл.\ref{tab1} та відобразити на рис. \ref{ris3}.
+\begin{table}[h]%1
+	\begin{center}
+	\begin{large}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+			\hline
+			$U_1, B$                                                             & 1,8 & 2,4 & 2,6 & 2,8 & 2,9 & 3 & 3,2   \\ \hline
+			\begin{tabular}[c]{@{}c@{}}$U_2, B$\\ (П1-П4$\uparrow$)\end{tabular} & 5 & 4,8 & 4 & 2 & 1 & 0,5 & 0,5   \\ \hline
+			\begin{tabular}[c]{@{}c@{}}$U_2, B$\\ для $VD_1$ (П1$\downarrow$)\end{tabular} & 5 & 4,8 & 4 & 2 & 2,5 & 2,5 & 2  \\ \hline
+			\begin{tabular}[c]{@{}c@{}}$U_2, B$\\ для $C_1$ (П2 $\downarrow$)\end{tabular} & 5 & 4,8 & 4 & 2 & 1 & 0,5 & 0,4   \\ \hline
+			\begin{tabular}[c]{@{}c@{}}$U_2, B$\\ для $R_7$ (П4$\downarrow$)\end{tabular} & 5 & 4,9 & 4,5 & 3,8 & 3 & 0,5 & 0,5   \\ \hline
+		\end{tabular}
+	\end{large}
+	\end{center}
+	\caption{Результати вимірювання передавальної характеристики  перемикача напруги на біполярному транзисторі для різних модифікацій схеми.}
+	\label{tab1}
+\end{table}
+
+ 
+\begin{figure}[h]
+	\center{\includegraphics[width=1\linewidth]{fortab1.png}}
+	\caption{Передавальна характеристика.}
+	\label{ris3}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,132 @@
+\documentclass[a4paper,14pt]{extreport}
+  \usepackage[left=1.5cm,right=1.5cm,
+      top=1.5cm,bottom=1.5cm,bindingoffset=0cm]{geometry}
+  \usepackage{scrextend}
+  \usepackage[T1,T2A]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage[english,russian,ukrainian]{babel}
+  \usepackage{tabularx}
+  \usepackage{amssymb}
+  \usepackage{color}
+  \usepackage{amsmath}
+  \usepackage{mathrsfs}
+  \usepackage{listings}
+  \usepackage{graphicx}
+  \graphicspath{ {./images/} }
+  \usepackage{lipsum}
+  \usepackage{xcolor}
+  \usepackage{hyperref}
+  \usepackage{tcolorbox}
+  \usepackage{tikz}
+  \usepackage[framemethod=TikZ]{mdframed}
+  \usepackage{wrapfig,boxedminipage,lipsum}
+  \mdfdefinestyle{MyFrame}{%
+  linecolor=blue,outerlinewidth=2pt,roundcorner=20pt,innertopmargin=\baselineskip,innerbottommargin=\baselineskip,innerrightmargin=20pt,innerleftmargin=20pt,backgroundcolor=gray!50!white}
+   \usepackage{csvsimple}
+   \usepackage{supertabular}
+  \usepackage{pdflscape}
+  \usepackage{fancyvrb}
+  %\usepackage{comment}
+  \definecolor{ggreen}{rgb}{0.4,1,0}
+  \definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+  \definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+  \usepackage{array,tabularx}
+  \usepackage{colortbl}
+  \usepackage{multicol}
+
+  \usepackage{varwidth}
+  \tcbuselibrary{skins}
+  \usepackage{fancybox}
+
+  \usetikzlibrary{calc}
+  \makeatletter
+  \newlength{\mylength}
+  \xdef\CircleFactor{1.1}
+  \setlength\mylength{\dimexpr\f@size pt}
+  \newsavebox{\mybox}
+  \newcommand*\circled[2][draw=blue]{\savebox\mybox{\vbox{\vphantom{WL1/}#1}}\setlength\mylength{\dimexpr\CircleFactor\dimexpr\ht\mybox+\dp\mybox\relax\relax}\tikzset{mystyle/.style={circle,#1,minimum height={\mylength}}}
+  \tikz[baseline=(char.base)]
+  \node[mystyle] (char) {#2};}
+  \makeatother
+
+  \usepackage{float}
+  \usepackage{wrapfig}
+  \usepackage{framed}
+
+
+\begin{document}
+\pagecolor{white}
+
+\begin{center}\fbox{Mnatsakanov Anton DP-82}\end{center}\par
+\vspace{1cm}
+
+
+
+\fcolorbox{black}{green}{textp. 6-8 Task 1 a}
+\begin{multicols}{2}
+    \begin{enumerate}
+    \item c
+    \item g
+    \item d
+    \item f
+    \item h
+    \item a
+    \item b
+    \item e
+    \end{enumerate}
+\end{multicols}
+
+\vspace{1cm}
+\fcolorbox{black}{green}{textp. 6-8 Task 1c}
+\begin{multicols}{3}
+    \begin{enumerate}
+    \item c, e
+    \item c, e, f, d
+    \item d
+    \item f, e
+    \item c, d, g
+    \item a, b
+    \item c
+    \item e, c, d
+    \item b, c, d 
+    \item h
+    \end{enumerate}
+\end{multicols}
+
+\vspace{1cm}
+\fcolorbox{black}{orange}{p. 8-9 Task 3 b }
+\begin{multicols}{2}
+    \begin{enumerate}
+    \item skills (a- at, b - to, c - at)
+    \item Achivments (d- to)
+    \item Languages (e - in)
+    \item Experience (f - in, g - with)
+    \item Personal characteristics (h - at, i - with)
+    \item Knowlage ( - )
+    \end{enumerate}
+\end{multicols}
+
+
+\fcolorbox{black}{babyblue}{p. 9 Task 3 f (in writing)}
+\vspace{1cm}
+\begin{multicols}{2}
+    \begin{enumerate}
+    \item uncreative
+    \item indecisive
+    \item unflexible
+    \item unorganized
+    \item unpersuasive
+    \item unreliable
+    \end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+
+
+
+%\begin{center}\circled[fill=babyblue,draw=black]{2}\end{center}
+\end{document}
