@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.4.22)  10 SEP 2021 18:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.4.22)  12 SEP 2021 14:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1420,29 +1420,35 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@inbox=\box90
 \enit@count@id=\count352
 \enitdp@description=\count353
-) (./l1.aux)
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 87.
+ (./l1.aux
+
+LaTeX Warning: Label `ris3' multiply defined.
+
+)
 \openout1 = `l1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1478,7 +1484,7 @@ LaTeX Font Info:    ... okay on input line 86.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \th on input line 86.
+LaTeX Info: Redefining \th on input line 91.
 (c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count354
@@ -1502,7 +1508,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count360
-Package hyperref Info: Link coloring OFF on input line 86.
+Package hyperref Info: Link coloring ON on input line 91.
 
 (c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1515,9 +1521,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count361
 )
-LaTeX Info: Redefining \ref on input line 86.
-LaTeX Info: Redefining \pageref on input line 86.
-LaTeX Info: Redefining \nameref on input line 86.
+LaTeX Info: Redefining \ref on input line 91.
+LaTeX Info: Redefining \pageref on input line 91.
+LaTeX Info: Redefining \nameref on input line 91.
 
 (./l1.out) (./l1.out)
 \@outlinefile=\write9
@@ -1528,34 +1534,34 @@ Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.17} (current compat level: 1.9).
 
 \ML=\skip133
-LaTeX Font Info:    Trying to load font information for U+msa on input line 114
+LaTeX Font Info:    Trying to load font information for U+msa on input line 119
 .
 (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 114
+LaTeX Font Info:    Trying to load font information for U+msb on input line 119
 .
 
 (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 11
-4.
+9.
 
 (c:/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 117--119
+Underfull \hbox (badness 10000) in paragraph at lines 122--124
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
 
-Overfull \hbox (21.14975pt too wide) in paragraph at lines 115--124
+Overfull \hbox (21.14975pt too wide) in paragraph at lines 120--129
 [] $[]$ 
  []
 
@@ -1565,36 +1571,41 @@ Overfull \hbox (21.14975pt too wide) in paragraph at lines 115--124
 <1.png, id=17, 422.57875pt x 126.4725pt>
 File: 1.png Graphic file (type png)
 <use 1.png>
-Package pdftex.def Info: 1.png  used on input line 141.
+Package pdftex.def Info: 1.png  used on input line 147.
 (pdftex.def)             Requested size: 358.50317pt x 107.29756pt.
 <2.png, id=18, 214.401pt x 142.131pt>
 File: 2.png Graphic file (type png)
 <use 2.png>
-Package pdftex.def Info: 2.png  used on input line 151.
+Package pdftex.def Info: 2.png  used on input line 157.
 (pdftex.def)             Requested size: 256.07481pt x 169.77557pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--168
+
+ []
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.166 	\item �
-              �хемі із відключеними компонентам...
+l.173 	\item
+             Схемі із відключеними компонентам...
 [1pdfTeX warning (ext4): destination with the same identifier (name{figure.0.1}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.166 	\item �
-              �хемі із відключеними компонентам...
+l.173 	\item
+             Схемі із відключеними компонентам...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.0.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.166 	\item �
-              �хемі із відключеними компонентам...
+l.173 	\item
+             Схемі із відключеними компонентам...
  <./1.png> <./2.png>]
-<fortab1.png, id=30, 963.6pt x 542.025pt>
+<fortab1.png, id=28, 963.6pt x 542.025pt>
 File: fortab1.png Graphic file (type png)
 <use fortab1.png>
-Package pdftex.def Info: fortab1.png  used on input line 192.
+Package pdftex.def Info: fortab1.png  used on input line 199.
 (pdftex.def)             Requested size: 512.14963pt x 288.09067pt.
 
 
@@ -1604,24 +1615,86 @@ LaTeX Warning: `h' float specifier changed to `ht'.
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.212 \end{document}
-                    ] [3pdfTeX warning (ext4): destination with the same identi
-fier (name{figure.0.3}) has been already used, duplicate ignored
+l.211 
+      ] [3pdfTeX warning (ext4): destination with the same identifier (name{fig
+ure.0.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.212 \end{document}
-                     <./fortab1.png>] (./l1.aux)
+l.221     \item �
+                 �хема із підключеним конденсато�...
+ <./fortab1.png>]
+Overfull \hbox (55.53923pt too wide) in paragraph at lines 247--248
+ [] 
+ []
+
+<5.png, id=51, 170.43675pt x 81.906pt>
+File: 5.png Graphic file (type png)
+<use 5.png>
+Package pdftex.def Info: 5.png  used on input line 253.
+(pdftex.def)             Requested size: 307.2929pt x 147.69937pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
+
+ []
+
+[4pdfTeX warning (ext4): destination with the same identifier (name{table.0.2})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.266 
+      ]
+<fortab2.png, id=62, 963.6pt x 542.025pt>
+File: fortab2.png Graphic file (type png)
+<use fortab2.png>
+Package pdftex.def Info: fortab2.png  used on input line 285.
+(pdftex.def)             Requested size: 512.14963pt x 288.09067pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.0.4}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.293 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.0
+.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.293 
+       <./5.png>] [6pdfTeX warning (ext4): destination with the same identifier
+ (name{figure.0.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.324 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{table.0.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.324 \end{document}
+                     <./fortab2.png>] (./l1.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `l1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 40370 strings out of 478994
- 892039 string characters out of 5862207
- 1646725 words of memory out of 5000000
- 57118 multiletter control sequences out of 15000+600000
+ 40401 strings out of 478994
+ 892323 string characters out of 5862207
+ 1648725 words of memory out of 5000000
+ 57134 multiletter control sequences out of 15000+600000
  416337 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,18n,116p,726b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,18n,116p,1052b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}<c:/tex
 live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dis
@@ -1632,10 +1705,10 @@ c/cm-super/sfbx1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super
 pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/te
 xlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2021
 /texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on l1.pdf (4 pages, 142164 bytes).
+Output written on l1.pdf (7 pages, 166866 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 117 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
+ 25 named destinations out of 1000 (max. 500000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

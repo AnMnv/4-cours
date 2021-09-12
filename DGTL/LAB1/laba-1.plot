@@ -22,6 +22,17 @@ plot  "tab1.csv" using 1:2  notitle with points lw 4,\
       "tab1.csv" using 1:5 notitle with points lw 4,\
       "tab1.csv" using 1:5  title"U_2, для R_7 (П4)" smooth mcsplines   lw 2
 
+set output 'fortab2.png';
+
+set xtics font ", 15"
+set ytics font ", 15"
+set ylabel font ", 20" 'U_2, B' textcolor lt 8 offset 0.5,0,0
+set xlabel font ", 20" 'U_1, B' textcolor lt 8 offset 2,-1,0
+set key font ",15"
+set key bottom left
+plot  "tab1.csv" using 1:2  notitle with points lw 4,\
+      "tab1.csv" using 1:2  notitle smooth csplines  lw 2, \
+
 
 
 
