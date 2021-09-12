@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage[createtips]{fancytooltips}
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[maxnames=2]{biblatex}
+\usepackage{geometry}
+
+% Size page a little larger than the longest tooltip
+\geometry{noheadfoot,nomarginpar,margin=0in,paperwidth=4in,paperheight=1in}
+\pagestyle{empty}
+\parindent=0pt
+
+\DeclareCiteCommand{\keytipcite}
+  {}
+  {\null\vfill% Move tooltip to bottom of page
+   \begin{center}
+   \keytip{\thefield{entrykey}}%
+   \fcolorbox{brown!50}{yellow!10}
+     {\footnotesize\parbox{0.95\textwidth}
+        {\usedriver
+           {\clearfield{extrayear}% Omit extraneous fields here
+            \clearfield{addendum}%
+            \clearfield{subtitle}%
+            \clearfield{titleaddon}%
+            \clearfield{booksubtitle}%
+            \clearfield{booktitleaddon}%
+            \clearfield{mainsubtitle}%
+            \clearfield{maintitleaddon}%
+            \clearfield{issuesubtitle}%
+            \clearfield{journalsubtitle}}
+           {\thefield{entrytype}}}}%
+   \end{center}
+   \medskip% Leave space below tooltip to avoid obscuring text
+   \newpage}
+  {}
+  {}
+
+\def\allkeys{}
+\AtDataInput{\listxadd{\allkeys}{\thefield{entrykey},}}
+
+\addbibresource{biblatex-examples.bib}
+\begin{document}
+%\nocite{*}
+\nocite{companion,cicero,baez/article,bertram,kant:kpv,kant:ku}
+\nocite{aristotle:poetics,aristotle:rhetoric,aristotle:anima}
+\forlistloop{\keytipcite}{\allkeys}
+\end{document}
