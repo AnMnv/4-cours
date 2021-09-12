@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.4.22)  12 SEP 2021 14:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.4.22)  12 SEP 2021 16:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1426,6 +1426,9 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 87.
 
 LaTeX Warning: Label `ris3' multiply defined.
 
+
+LaTeX Warning: Label `ris3' multiply defined.
+
 )
 \openout1 = `l1.aux'.
 
@@ -1620,28 +1623,38 @@ l.211
 ure.0.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.221     \item �
+l.220     \item �
                  �хема із підключеним конденсато�...
  <./fortab1.png>]
-Overfull \hbox (55.53923pt too wide) in paragraph at lines 247--248
+<4.pdf, id=52, 2086.15396pt x 972.88266pt>
+File: 4.pdf Graphic file (type pdf)
+<use 4.pdf>
+Package pdftex.def Info: 4.pdf  used on input line 246.
+(pdftex.def)             Requested size: 512.14963pt x 238.84079pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (55.53923pt too wide) in paragraph at lines 251--252
  [] 
  []
 
-<5.png, id=51, 170.43675pt x 81.906pt>
+<5.png, id=53, 170.43675pt x 81.906pt>
 File: 5.png Graphic file (type png)
 <use 5.png>
-Package pdftex.def Info: 5.png  used on input line 253.
+Package pdftex.def Info: 5.png  used on input line 257.
 (pdftex.def)             Requested size: 307.2929pt x 147.69937pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--264
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--266
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
@@ -1649,12 +1662,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 265--266
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.266 
+l.270 
       ]
-<fortab2.png, id=62, 963.6pt x 542.025pt>
+<fortab2.png, id=65, 963.6pt x 542.025pt>
 File: fortab2.png Graphic file (type png)
 <use fortab2.png>
-Package pdftex.def Info: fortab2.png  used on input line 285.
+Package pdftex.def Info: fortab2.png  used on input line 289.
 (pdftex.def)             Requested size: 512.14963pt x 288.09067pt.
 
 
@@ -1664,23 +1677,39 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.293 
+l.297 
       pdfTeX warning (ext4): destination with the same identifier (name{table.0
 .3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.293 
-       <./5.png>] [6pdfTeX warning (ext4): destination with the same identifier
+l.297 
+       <./4.pdf>] [6pdfTeX warning (ext4): destination with the same identifier
  (name{figure.0.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.324 \end{document}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{table.0.4}) has been already used, duplicate ignored
+l.297 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+0.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.324 \end{document}
-                     <./fortab2.png>] (./l1.aux)
+l.297 
+       <./5.png> <./fortab2.png>]
+<6.pdf, id=94, 661.36183pt x 462.07329pt>
+File: 6.pdf Graphic file (type pdf)
+<use 6.pdf>
+Package pdftex.def Info: 6.pdf  used on input line 315.
+(pdftex.def)             Requested size: 409.72125pt x 286.2639pt.
+ [7pdfTeX warning (ext4): destination with the same identifier (name{table.0.4}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.333 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{figure.0.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.333 \end{document}
+                     <./6.pdf>] (./l1.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1688,10 +1717,10 @@ Package rerunfilecheck Info: File `l1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 40401 strings out of 478994
- 892323 string characters out of 5862207
+ 40417 strings out of 478994
+ 892501 string characters out of 5862207
  1648725 words of memory out of 5000000
- 57134 multiletter control sequences out of 15000+600000
+ 57145 multiletter control sequences out of 15000+600000
  416337 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,18n,116p,1052b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1705,10 +1734,10 @@ c/cm-super/sfbx1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super
 pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/te
 xlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2021
 /texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on l1.pdf (7 pages, 166866 bytes).
+Output written on l1.pdf (8 pages, 32410624 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
- 25 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 330 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
