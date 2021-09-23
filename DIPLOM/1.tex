@@ -1,0 +1,96 @@
+\documentclass[a4paper, fontsize=12pt]{article}
+	\usepackage[T1,T2A]{fontenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english,russian,ukrainian]{babel}
+	\usepackage[left=1.5cm,right=3.5cm,top=1.5cm,bottom=2cm,bindingoffset=0cm]{geometry}
+	\usepackage{scrextend}
+	\usepackage{tabularx}
+	\linespread{1.3}
+	\usepackage[colorlinks]{hyperref}
+	\usepackage[colorinlistoftodos]{todonotes}
+	\usepackage{verbatim}
+	\usepackage{xcolor}
+	\usepackage{wrapfig}
+	\usepackage{setspace} % set space between lines
+	\usepackage{ragged2e} % ragged text and allow hyphenation
+	\usepackage{environ} % new environment
+	%\usepackage{tcolorbox} % colorful boxes
+	\usepackage{blindtext} % just for testing
+	\usepackage{cooltooltips}
+	\usepackage{mathtools}
+	\usepackage{blindtext}
+	\usepackage[most]{tcolorbox}
+
+
+	\definecolor{a0}{rgb}{0.61, 0.77, 0.89}
+	\definecolor{a1}{rgb}{1.0, 0.75, 0.0}
+	\definecolor{a2}{rgb}{1.0, 0.74, 0.53}
+	\definecolor{a3}{rgb}{0.79, 0.86, 0.54}
+	\definecolor{a4}{rgb}{0.67, 0.94, 0.82}
+	\definecolor{a5}{rgb}{0.88, 0.69, 1.0}
+	\definecolor{a6}{rgb}{0.0, 0.98, 0.6}
+	\definecolor{a7}{rgb}{1.0, 0.77, 0.05}
+	\definecolor{a8}{rgb}{0.22, 0.88, 0.08}
+	\definecolor{a9}{rgb}{1.0, 0.43, 0.29}
+	\definecolor{orang}{RGB}{255,155,0}
+
+\newtcolorbox[auto counter,number within=section]{caja}[1][]{
+  enhanced jigsaw,colback=white,colframe=orang,coltitle=orang,
+  fonttitle=\bfseries\sffamily,
+  sharp corners,
+  detach title,
+  leftrule=10mm,
+  % What you need %%%%%%%%%%%%
+  underlay unbroken and first={\node[below,text=black,anchor=east]
+  at ([xshift=-5.5pt]interior.base west) {\Huge  \textbf{!}};},
+  %%%%%%%%%%%%%%%%%%%%%%%%
+  breakable,pad at break=1mm,
+  #1,
+  code={\ifdefempty{\tcbtitletext}{}{\tcbset{before upper={\tcbtitle\par\medskip}}}},}
+
+\begin{document}
+\noindent
+
+\textbf{Abstract -- Thermal expansion coefficient, reflecting the peculiarities of crystal inter-atomic bonds, in most of crystals increases with temperature rise. The negative value of this coefficient, seen in the polar crystals in a certain\todo[color=a1]{qqq} temperature interval, correlates to the configurational entropy, which in opposed to vibrational entropy increases as pressure grows. Negative coefficient of thermal expansion testifies to dynamic self-ordering of polar bonds in crystals, and is seen not only in the piezoelectrics, but also in the semiconductors (like Si) that might be due to ordering of the virtual hexagonal polar phase.}
+
+
+\vspace{0.5cm}
+
+\begin{center}I. INTRODUCTION\end{center}
+The coefficient of thermal expansion describes the change in relative dimensions of solids with temperature growing, and it is important characteristic of interatomic bonds features. The polar dielectric possess peculiar structures arising due to different electronegativity of their constituent atoms. 
+
+The peculiarities of complex interatomic bonds in polar crystals are manifested
+precisely during their deformation under the scalar action, such as the uniform
+change in temperature. On the contrary, the gradient (vector) and tensor type of
+actions affect the symmetry of crystal response, when
+
+the strain $x_{ij}$ occurs due to mechanical stress tensor ($x_{ij} = s_{ijkl}X_{kl}$) 
+or to to vector type actions of electrical or magnetic fields, ($x_{ij} = d_{ij}E_k, x_{ij}
+= \zeta_{ijkl}H_{k}$)
+
+qqq\marginpar{Этот текст появится сбоку на полях.}
+
+
+
+
+
+\begin{caja}[title=warning]
+The vertical alignment settings are only relevant for boxes which are larger than their natural height, see Section 4.10 on page 53.
+\end{caja}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.4.22)  13 SEP 2021 16:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.4.22)  19 SEP 2021 11:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -985,6 +985,10 @@ File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )))
 Package hyperref Info: Option `colorlinks' set `true' on input line 86.
 )
+(c:/texlive/2021/texmf-dist/tex/latex/fibeamer/theme/mu/beamercolorthemefibeame
+r-mu-fss.sty
+Package: fibeamer/theme/mu/beamercolorthemefibeamer-mu-fss 2016/05/06
+)
 (c:/texlive/2021/texmf-dist/tex/latex/fibeamer/theme/mu/beamerfontthemefibeamer
 -mu.sty
 Package: fibeamer/theme/mu/beamerfontthemefibeamer-mu 2016/01/12
@@ -1425,67 +1429,10 @@ LaTeX Font Warning: Font shape `T2A/Carlito-LF/m/n' undefined
 
 <<t2a.cmap>>
 
-LaTeX Warning: Label `lists<1>' multiply defined.
-
-
-LaTeX Warning: Label `lists' multiply defined.
-
-
-LaTeX Warning: Label `simmonshall<1>' multiply defined.
-
-
-LaTeX Warning: Label `simmonshall' multiply defined.
-
-
 LaTeX Warning: Label `proof<1>' multiply defined.
 
 
 LaTeX Warning: Label `proof' multiply defined.
-
-
-LaTeX Warning: Label `math<1>' multiply defined.
-
-
-LaTeX Warning: Label `math' multiply defined.
-
-
-LaTeX Warning: Label `figs1<1>' multiply defined.
-
-
-LaTeX Warning: Label `figs1' multiply defined.
-
-
-LaTeX Warning: Label `figs2<1>' multiply defined.
-
-
-LaTeX Warning: Label `figs2' multiply defined.
-
-
-LaTeX Warning: Label `citations<1>' multiply defined.
-
-
-LaTeX Warning: Label `citations' multiply defined.
-
-
-LaTeX Warning: Label `knuth84' multiply defined.
-
-
-LaTeX Warning: Label `lamport94' multiply defined.
-
-
-LaTeX Warning: Label `MG94' multiply defined.
-
-
-LaTeX Warning: Label `tantau04' multiply defined.
-
-
-LaTeX Warning: Label `MS05' multiply defined.
-
-
-LaTeX Warning: Label `bibliography<1>' multiply defined.
-
-
-LaTeX Warning: Label `bibliography' multiply defined.
 
 )
 \openout1 = `lab1-ref.aux'.
@@ -1701,21 +1648,278 @@ LaTeX Info: Redefining \th on input line 19.
  ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 19.
  (./lab1-ref.nav)
-! TeX capacity exceeded, sorry [grouping levels=255].
-\set@curr@file #1->\begingroup 
-                               \escapechar \m@ne \expandafter \def \csname \...
-l.21   \frame[c]{\maketitle}
-                            
-If you really absolutely need more capacity,
-you can ask a wizard to enlarge me.
+<fibeamer/logo/mu/fibeamer-mu-fss-english.pdf, id=19, 227.62138pt x 91.04816pt>
 
- 
+File: fibeamer/logo/mu/fibeamer-mu-fss-english.pdf Graphic file (type pdf)
+<use fibeamer/logo/mu/fibeamer-mu-fss-english.pdf>
+Package pdftex.def Info: fibeamer/logo/mu/fibeamer-mu-fss-english.pdf  used on 
+input line 21.
+(pdftex.def)             Requested size: 149.3831pt x 59.7502pt.
+
+
+LaTeX Font Warning: Font shape `T2A/Carlito-LF/b/n' undefined
+(Font)              using `T2A/Carlito-LF/m/n' instead on input line 21.
+
+LaTeX Font Info:    Trying to load font information for T2A+DejaVuSansMono-TLF 
+on input line 21.
+(c:/texlive/2021/texmf-dist/tex/latex/dejavu/T2ADejaVuSansMono-TLF.fd
+File: T2ADejaVuSansMono-TLF.fd 2011/06/01 Font definitions for T2A/DejaVuSansMo
+no-TLF.
+)
+LaTeX Font Info:    Font shape `T2A/DejaVuSansMono-TLF/b/n' will be
+(Font)              scaled to size 14.6881pt on input line 21.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `DejaVuSansMono-TLF' (encoding: T2A).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Overfull \hbox (2.0pt too wide) in paragraph at lines 21--21
+[][]  
+ []
+
+LaTeX Font Info:    Trying to load font information for OT1+zavm on input line 
+21.
+(c:/texlive/2021/texmf-dist/tex/latex/arev/ot1zavm.fd
+File: ot1zavm.fd 2006/05/30 Fontinst v1.929 font definitions for OT1/zavm.
+)<<ot1.cmap>>
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zavm' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `OT1/zavm/m/n/14.4'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `OT1/zavm/m/n/14.4'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `OT1/zavm/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `OT1/zavm/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `OT1/zavm/m/n/7'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `OT1/zavm/m/n/7'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
+(Font)              scaled to size 12.24008pt on input line 21.
+<<oml.cmap>>
+LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
+(Font)              scaled to size 8.50006pt on input line 21.
+LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
+(Font)              scaled to size 5.95004pt on input line 21.
+LaTeX Font Info:    Trying to load font information for OMS+zavm on input line 
+21.
+
+(c:/texlive/2021/texmf-dist/tex/latex/arev/omszavm.fd
+File: omszavm.fd 2006/05/30 Fontinst v1.929 font definitions for OMS/zavm.
+)<<oms.cmap>>
+LaTeX Font Info:    Trying to load font information for OMX+iwona on input line
+ 21.
+
+(c:/texlive/2021/texmf-dist/tex/latex/iwona/omxiwona.fd
+File: omxiwona.fd 2008/07/22 v0.995 font definition file for OMX/iwona (MW)
+)<<omx.cmap>>
+LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
+
+
+(c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(c:/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
+
+
+(c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(c:/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
+(Font)              scaled to size 14.4pt on input line 21.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 21.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
+(Font)              scaled to size 7.0pt on input line 21.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
+(Font)              scaled to size 14.4pt on input line 21.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
+(Font)              scaled to size 10.0pt on input line 21.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
+(Font)              scaled to size 7.0pt on input line 21.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `OT1/zavm/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `OT1/zavm/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `OT1/zavm/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `OT1/zavm/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `OT1/zavm/m/n/6'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `OT1/zavm/m/n/6'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
+(Font)              scaled to size 10.20007pt on input line 21.
+LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
+(Font)              scaled to size 6.80005pt on input line 21.
+LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
+(Font)              scaled to size 5.10004pt on input line 21.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 21.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 21.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
+(Font)              scaled to size 6.0pt on input line 21.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
+(Font)              scaled to size 12.0pt on input line 21.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
+(Font)              scaled to size 8.0pt on input line 21.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
+(Font)              scaled to size 6.0pt on input line 21.
+ [1
+
+{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <c:/texlive/2021
+/texmf-dist/tex/latex/fibeamer/logo/mu/fibeamer-mu-fss-english.pdf>]
+<2.jpg, id=46, 513.92pt x 488.82625pt>
+File: 2.jpg Graphic file (type jpg)
+<use 2.jpg>
+Package pdftex.def Info: 2.jpg  used on input line 38.
+(pdftex.def)             Requested size: 180.10786pt x 171.3155pt.
+
+
+LaTeX Font Warning: Font shape `T2A/Carlito-LF/m/it' undefined
+(Font)              using `T2A/Carlito-LF/m/n' instead on input line 38.
+
+[2
+
+ <./2.jpg>]
+<1.png, id=56, 469.755pt x 250.68657pt>
+File: 1.png Graphic file (type png)
+<use 1.png>
+Package pdftex.def Info: 1.png  used on input line 50.
+(pdftex.def)             Requested size: 240.1423pt x 128.15063pt.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `OT1/zavm/m/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `OT1/zavm/m/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
+(Font)              scaled to size 9.30756pt on input line 50.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
+(Font)              scaled to size 10.95pt on input line 50.
+ [3
+
+ <./1.png>] [4
+
+]
+<5.jpg, id=78, 622.325pt x 445.665pt>
+File: 5.jpg Graphic file (type jpg)
+<use 5.jpg>
+Package pdftex.def Info: 5.jpg  used on input line 75.
+(pdftex.def)             Requested size: 270.15723pt x 193.46829pt.
+ [5
+
+ <./5.jpg>]pdfTeX warning (ext4): destination with the same identifier (name{pr
+oof<1>}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.83   \end{frame}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{proof}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.83   \end{frame}
+                  
+<6.jpg, id=86, 622.325pt x 191.71625pt>
+File: 6.jpg Graphic file (type jpg)
+<use 6.jpg>
+Package pdftex.def Info: 6.jpg  used on input line 83.
+(pdftex.def)             Requested size: 297.17662pt x 91.54884pt.
+ [6
+
+ <./6.jpg>]
+<9.png, id=92, 128.7569pt x 169.04535pt>
+File: 9.png Graphic file (type png)
+<use 9.png>
+Package pdftex.def Info: 9.png  used on input line 91.
+(pdftex.def)             Requested size: 180.10786pt x 236.47614pt.
+ [7
+
+ <./9.png (PNG copy)>]
+<10.png, id=100, 622.325pt x 296.10625pt>
+File: 10.png Graphic file (type png)
+<use 10.png>
+Package pdftex.def Info: 10.png  used on input line 99.
+(pdftex.def)             Requested size: 384.11874pt x 170.72061pt.
+
+Overfull \hbox (83.942pt too wide) in paragraph at lines 99--99
+ [] 
+ []
+
+[8
+
+ <./10.png (PNG copy)>] [9
+
+] [10
+
+]
+\tf@nav=\write6
+\openout6 = `lab1-ref.nav'.
+
+\tf@toc=\write7
+\openout7 = `lab1-ref.toc'.
+
+\tf@snm=\write8
+\openout8 = `lab1-ref.snm'.
+
+ (./lab1-ref.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `lab1-ref.out' has not changed.
+(rerunfilecheck)             Checksum: BD1A894C2D69FE5633D40FDA5D493744;167.
+ ) 
 Here is how much of TeX's memory you used:
- 31069 strings out of 478994
- 592708 string characters out of 5862207
- 983999 words of memory out of 5000000
- 47821 multiletter control sequences out of 15000+600000
- 416744 words of font info for 39 fonts, out of 8000000 for 9000
+ 31882 strings out of 478994
+ 611729 string characters out of 5862207
+ 961433 words of memory out of 5000000
+ 48403 multiletter control sequences out of 15000+600000
+ 547597 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 373i,4n,382p,444b,12556s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 131i,16n,132p,444b,1056s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/carlito/crlt_csjzgd.enc}{c:/texli
+ve/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{c:/texlive/2021/t
+exmf-dist/fonts/enc/dvips/dejavu/dejavumono_t2a.enc}<c:/texlive/2021/texmf-dist
+/fonts/type1/typoland/carlito/Carlito-Italic.pfb><c:/texlive/2021/texmf-dist/fo
+nts/type1/typoland/carlito/Carlito.pfb><c:/texlive/2021/texmf-dist/fonts/type1/
+public/dejavu/DejaVuSansMono-Bold.pfb><c:/texlive/2021/texmf-dist/fonts/type1/p
+ublic/mathdesign/mdbch/md-chb7t.pfb><c:/texlive/2021/texmf-dist/fonts/type1/pub
+lic/mathdesign/mdbch/md-chb7y.pfb><c:/texlive/2021/texmf-dist/fonts/type1/publi
+c/cm-super/sfrm0600.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super
+/sfrm1000.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.
+pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/te
+xlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
+Output written on lab1-ref.pdf (10 pages, 2115609 bytes).
+PDF statistics:
+ 174 PDF objects out of 1000 (max. 8388607)
+ 124 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 61562 words of extra memory for PDF output out of 61914 (max. 10000000)
+
