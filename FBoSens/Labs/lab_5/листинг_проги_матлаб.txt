@@ -1,0 +1,80 @@
+x=xlsread('kluch', 'Sheet1', 'A3:A9');
+y1=xlsread('kluch', 'Sheet1', 'B3:B9'); %r6
+y2=xlsread('kluch', 'Sheet1', 'C3:C9'); %vd1
+y3=xlsread('kluch', 'Sheet1', 'D3:D9'); %c1
+y4=xlsread('kluch', 'Sheet1', 'E3:E9'); %r7
+
+
+grid on;
+xlabel('U_1, В');
+ylabel('U_2, В');
+
+x_grid = linspace(min(x), max(x), 500);
+
+% резистор r6
+spl1=interp1(x, y1, x_grid, 'pchip');
+
+%диод
+spl2=interp1(x, y2, x_grid, 'pchip');
+
+%кондёр с1
+spl3=interp1(x, y3, x_grid, 'pchip');
+
+
+%резистор r7
+spl4=interp1(x, y4, x_grid, 'pchip');
+
+
+
+hold on;
+
+%r6
+h1=plot(x_grid, spl1, 'k-', 'LineWidth' , 3);
+scatter(x,y1,'filled','ko', 'DisplayName', '');
+
+%диод
+ h2=plot(x_grid, spl2, 'r-.', 'LineWidth' , 1.5);
+scatter(x,y2,'filled','ro');
+
+
+%кондёр с1
+ h3=plot(x_grid, spl3, 'g--');
+scatter(x,y3,'filled','go');
+
+
+%r7
+h4=plot(x_grid, spl4, 'b:', 'LineWidth' , 2);
+scatter(x,y4,'filled','bo');
+
+
+hleglines = [h1 h2 h3 h4];
+hleg = legend(hleglines, 'R_6', 'VD_1', 'C_1', 'R_7' )
+
+
+
+
+%--------------------------------------------------------------------------------------------------------------------
+
+x=xlsread('kluch', 'Sheet2', 'A1:A7');
+y=xlsread('kluch', 'Sheet2', 'B1:B7'); 
+
+
+plot(x,y, 'ko', 'MarkerSize',5);
+grid on;
+xlabel('U_1, В');
+ylabel('U_2, В');
+
+
+
+
+coeff=polyfit(x,y,4);
+x_grid = linspace(min(x), max(x), 500);
+y_grid = polyval(coeff, x_grid);
+
+hold on;
+
+plot(x_grid, y_grid, 'r');
+
+
+
+

@@ -1,0 +1,5 @@
+\babel@toc {russian}{}
+\beamer@sectionintoc {1}{Визначення}{3}{0}{1}
+\beamer@sectionintoc {2}{Порівняння}{5}{0}{2}
+\beamer@sectionintoc {3}{Надпровідні кубити}{9}{0}{3}
+\beamer@sectionintoc {4}{Ion Trap}{11}{0}{4}

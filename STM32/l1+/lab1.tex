@@ -1,0 +1,127 @@
+\documentclass[a4paper,14pt]{extreport}
+  \usepackage[left=1.5cm,right=1.5cm,
+      top=1.5cm,bottom=2cm,bindingoffset=0cm]{geometry}
+  \usepackage{scrextend}
+  \usepackage[T1,T2A]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage[english,russian,ukrainian]{babel}
+  \usepackage{tabularx}
+  \usepackage{amssymb}
+  \usepackage{color}
+  \usepackage{amsmath}
+  \usepackage{mathrsfs}
+  \usepackage{listings}
+  \usepackage{graphicx}
+  \usepackage{xcolor}
+  \usepackage{hyperref}
+
+  \usepackage{minted}
+  \usemintedstyle{monokai}
+
+
+
+  
+  
+%}
+
+\newcommand{\img}[4]{\center{\includegraphics[width=#1\linewidth]{#2}}\captionof{figure}{#3}\label{#4}}
+\begin{document}
+  \pagecolor{white}
+
+  %----------------------------------------1
+\begin{titlepage}
+    \begin{center}
+    \large
+    Національний технічний університет України \\ "Київський політехнічний інститут імені Ігоря Сікорського"
+
+
+    Факультет Електроніки
+
+    Кафедра мікроелектроніки
+    \vfill
+
+    \textsc{ЗВІТ}\\
+
+    {\Large Про виконання лабораторної роботи №1\\
+    з дисципліни: «Мікропроцесори та мікроконтролери»\\[1cm]
+
+    %Резистивні сенсори температури
+
+
+    }
+    \bigskip
+    \end{center}
+    \vfill
+
+    \newlength{\ML}
+    \settowidth{\ML}{«\underline{\hspace{0.4cm}}» \underline{\hspace{2cm}}}
+    \hfill
+    \begin{minipage}{1\textwidth}
+    Виконавець:\\
+    Студент 4-го курсу \hspace{4cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm}А.\,С.~Мнацаканов\\
+    \vspace{1cm}
+
+    Перевірив: \hspace{6.1cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm} Татарчук Д. Д.\\
+
+    \end{minipage}
+
+    \vfill
+
+    \begin{center}
+    2021
+    \end{center}
+\end{titlepage}
+
+
+
+\newpage
+\setcounter{page}{2}
+
+
+\begin{minted}[bgcolor=black]{c}
+import numpy as np
+    
+def incmatrix(genl1,genl2):
+    m = len(genl1)
+    n = len(genl2)
+    M = None #to become the incidence matrix
+    VT = np.zeros((n*m,1), int)  #dummy variable
+    
+    #compute the bitwise xor matrix
+    M1 = bitxormatrix(genl1)
+    M2 = np.triu(bitxormatrix(genl2),1) 
+
+    for i in range(m-1):
+        for j in range(i+1, m):
+            [r,c] = np.where(M2 == M1[i,j])
+            for k in range(len(r)):
+                VT[(i)*n + r[k]] = 1;
+                VT[(i)*n + c[k]] = 1;
+                VT[(j)*n + r[k]] = 1;
+                VT[(j)*n + c[k]] = 1;
+                
+                if M is None:
+                    M = np.copy(VT)
+                else:
+                    M = np.concatenate((M, VT), 1)
+                
+                VT = np.zeros((n*m,1), int)
+    
+    return M
+\end{minted}
+
+
+
+
+\begin{center}
+\textbf{Висновок}
+\end{center}
+
+Виходлячи з даних з рис. \ref{im1} видно, що при зменшеннi вiдстанi до джерела випромiнювання і збiльшеннi температури опiр зменшується, тобто можна сказати, що ТКО - вiд’ємний $\Rightarrow$ тип терморезистору - термiстор. 
+На рис. \ref{im1} видно деяку нелiнiйнiсть,
+проте вона наближається до прямолiнiйної залежностi, про що свiдчить симетричнiсть графiку вiдносно деякої точки перегину, через те, що є паралельно пiд’єднаний опір, номiнал якого рiвний термiстору за кiмнатної температури.
+
+
+
+
+\end{document}

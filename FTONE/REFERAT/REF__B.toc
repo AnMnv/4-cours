@@ -1,0 +1,5 @@
+\babel@toc {ukrainian}{}
+\contentsline {chapter}{\numberline {1}Вступ}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Експериментальні методи}{4}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Електричні характеристики приладів}{7}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Висновки}{11}{chapter.4}%

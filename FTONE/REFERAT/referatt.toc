@@ -1,0 +1,13 @@
+\babel@toc {ukrainian}{}
+\contentsline {chapter}{\numberline {1}Вступ}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Надпровідні кубіти}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Переваги}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Недоліки}{6}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Іонна пастка}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Переваги}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Недоліки}{8}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Нейтральні атоми}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Переваги}{9}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Недоліки}{9}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Топологічні кубіти}{10}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Висновок}{11}{chapter.6}%
