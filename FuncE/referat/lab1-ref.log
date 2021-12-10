@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.4.22)  19 SEP 2021 11:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.4.22)  8 DEC 2021 14:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1793,7 +1793,7 @@ LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <c:/texlive/2021
 /texmf-dist/tex/latex/fibeamer/logo/mu/fibeamer-mu-fss-english.pdf>]
-<2.jpg, id=46, 513.92pt x 488.82625pt>
+<2.jpg, id=45, 513.92pt x 488.82625pt>
 File: 2.jpg Graphic file (type jpg)
 <use 2.jpg>
 Package pdftex.def Info: 2.jpg  used on input line 38.
@@ -1897,10 +1897,10 @@ Package rerunfilecheck Info: File `lab1-ref.out' has not changed.
 (rerunfilecheck)             Checksum: BD1A894C2D69FE5633D40FDA5D493744;167.
  ) 
 Here is how much of TeX's memory you used:
- 31882 strings out of 478994
- 611729 string characters out of 5862207
- 961433 words of memory out of 5000000
- 48403 multiletter control sequences out of 15000+600000
+ 31884 strings out of 478994
+ 611745 string characters out of 5862207
+ 961133 words of memory out of 5000000
+ 48405 multiletter control sequences out of 15000+600000
  547597 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  131i,16n,132p,444b,1056s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1916,7 +1916,7 @@ c/cm-super/sfrm0600.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super
 /sfrm1000.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.
 pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/te
 xlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
-Output written on lab1-ref.pdf (10 pages, 2115609 bytes).
+Output written on lab1-ref.pdf (10 pages, 2111845 bytes).
 PDF statistics:
  174 PDF objects out of 1000 (max. 8388607)
  124 compressed objects within 2 object streams

@@ -1,0 +1,5 @@
+\babel@toc {ukrainian}{}
+\beamer@sectionintoc {1}{Scrum}{3}{0}{1}
+\beamer@sectionintoc {3}{Lean}{6}{0}{2}
+\beamer@sectionintoc {4}{Kanban}{8}{0}{3}
+\beamer@sectionintoc {6}{Six Sigma}{11}{0}{4}
