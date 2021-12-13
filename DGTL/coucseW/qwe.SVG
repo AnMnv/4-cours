@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1164 546" style="enable-background:new 0 0 1164 546;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:square;}
+	.st1{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st2{font-family:'ArialMT';}
+	.st3{font-size:28px;}
+</style>
+<path class="st0" d="M201,270h130v170H201V270"/>
+<path class="st0" d="M451,270h130v170H451V270"/>
+<path class="st0" d="M701,270h130v170H701V270"/>
+<path class="st0" d="M951,270h130v170H951V270"/>
+<line class="st1" x1="201" y1="290" x2="151" y2="290"/>
+<line class="st1" x1="201" y1="350" x2="151" y2="350"/>
+<line class="st1" x1="201" y1="410" x2="151" y2="410"/>
+<polyline class="st1" points="151,410 151,210 161,220 151,210 141,220 "/>
+<polygon class="st1" points="151,350 51,350 101,350 "/>
+<polyline class="st1" points="91,350 91,500 421,500 421,370 451,370 451,420 401,420 401,320 "/>
+<polyline class="st1" points="401,320 401,290 331,290 451,290 401,290 401,120 501,120 "/>
+<path class="st0" d="M501,90h60v60h-60V90"/>
+<path class="st0" d="M831,90h60v60h-60V90"/>
+<polyline class="st1" points="401,120 401,40 801,40 801,100 831,100 831,120 801,120 801,220 871,220 871,290 831,290 831,270 
+	701,270 701,290 661,290 661,120 "/>
+<polyline class="st1" points="661,120 661,120 561,120 561,150 501,150 "/>
+<polyline class="st1" points="501,140 461,140 461,200 601,200 601,290 581,290 "/>
+<polyline class="st1" points="601,200 601,160 601,140 741,140 831,140 "/>
+<line class="st1" x1="661" y1="370" x2="701" y2="370"/>
+<line class="st1" x1="661" y1="370" x2="661" y2="500"/>
+<polyline class="st1" points="661,290 641,290 641,420 701,420 "/>
+<polyline class="st1" points="421,500 661,500 921,500 921,370 951,370 "/>
+<polyline class="st1" points="951,420 911,420 911,290 951,290 911,290 911,120 891,120 "/>
+<circle cx="151" cy="290" r="6"/>
+<circle cx="91" cy="350" r="6"/>
+<circle cx="401" cy="290" r="6"/>
+<circle cx="421" cy="500" r="6"/>
+<circle cx="661" cy="500" r="6"/>
+<circle cx="661" cy="290" r="6"/>
+<circle cx="601" cy="200" r="6"/>
+<circle cx="401" cy="120" r="6"/>
+<circle cx="911" cy="290" r="6"/>
+<circle class="st1" cx="46" cy="350" r="6"/>
+<circle class="st1" cx="1081" cy="420" r="6"/>
+<path class="st1" d="M1091,420c30,0,30,0,30,0"/>
+<text transform="matrix(1 0 0 1 121 202)" class="st2 st3">5V</text>
+<text transform="matrix(1 0 0 1 211 312)" class="st2 st3">J</text>
+<text transform="matrix(1 0 0 1 211 362)" class="st2 st3">C</text>
+<text transform="matrix(1 0 0 1 211 422)" class="st2 st3">K</text>
+<text transform="matrix(1 0 0 1 291 312)" class="st2 st3">Q</text>
+<text transform="matrix(1 0 0 1 291 422)" class="st2 st3">Q</text>
+<polyline class="st1" points="306,390 321,390 291,390 "/>
+<polyline class="st1" points="1050.4,395.4 1065.4,395.4 1035.4,395.4 "/>
+<polyline class="st1" points="802.1,395.4 817.1,395.4 787.1,395.4 "/>
+<polyline class="st1" points="551.2,395.4 566.2,395.4 536.2,395.4 "/>
+<text transform="matrix(1 0 0 1 461 312)" class="st2 st3">J</text>
+<text transform="matrix(1 0 0 1 461 362)" class="st2 st3">C</text>
+<text transform="matrix(1 0 0 1 461 422)" class="st2 st3">K</text>
+<text transform="matrix(1 0 0 1 541 312)" class="st2 st3">Q</text>
+<text transform="matrix(1 0 0 1 541 422)" class="st2 st3">Q</text>
+<text transform="matrix(1 0 0 1 711 312)" class="st2 st3">J</text>
+<text transform="matrix(1 0 0 1 711 362)" class="st2 st3">C</text>
+<text transform="matrix(1 0 0 1 711 422)" class="st2 st3">K</text>
+<text transform="matrix(1 0 0 1 791 312)" class="st2 st3">Q</text>
+<text transform="matrix(1 0 0 1 791 422)" class="st2 st3">Q</text>
+<text transform="matrix(1 0 0 1 961 312)" class="st2 st3">J</text>
+<text transform="matrix(1 0 0 1 961 362)" class="st2 st3">C</text>
+<text transform="matrix(1 0 0 1 961 422)" class="st2 st3">K</text>
+<text transform="matrix(1 0 0 1 1041 312)" class="st2 st3">Q</text>
+<text transform="matrix(1 0 0 1 1041 422)" class="st2 st3">Q</text>
+<text transform="matrix(1 0 0 1 511 132)" class="st2 st3">&amp;</text>
+<text transform="matrix(1 0 0 1 841 132)" class="st2 st3">&amp;</text>
+</svg>

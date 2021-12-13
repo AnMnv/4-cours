@@ -5,10 +5,462 @@
 \input{preambula.tex}
 \usepackage{multirow}
 \usepackage{spreadtab}
+\usepackage{pgf-pie}   
+\usepackage{xcolor} % package used to implement colors  
 
 
 
+
+ 
 \begin{document}
+
+
+\begin{titlepage}
+      \begin{center}
+      \large
+      Національний технічний університет України \\ "Київський політехнічний інститут імені Ігоря Сікорського"
+
+
+      
+      Факультет Електроніки
+
+      Кафедра мікроелектроніки
+      \vfill
+
+      \textsc{РОЗРАХУНКОВО-ГРАФІЧНА РОБОТА}\\
+    за темою: «Аналіз доцільності виходу на ринок моноблоку власного виробництва»
+      %{\Large Про виконання лабораторної роботи №1\\
+      з дисципліни: «Фізичні основи сенсорики»\\[1cm]
+
+      
+
+
+      %}
+      \bigskip
+      \end{center}
+      \vfill
+
+      \newlength{\ML}
+      \settowidth{\ML}{«\underline{\hspace{0.4cm}}» \underline{\hspace{2cm}}}
+      \hfill
+      \begin{minipage}{1\textwidth}
+      Виконав:\\
+      Студент 4-го курсу \hspace{4cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm}Мнацаканов А. С.\\
+      \vspace{1cm}
+
+      Перевірила: \hspace{5.6cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm}доц. Павленко Т. В.\\
+
+      \end{minipage}
+
+      \vfill
+
+      \begin{center}
+      2021
+      \end{center}
+\end{titlepage}
+
+\tableofcontents
+\setcounter{page}{2}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Вступ}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    Метою цієї РГР є аналіз доцільності виходу на ринок виробу, згідно з яким
+    необхідним є визначення оцінка рівня якості та конкурентоспроможності, а також
+    розрахунок собівартості та ціни виробу.\\ 
+
+    Необхідні розрахунки будемо проводити для кастомного моноблоку. 
+    Потрібно буде обґрунтувати вибір договірної ціни, а також розрахувати кількість
+    виробленої продукції, при якій виробництво буде беззбитковим та досягне
+    запланованого рівня рентабельності.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Аналіз ринку}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    Даний   пристрій відноситься до класу «All-in-one PC» -- представляє собою РК-монітор, ззаду якого знаходиться системний блок, він поєднує кілька пристроїв в одному корпусі, застосовується для зменшення займаної обладнанням площі, спрощення збірки кінцевим користувачем, надання естетичного вигляду.\\
+
+    Продаж виробу буде організований на ринках України, Білорусі, Польщі, прибалтійських
+    країн, Молдови, Румунії, оскільки в цих державах відсутні фірми, що спеціалізуються на
+    виготовленні подібної продукції.  Виріб буде продаватись оптовим покупцям та в роздрібних фірмових магазинах.\\ 
+
+    Основні технічні характеристики виробу наступні:
+    \begin{itemize}
+    \item Процесор \dotfill 2.2 ГГц 
+    \item Вiдеокарта \dotfill 3 Тф
+    \item ОЗУ \dotfill 16 Гб
+    \item Яскравiсть дисплея \dotfill 500 кд
+    \item Дiагональ \dotfill 19.5 inch
+    \end{itemize}
+
+    Візьмемо серійне виробництво з серією 5000 шт./рік.\\ 
+
+    Найбільш наближеним за технічними характеристиками до розробленого
+    пристрою  є  \href{https://www.itbox.ua/ua/product/Kompyuter_HP_24-df0054ua_IPS_Pentium_J5040_426F3EA-p702646/?utm=shopping&utm_content=shopping&gclid=CjwKCAiAtdGNBhAmEiwAWxGcUoFSjhq16_yyk_vusMuu-Nb1aAfwNXYS7bWDjVH86uK1hBbyGcG11BoCPasQAvD_BwE}{моноблок}  китайської  компанії  з  наступними  технічними
+    характеристиками:
+    \begin{itemize}
+    \item Процесор \dotfill 2.8 ГГц 
+    \item Вiдеокарта \dotfill 2.2 Тф
+    \item ОЗУ \dotfill 12 Гб
+    \item Яскравiсть дисплея \dotfill 400кд
+    \item Дiагональ \dotfill 20 inch
+    \end{itemize}
+    Ціна за базовий виріб 19 500 грн.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{ОЦІНКА РІВНЯ ЯКОСТІ ВИРОБУ}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Вихідні положення}
+    Для оцінки рівня якості виробу використовується коефіціснт технічного рівня ( $K_{\text {T.P. }}$ ), який розраховується для кожного варіанту інженерного рішення:
+    \begin{align}
+    K_{T . P .}=\sum_{i=1}^{n} \varphi_{i j} B_{i j}
+    \end{align}
+    де $\varphi_{i j}$ - коефіціснт вагомості $i$-го параметра якості $j$-го варіанта в сукупності прийнятих для розгляду параметрів якості; $B_{i j}$ - оцінка $i$-го параметра якості $j$-го варіанта виробу; $^{n}-$ кількість параметрів виробу.
+
+    При наявності кількісної характеристики виробу коефіцієнт технічного рівня можна визначити за формулою:
+    \begin{align}
+    K_{T. P.}=\sum_{i=1}^{n} \varphi_{i} q_{i}
+    \end{align}
+    де $q_{i}$ - відносний (одиничний)   i-й показник якості. 
+
+
+\section{Обґрунтування системи параметрів виробу і визначення відносних показників якості}
+    На основі даних про зміст основних функцій, які повинен реалізовувати виріб, вимог
+    замовника, а також умов, які характеризують експлуатацію виробу, визначають основні
+    параметри виробу, які будуть використані для розрахунку коефіцієнта технічного рівня виробу.\\ 
+
+    Відносні показники якості по будь-якому параметру $q_i$, якщо вони находяться в лінійній
+    залежності від якості, визначаються за формулами:
+    \begin{align}
+    q_i = \dfrac{P_{H_{i}}}{P_{\text{Б}_{i}}}
+    \end{align}
+    або
+    \begin{align}
+    \acute q_i = \dfrac{P_{H_{i}}}{P_{\text{Б}_{i}}}
+    \end{align}
+    Формула (3) використовується при розрахунку відносних показників якості,
+    коли збільшення величини параметра веде до покращення якості виробу і формула
+    (4) коли зі збільшенням величини параметра якість виробу погіршується.
+    Параметри нового і базового виробів наведені в табл. \ref{t1}. В цій таблиці також
+    наведемо розраховані показники якості.
+
+    \begin{table}[h!]
+    \caption{Параметри виробів.}
+    \begin{center}
+        \begin{spreadtab}{{tabular}{|l|c|c|c|}}
+        \hline%     A                             B           С            D
+        @Параметр                           &@ Варіант   & @Варіант   & @Показник якості $q_i$ \\ \hline
+                                            & @базовий   & @новий     &      \\ \hline
+        1) @Вага \hfill [кг]               &   4        &   3.5      &  round(b3/c3,2)    \\ \hline
+        2) @Діагональ\hfill [inch]         &    20      &  19.5      &  round(c4/b4,2)    \\ \hline
+        3) @Процесор \hfill [ГГц]          &    2.8     &   2.2      &  round(c5/b5,2)   \\ \hline
+        4) @Відеокарта\hfill [Тф]          &    2.2     &   3        &  round(c6/b6,2)   \\ \hline
+        5) @ОЗУ\hfill [Гб]                 &     12     &   16       &  round(c7/b7,2)   \\ \hline
+        6) @Яскравість дисплея \hfill [кд]  & 400        &   500      &  round(c8/b8,2)     \\ \hline
+        \end{spreadtab}
+    \end{center} 
+    \label{t1}
+    \end{table}
+
+
+\section{Визначення коефіцієнтів вагомості параметрів}
+    Вагомість кожного параметра в загальній кількості розглянутих при оцінці
+    параметрів визначається методом попарного порівняння. Оцінку проводить
+    експертна комісія, кількість членів якої повинна дорівнювати непарному числу (не
+    менше 7 осіб). Експерти повинні бути фахівцями у даній предметній галузі. Після
+    детального обговорення та аналізу кожний експерт оцінює ступінь важливості
+    шляхом присвоєння їм рангів. В даному випадку оцінку дають 7 експертів в галузі
+    вимірювальних приладів. Результати рангування параметрів заносимо до табл. \ref{t2}.
+
+     \begin{table}[ht]
+     
+    \caption{Результат оцінки параметрів}
+     \begin{center}
+        \begin{spreadtab}{{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}}
+        \hline%  A     B     С    D     e   f    g     h               i                j                              k
+                      & 1  & 2  & 3  & 4 &  5 &   6 &  7 & @$\sum \text{рівнів}$& @$\triangle$           &  @$\triangle^2$\\ \hline
+        @x1           & 5  & 4  & 4  & 5 &  6 & 5  &  6 & sum(b2:h2)               &   round( i2-(sum(i2:i7)/6),2) & j2*j2\\ \hline
+        @x2           & 6  & 6  & 5  & 3 &  4 &  4 &  4 &sum(b3:h3)                &    round(i3-(sum(i2:i7)/6),2)  & j3*j3\\ \hline
+        @x3           & 4  & 5  & 6  & 6 &  5 &  6 &  5 &sum(b4:h4)                &    round(i4-(sum(i2:i7)/6),2)  & j4*j4\\ \hline
+        @x4           & 1  & 2  & 1  & 1 &  1 &  3 &  1 &sum(b5:h5)                &    round(i5-(sum(i2:i7)/6),2)  & j5*j5\\ \hline
+        @x5           & 3  & 3  & 2  & 2 &  2 &  2 &  3 &sum(b6:h6)                &    round(i6-(sum(i2:i7)/6),2)  & j6*j6\\ \hline
+        @x6           & 2  & 1  & 3  & 4 &  3 &  1 &  2 &sum(b7:h7)                &    round(i7-(sum(i2:i7)/6),2)  & j7*j7\\ \hline
+        @$\sum $      &    &    &    &   &    &    &    &  sum(i2:i7)              &                                & sum(k2:k7) \\ \hline
+        \end{spreadtab}
+    \end{center} 
+    \label{t2}
+     \end{table}
+
+     Коефіцієнт конкордації 
+     \[ W = \dfrac{S\cdot 12}{N^2 (n^3-n)} = \dfrac{661.5\cdot 12}{7^2 (6^3-6)} \approx 0.77, \]
+     де $n$ -- к-ть параметрів, $N$ -- к-ть експериментів.\\ 
+     Нормативна величина для радіотехнічних виробів $W_H$ =  0,77 . Розрахункове
+    значення W  = $W_H$ , отже визначені дані заслуговують довіри.
+    Далі проводимо попарне порівняння всіх параметрів, результати занесемо до
+    табл. \ref{t3}.
+
+    \begin{table}[h!]
+    \caption{Попарне зрівняння параметрів}
+    \begin{center}
+    \begin{tabular}{|c|ccccccc|c|c|}
+    \hline
+    \multirow{2}{*}{} & \multicolumn{7}{c|}{Експерт}                                                                                                                            & \multirow{2}{*}{Підсумкова оцінка} & \multirow{2}{*}{Числове значення} \\ \cline{2-8}
+                      & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{2} & \multicolumn{1}{c|}{3} & \multicolumn{1}{c|}{4} & \multicolumn{1}{c|}{5} & \multicolumn{1}{c|}{6} & 7 &                                    &                                   \\ \hline
+    x1 vs  x2         & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
+    x1 vs x3          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & < & >                                  & 1.5                               \\ \hline
+    x1 vs x4          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
+    x1 vs x5          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
+    x1 vs x6          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0,5                               \\ \hline
+    x2 vs x3          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & > & >                                  & 1.5                               \\ \hline
+    x2 vs x4          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
+    x2 vs x5          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
+    x2 vs x6          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
+    x3 vs x4          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
+    x3 vs x5          & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & < & >                                  & 1.5                               \\ \hline
+    x3 vs x6          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
+    x4 vs x5          & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & < & >                                  & 1.5                               \\ \hline
+    x4 vs x6          & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & > & >                                  & 1.5                               \\ \hline
+    x5 vs x6          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
+    \end{tabular}
+    \end{center} 
+    \label{t3}
+    \end{table}
+
+    \begin{table}[h!]
+    \caption{Розрахунок вагомості параметрів.}
+    \begin{center}
+        \begin{spreadtab}{{tabular}{|l|c|c|c|c|c|c|c|c|}}
+    \hline%A       B       С      D     e      f       g               h           i
+                 & @x1  & @x2  & @x3  &@x4  &@x5   &   @x6    & @$b_i$      &  @   $\varphi_i$ \\ \hline
+        @x1      & 1    & 1.5  & 1.5  & 0.5 &  0.5 &  0.5     &  sum(b2:g2) & round(h2/(sum(h2:h7)),2)\\ \hline
+        @x2      & 0.5  & 1    & 1.5  & 0.5 &  0.5 &  0.5     &  sum(b3:g3) & round(h3/(sum(h2:h7)),2)\\ \hline
+        @x3      & 0.5  & 0.5  & 1    & 0.5 &  0.5 &  0.5     &  sum(b4:g4) & round(h4/(sum(h2:h7)),2)\\ \hline
+        @x4      & 1.5  & 1.5  & 1.5  & 1   &  1.5 &  1.5     &  sum(b5:g5) & round(h5/(sum(h2:h7)),2)\\ \hline
+        @x5      & 1.5  & 1.5  & 1.5  & 0.5 &  1   &  1.5     &  sum(b6:g6) & round(h6/(sum(h2:h7)),2)\\ \hline
+        @x6      & 1.5  & 1.5  & 1.5  & 0.5 &  0.5 &   1      &  sum(b7:g7)  & round(h7/(sum(h2:h7)),2)\\ \hline
+        @$\sum$  &      &      &      &     &      &          &  sum(h2:h7)  & round(sum(i2:i7),0)\\ \hline
+        \end{spreadtab}
+    \end{center} 
+
+    \label{t4}
+    \end{table}
+
+
+
+
+    Розрахунок вагомості (пріоритетності) кожного параметра $\varphi_{i}$ проводимо за наступними формулами:
+    $$
+    \varphi_{i}=\frac{b_{i}}{\sum_{i=1}^{n} b_{i}}=\sum_{i=1}^{n} a_{i j}
+    $$
+    де $b_{i}$-вагомість $i$-го параметра за результатами оцінок всіх експертів визначається як сума значень коефіцієнтів переваги $\left(a_{i j}\right)$ даних усіма експертами по $i$-му параметру.
+    Результати розрахунків занесемо до табл. \ref{t4}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{РОЗРАХУНОК СОБІВАРТОСТІ ВИРОБУ}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Калькуляція собівартості}
+\subsection{Сировина та матеріали}
+    \begin{table}[h!]
+        \caption{Витрати на матеріали.}
+        \begin{center}
+            \begin{spreadtab}{{tabular}{|p{4.2cm}|p{2.2cm}|p{2.2cm}|p{2.0cm}|p{2.0cm}|c|}}
+    \hline% A                B                       С                   D              E                F 
+    @Матеріал       &@ Стандарт або марка   & @Одиниця виміру   & @Норма витрат & @Ціна одиниці, грн &@ Сума, грн \\ \hline
+    @ Екран         &@ Sasung IPS           & @ inch  &     & 4000              & e2 \\ \hline
+    @  Процесор     &@ core i7 5th gen      & @ ГГц  &      & 2000              & e3 \\ \hline
+    @  Відеокарта   &@ GeForce GT 1030      & @ Тф  &       & 4500              & e4 \\ \hline
+    @  ОЗУ          &@ DDR4                 & @ МГц  &      & 960               & e5 \\ \hline
+    @ Разом         &@                      & @   &   &                         & round(sum(e2:e5),2) \\ \hline
+    @ Невраховані матеріали 10\%            & @   & @   &   &                   & round(f6/11,2) \\ \hline
+    @  Всього з урахуванням транспортно-заготівельних витрат (К = 1,1)& @ & & && round((f7+f6)*1.1,0) \\ \hline
+    \end{spreadtab}
+        \end{center} 
+        \label{t5}
+        \end{table}
+
+
+\subsection{ Покупні комплектуючі виробу, напівфабрикати, роботи і послуги
+    виробничого характеру сторонніх підприємств та організацій}
+    \begin{table}[h!]
+    \caption{Розрахунки по витратам на покупні вироби та напівфабрикати.}
+    \begin{center}
+    \begin{spreadtab}{{tabular}{|p{4.2cm}|p{2.2cm}|p{2.2cm}|p{2.0cm}|p{2.0cm}|}}
+    \hline% A                B                       С                   D              E                 
+    @Вироби, напівфабрикати&@ Стандарт або марка   & @К-сть, одиниць    & @Ціна одиниці, грн &@ Сума, грн \\ \hline
+    @ дроти        &@ -    & @ 10      & 52              & d2 \\ \hline
+    @  клеми       &@ -    & @ 8      & 19             & d3 \\ \hline
+    @  корпус      &@ -    & @ 1      & 300              & d4 \\ \hline
+    @  охолоджння  &@ -    & @ 1      &120               & d5 \\ \hline
+    @ Разом         &@      & @        &         & round(sum(d2:d5),2) \\ \hline
+    @ Невраховані матеріали 10\% & @   & @       &                 &round(e6*1.1,0)- round(sum(d2:d5),2) \\ \hline
+    @  Всього з урахуванням транспортно-заготівельних витрат (К = 1,1)& @ & & & e6+e7 \\ \hline
+    \end{spreadtab}
+    \end{center} 
+    \label{t6}
+    \end{table}
+
+
+
+
+\subsection{ Основна заробітна плата}
+    \begin{table}[h!]
+    \caption{Основна заробітна плата.}
+    \begin{center}
+    \begin{spreadtab}{{tabular}{|p{4.2cm}|p{2.2cm}|p{2.2cm}|p{2.0cm}|p{2.0cm}|}}
+    \hline% A                B                              С                              D           E                 
+    @Найменування робіт &@ Сер. погод. ставка   & @К-сть операцій, одиниць  & @Норма часу, год &@ Сума, грн \\ \hline
+    @ підготовка елементів     &@ 20             & @ 1                      & 52              & 0.25 \\ \hline
+    @ нанесення термопасти     &@ 20             & @ 1                      & 52              & 1.82 \\ \hline
+    @ встановлення охолодження &@ 20             & @ 1                      & 52              & 2.7 \\ \hline
+    @ попередня діагностика    &@ 22             & @ 1                      & 52              & 1.3 \\ \hline
+    @ калібровка               &@ 25             & @ 1                      & 52              & 1.5 \\ \hline
+    @  Всього                  & @ & & & sum(e2:e6) \\ \hline
+    \end{spreadtab}
+    \end{center} 
+    \label{t7}
+    \end{table}
+
+
+
+\subsection{ Додаткова заробітна плата}
+    Витрати за цією статтею визначаються у відсотках до основної заробітної
+    плати:\\ 
+
+    \FPset\k{0.35}
+    \FPset\c{7.57}
+    \FPmul\cc\k\c
+    \FPeval\cc{round(\cc:2)}
+    \begin{equation}
+    C_{\text{з.д}}. = k_{\text{з.д}} C_{\text{з.o}} = \k \cdot \c = \cc \text{ грн},
+    \end{equation}
+    де к$_{\text{з.д}}$ = 0,3...0,4 – коефіцієнт, який враховує додаткову зарплату.
+
+
+\subsection{ Відрахування на соціальне страхування}
+    За діючими нормативами, відрахування на соціальне страхування (ЄСВ)
+    складає 22\% від суми основної та додаткової заробітної плати:\\ 
+
+    \FPset\dd{0.22}
+     \FPmul\esv\c\dd
+     \FPeval\esv{round(\esv:2)}
+    \begin{equation}
+     \text{ЄСВ} =  \c \cdot \dd = \esv \text{ грн}
+    \end{equation}
+ 
+\subsection{Загальновиробничі витрати}
+    Враховуючи, що собівартість виробу визначається на ранніх стадіях його
+    проектування в умовах обмеженої інформації щодо технології виробництва та
+    витрат на його підготовку у загальновиробничі витрати включаються, крім власне
+    цих витрат, витрати на: освоєння основного виробництва, відшкодування зносу
+    спеціальних інструментів і пристроїв цільового призначення, утримання та
+    експлуатацію устаткування. При цьому загальновиробничі витрати визначаються у
+    відсотках до основної заробітної плати. При такому комплексному складі
+    загальновиробничих витрат їх норматив ( n$_{\text{з.в}}$ ) досягає 200-300\%, тобто
+    \FPadd\czv\c\c
+    \FPeval\czv{round(\czv:2)}
+     \begin{equation}
+        C_{\text{з.д}}. = n_{\text{з.в}}\cdot C_{\text{з.o}} =  \czv  \text{ грн}
+    \end{equation}
+
+\subsection{Адміністративні витрати}
+    Ці витрати відносяться на собівартість виробу пропорційно основній
+    заробітній платі і на приладобудівних підприємствах вони становлять ( n$_{\text{з.г}}$ ) 100-
+    200\%, нехай
+    \FPset\nzg{1.3}
+    \FPadd\czg\c\nzg
+    \FPeval\czg{round(\czg:2)}
+    \begin{equation}
+    C_{\text{з.г}}. = n_{\text{з.г}}\cdot C_{\text{з.o}} =  \czg  \text{ грн}
+    \end{equation}
+
+
+
+\subsection{Комерційні витрати}
+    Витрати за цією статтею визначаються у відсотках до виробничої
+    собівартості ( $n_{\text{з.в}}$ = 2,5 ... 5\% ), С$_{\text{вир}}$ – сума за усіма наведеними вище статтями
+    калькуляції, являє повну собівартість продукції.
+
+ 
+\begin{equation}
+C_{\text{з.г}}. = n_{\text{п.в}}\cdot C_{\text{з.o}} =  0.03\cdot  14319.03  = 429.57 \text{ грн}
+\end{equation}
+
+\begin{figure}
+ \centering
+ \begin{tikzpicture}
+ 
+\pie[
+    color = {
+        yellow!90!black, 
+        green!60!black, 
+        blue!60, 
+        red!70,
+        gray!70,
+        teal!20,
+        orange!50,
+        pink!90},
+    text = legend
+]
+{93.0/Bитрати на матеріали (93\%),
+    3.6/Bитрати на покупні вироби(3.6\%),
+    0.05/Основна зп (0.05\%),
+    0.018/Додаткова зп (0.018\%),
+    0.011/Відрахування на соціальне страхування (0.011\%),
+    0.01/Загальновиробничі витрати (0.01\%),
+    0.06/Адміністративні витрати (0.06\%),
+    2.3/Комерційні витрати (2.3\%)}
+ 
+\end{tikzpicture}
+\caption{Калькуляція собівартості виробу.}
+\end{figure}
+
+
+\begin{itemize}
+\item Виробнича собівартість = 14 319.03
+\item Повна собівартість = 14 343.04
+\end{itemize}
+
+
+ 
+ 
+ 
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\newpage
+
+
+
+
+
+
+
+
+
+
+
 
 \begin{center}
 \xmybox[green]{ МОНОБЛОК }
@@ -41,56 +493,117 @@
     3) @Процесор \hfill [ГГц]          &    2.8     &   2.2      &  round(c5/b5,2)   \\ \hline
     4) @Відеокарта\hfill [Тф]          &    2.2     &   3        &  round(c6/b6,2)   \\ \hline
     5) @ОЗУ\hfill [Гб]                 &     12     &   16       &  round(c7/b7,2)   \\ \hline
-    6) @Яскравість дисплея\hfill [кд]  & 400        &   500      &  round(c8/b8,2)     \\ \hline
+    6) @Яскравість дисплея \hfill [кд]  & 400        &   500      &  round(c8/b8,2)     \\ \hline
     \end{spreadtab}
 \end{center} 
 
  
+ \begin{table}[ht]
+ 
+\caption{Результат оцінки параметрів}
  \begin{center}
-    \begin{spreadtab}{{tabular}{|l|c|c|c|c|c|c|c|c|}}
-    \hline%  A     B     С    D     e   f              g                    h               i
-                  & 1  & 2  & 3  & 4 &  5 &   @$\sum \text{рівнів}$& @$\triangle$&  @$\triangle^2$\\ \hline
-    @x1           & 5  & 4  & 4  & 5 &  6 &  sum(b2:f2)                &    g2-(sum(g2:g7)/6) & h2*h2\\ \hline
-    @x2           & 6  & 6  & 5  & 3 &  4 &  sum(b3:f3)                &    g3-(sum(g2:g7)/6) & h3*h3\\ \hline
-    @x3           & 4  & 5  & 6  & 6 &  5 &  sum(b4:f4)                &    g4-(sum(g2:g7)/6) & h4*h4\\ \hline
-    @x4           & 1  & 2  & 1  & 1 &  1 &  sum(b5:f5)                &    g5-(sum(g2:g7)/6) & h5*h5\\ \hline
-    @x5           & 3  & 3  & 2  & 2 &  2 &  sum(b6:f6)                &    g6-(sum(g2:g7)/6) & h6*h6\\ \hline
-    @x6           & 2  & 1  & 3  & 4 &  3 &  sum(b7:f7)                &    g7-(sum(g2:g7)/6) & h7*h7\\ \hline
-                  &    &    &    &   &    &                            &                      &sum(i2:i7)\\ \hline
+    \begin{spreadtab}{{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}}
+    \hline%  A     B     С    D     e   f    g     h               i                j                              k
+                  & 1  & 2  & 3  & 4 &  5 &   6 &  7 & @$\sum \text{рівнів}$& @$\triangle$           &  @$\triangle^2$\\ \hline
+    @x1           & 5  & 4  & 4  & 5 &  6 & 5  &  6 & sum(b2:h2)               &   round( i2-(sum(i2:i7)/6),2) & j2*j2\\ \hline
+    @x2           & 6  & 6  & 5  & 3 &  4 &  4 &  4 &sum(b3:h3)                &    round(i3-(sum(i2:i7)/6),2)  & j3*j3\\ \hline
+    @x3           & 4  & 5  & 6  & 6 &  5 &  6 &  5 &sum(b4:h4)                &    round(i4-(sum(i2:i7)/6),2)  & j4*j4\\ \hline
+    @x4           & 1  & 2  & 1  & 1 &  1 &  3 &  1 &sum(b5:h5)                &    round(i5-(sum(i2:i7)/6),2)  & j5*j5\\ \hline
+    @x5           & 3  & 3  & 2  & 2 &  2 &  2 &  3 &sum(b6:h6)                &    round(i6-(sum(i2:i7)/6),2)  & j6*j6\\ \hline
+    @x6           & 2  & 1  & 3  & 4 &  3 &  1 &  2 &sum(b7:h7)                &    round(i7-(sum(i2:i7)/6),2)  & j7*j7\\ \hline
+                  &    &    &    &   &    &    &    &  sum(i2:i7)              &                                & sum(k2:k7) \\ \hline
     \end{spreadtab}
 \end{center} 
+ \end{table}
 
- Коефіцієнт конкордації 
- \[ W = \dfrac{S\cdot 12}{N^2 (n^3-n)} = \dfrac{339.5\cdot 12}{5^2 (6^3-6)} \approx 0.78, \]
- де $n$ -- к-ть параметрів, $N$ -- к-ть експериментів.
+
 
 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
 \begin{table}[h]
 \begin{center}
-\begin{tabular}{|c|ccccc|c|c|}
+\caption{Попарне зрівняння параметрів}
+\begin{tabular}{|c|ccccccc|c|c|}
 \hline
-\multirow{2}{*}{} & \multicolumn{5}{c|}{Експерт}                                                                          & \multirow{2}{*}{Підсумкова оцінка} & \multirow{2}{*}{Числове значення} \\ \cline{2-6}
-                  & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{2} & \multicolumn{1}{c|}{3} & \multicolumn{1}{c|}{4} & 5 &                                    &                                   \\ \hline
-x1 vs  x2         & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & < & >                                  & 1.5                               \\ \hline
-x1 vs x3          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & < & >                                  & 1.5                               \\ \hline
-x1 vs x4          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
-x1 vs x5          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
-x1 vs x6          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0,5                               \\ \hline
-x2 vs x3          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & > & >                                  & 1.5                               \\ \hline
-x2 vs x4          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
-x2 vs x5          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
-x2 vs x6          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & < & <                                  & 0.5                               \\ \hline
-x3 vs x4          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
-x3 vs x5          & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & > & >                                  & 1.5                               \\ \hline
-x3 vs x6          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
-x4 vs x5          & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & > & >                                  & 1.5                               \\ \hline
-x4 vs x6          & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & > & >                                  & 1.5                               \\ \hline
-x5 vs x6          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & > & >                                  & 1.5                               \\ \hline
+\multirow{2}{*}{} & \multicolumn{7}{c|}{Експерт}                                                                                                                            & \multirow{2}{*}{Підсумкова оцінка} & \multirow{2}{*}{Числове значення} \\ \cline{2-8}
+                  & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{2} & \multicolumn{1}{c|}{3} & \multicolumn{1}{c|}{4} & \multicolumn{1}{c|}{5} & \multicolumn{1}{c|}{6} & 7 &                                    &                                   \\ \hline
+x1 vs  x2         & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
+x1 vs x3          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & < & >                                  & 1.5                               \\ \hline
+x1 vs x4          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
+x1 vs x5          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
+x1 vs x6          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0,5                               \\ \hline
+x2 vs x3          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & > & >                                  & 1.5                               \\ \hline
+x2 vs x4          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
+x2 vs x5          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
+x2 vs x6          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
+x3 vs x4          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
+x3 vs x5          & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & < & >                                  & 1.5                               \\ \hline
+x3 vs x6          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
+x4 vs x5          & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & < & >                                  & 1.5                               \\ \hline
+x4 vs x6          & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & > & >                                  & 1.5                               \\ \hline
+x5 vs x6          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
 \end{tabular}
 \end{center} 
 \end{table}
+
+
+ 
+
+
+ \begin{center}
+    \begin{spreadtab}{{tabular}{|l|c|c|c|c|c|c|c|c|}}
+\hline%A       B       С      D     e      f       g               h                     i
+             & @x1  & @x2  & @x3  &@x4  &@x5   &   @x6    & @I ітер             &  @ II ітер ($\beta$) \\ \hline
+    @x1      & 1    & 1.5  & 1.5  & 0.5 &  0.5 &  0.5     &    sum(b2:g2)       & round(h2/(sum(h2:h7)),2)\\ \hline
+    @x2      & 0.5  & 1    & 1.5  & 0.5 &  0.5 &  0.5     &    sum(b3:g3)       & round(h3/(sum(h2:h7)),2)\\ \hline
+    @x3      & 0.5  & 0.5  & 1    & 0.5 &  0.5 &  0.5     &    sum(b4:g4)       & round(h4/(sum(h2:h7)),2)\\ \hline
+    @x4      & 1.5  & 1.5  & 1.5  & 1   &  1.5 &  1.5     &    sum(b5:g5)       & round(h5/(sum(h2:h7)),2)\\ \hline
+    @x5      & 1.5  & 1.5  & 1.5  & 0.5 &  1   &  1.5     &    sum(b6:g6)       & round(h6/(sum(h2:h7)),2)\\ \hline
+    @x6      & 1.5  & 1.5  & 1.5  & 0.5 &  0.5 &   1      &    sum(b7:g7)       & round(h7/(sum(h2:h7)),2)\\ \hline
+    \end{spreadtab}
+\end{center} 
+ 
+
+
+ 
+
+
+  \begin{center}
+    \begin{spreadtab}{{tabular}{|c|c|c|c|}}
+\hline%A                  B                   С       
+ @$\rho$        & @ I ітер ($\beta$)  &       & @$\sum$\\ \hline
+    1.14        & 0.15              &  a2*b2   &  \\ \hline
+    0.98        & 0.13                &  a3*b3  &  \\ \hline
+     0.79       & 0.1                 &  a4*b4   &  \\ \hline
+     1.36       & 0.24                 &  a5*b5 &    \\ \hline
+    1.33        & 0.21                &  a6*b6  &  \\ \hline
+    1.25        & 0.18                &  a7*b7  &   \\ \hline
+            &                       &  &  sum(c2:c7)    \\ \hline
+    \end{spreadtab}
+ \end{center}
+
+
+
+
+
+
+
+
+\[ K_{\text{р.я.}} = 1.2 \]
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

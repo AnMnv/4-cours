@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.4.22)  21 NOV 2021 20:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.4.22)  11 DEC 2021 18:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
 (c:/texlive/2021/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
-(c:/texlive/2021/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+(c:/texlive/2021/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
 \c@part=\count179
 \c@section=\count180
@@ -1460,12 +1460,12 @@ LaTeX Font Info:    ... okay on input line 26.
 * \topmargin=-52.36449pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=12.0pt
+* \topskip=10.0pt
 * \footskip=30.0pt
 * \marginparwidth=4.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1537,12 +1537,6 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
 (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 1502) in paragraph at lines 39--39
-\T2A/cmr/m/it/10.95 NTE. Это открыло новую область композитов пр создании котор
-ых используют
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 39--39
 
  []
@@ -1562,48 +1556,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--54
  []
 
 
-Underfull \hbox (badness 3514) in paragraph at lines 63--64
-\T2A/cmr/m/n/12 Some ma-te-ri-als which un-dergo NTE have
- []
-
-
-Underfull \hbox (badness 1960) in paragraph at lines 63--64
-\T2A/cmr/m/n/12 a range of po-ten-tial en-gi-neer-ing, pho-tonic,
- []
-
-
-Underfull \hbox (badness 1810) in paragraph at lines 63--64
-\T2A/cmr/m/n/12 com-pen-sator what might al-low for form-ing
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
- []
-
-
-Underfull \hbox (badness 1742) in paragraph at lines 65--66
-[]\T2A/cmr/m/n/12 Combining a ma-te-rial with pos-i-tive heat
- []
-
-
-Underfull \hbox (badness 1577) in paragraph at lines 65--66
-\T2A/cmr/m/n/12 ex-pan-sion of com-pos-ites or even to ob-tain
- []
-
-
-Underfull \hbox (badness 1275) in paragraph at lines 65--66
-\T2A/cmr/m/n/12 com-po-si-tions with warm ex-pan-sion close to
- []
-
-
-Underfull \hbox (badness 2080) in paragraph at lines 65--66
-\T2A/cmr/m/n/12 ther-mal ex-pan-sion will com-pen-sate for the
- []
-
-
-Underfull \hbox (badness 1142) in paragraph at lines 65--66
-\T2A/cmr/m/n/12 changes. Ad-just-ing the to-tal co-ef-fi-cient of
  []
 
 
@@ -1627,36 +1581,17 @@ ype jpg)
 Package pdftex.def Info: C:/Users/anmnm/Desktop/4-cours/DIPLOM/obzor/images//1.
 jpg  used on input line 75.
 (pdftex.def)             Requested size: 147.23196pt x 157.03171pt.
-[2
 
- <c:/Users/anmnm/Desktop/4-cours/DIPLOM/obzor/images//2.jpg>]
-Underfull \hbox (badness 1194) in paragraph at lines 80--81
-\T2A/cmr/m/n/12 parts re-main close to am-bi-ent tem-per-a-ture.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 80--81
+\T2A/cmr/m/n/10 high tem-per-a-ture gra-di-ents and rapid tem-per-a-ture
  []
 
 
-Underfull \hbox (badness 1264) in paragraph at lines 80--81
-\T2A/cmr/m/n/12 each other and the vol-ume of the ce-ramic
- []
-
-
-Underfull \hbox (badness 1527) in paragraph at lines 80--81
-\T2A/cmr/m/n/12 crack-ing is avoided.Materials with near-zero
- []
-
-
-Underfull \hbox (badness 2269) in paragraph at lines 80--81
-\T2A/cmr/m/n/12 pre-ci-sion in-stru-ments, since any change in
- []
-
-
-Underfull \hbox (badness 1502) in paragraph at lines 80--81
-\T2A/cmr/m/n/12 re-quired. Vit-ri-fied ce-ramic cook-tops, such
- []
-
-
-Underfull \hbox (badness 1194) in paragraph at lines 80--81
-\T2A/cmr/m/n/12 parts re-main close to am-bi-ent tem-per-a-ture.
+Underfull \hbox (badness 1033) in paragraph at lines 80--81
+\T2A/cmr/m/n/10 ex-pan-sion of the dif-fer-ent phases com-pen-sates each
  []
 
 
@@ -1664,60 +1599,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
+[2
+
+ <c:/Users/anmnm/Desktop/4-cours/DIPLOM/obzor/images//2.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+[][][]\T2A/cmr/m/n/10 Ostertag W, Fis-cher G R. and Williams
+ []
+
+
+Underfull \hbox (badness 6510) in paragraph at lines 109--110
+\T2A/cmr/m/n/10 J P. J. Am. Ce-ram. Soc. 1968;51:651. doi:
+ []
+
+
+Underfull \hbox (badness 2961) in paragraph at lines 111--112
+[][][]\T2A/cmr/m/n/10 Sleight A W. In-org. Chem. 1998;37:2854. doi:
+ []
+
 [3 <c:/Users/anmnm/Desktop/4-cours/DIPLOM/obzor/images//1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
-[][][]\T2A/cmr/m/n/12 Milberg M E. and Blair H D. J.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
-\T2A/cmr/m/n/12 Am. Ce-ram. Soc. 1977;60:372. doi:
- []
-
-
-Underfull \hbox (badness 5231) in paragraph at lines 106--108
-\T2A/cmr/m/n/12 and neg-a-tive ther-mal ex-pan-sion. Kiev,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
-[][][]\T2A/cmr/m/n/12 Gillery F H. and Bush E A. J.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
-\T2A/cmr/m/n/12 Am. Ce-ram. Soc. 1959;42:175. doi:
- []
-
-[4
-
-] (./OOOOOOOOOOOOOOO.aux)
+(./OOOOOOOOOOOOOOO.aux)
 Package rerunfilecheck Info: File `OOOOOOOOOOOOOOO.out' has not changed.
 (rerunfilecheck)             Checksum: 140EEBAC13329E743D539588854738BB;373.
  ) 
 Here is how much of TeX's memory you used:
- 32778 strings out of 478994
- 640858 string characters out of 5862207
- 1212480 words of memory out of 5000000
- 49610 multiletter control sequences out of 15000+600000
- 418842 words of font info for 66 fonts, out of 8000000 for 9000
+ 32777 strings out of 478994
+ 640796 string characters out of 5862207
+ 1216459 words of memory out of 5000000
+ 49608 multiletter control sequences out of 15000+600000
+ 417922 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,8n,119p,1909b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}<c:/tex
-live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/
-cm-super/sfbx1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/s
-fbx1728.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pf
-b><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texl
-ive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2021/t
-exmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2021/texmf-dist/
-fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on OOOOOOOOOOOOOOO.pdf (4 pages, 206591 bytes).
+live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/
+cm-super/sfbx1000.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/s
+fbx1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pf
+b><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texl
+ive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2021/t
+exmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2021/texmf-dist/
+fonts/type1/public/cm-super/sfti0900.pfb>
+Output written on OOOOOOOOOOOOOOO.pdf (3 pages, 208698 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
- 120 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
+ 151 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
  143 words of extra memory for PDF output out of 10000 (max. 10000000)
 

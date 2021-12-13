@@ -1,0 +1,4 @@
+\babel@toc {ukrainian}{}
+\contentsline {chapter}{\numberline {1}ЗАВДАННЯ }{2}{chapter.1}%
+\contentsline {chapter}{\numberline {2} ТАБЛИЦЯ СТАНIВ }{4}{chapter.2}%
+\contentsline {chapter}{\numberline {3} Результати }{6}{chapter.3}%

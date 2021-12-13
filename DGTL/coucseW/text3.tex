@@ -1,0 +1,276 @@
+\documentclass[a4paper,14pt]{extreport}
+\usepackage[left=1.5cm,right=1.5cm,
+    top=1.5cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\usepackage{diagbox}
+\usepackage{nicematrix,tikz}
+\usetikzlibrary{fit}
+
+\input{preambula.tex}
+
+\begin{document}
+\renewcommand{\bibname}{Список використаної літератури}% -- переименуем название списка литературы
+\begin{titlepage}
+  \begin{center}
+  {\large МІНІСТЕРСТВО ОСВІТИ І НАУКИ УКРАЇНИ}\\[0.2cm]
+{\large НАЦІОНАЛЬНИЙ ТЕХНІЧНИЙ УНІВЕРСИТЕТ УКРАЇНИ}\\[0.2cm]
+ {\large <<КИЇВСЬКИЙ ПОЛІТЕХНІЧНИЙ ІНСТИТУТ>>}
+
+\vspace{1cm}
+  {\large Факультет Електроніки}\\[0.3cm]
+
+  {\large Кафедра мікроелектроніки}
+  
+\vspace{2cm}
+  {\Large КУРСОВИЙ ПРОЕКТ (РОБОТА)} \\
+  {\large з дисципліни: <<Схемотехніка-3>>}\\[1cm]
+    
+\bigskip
+  \end{center}
+  
+
+
+\begin{center}
+\begin{tabular}{ll}
+Керівник:&\hspace{1cm}Виконав:\\[0.2cm]
+Ніколов Микола Олександрович&\hspace{1cm}Студент 4-го курсу, групи ДП-82\\[0.5cm]
+“Допущений до захисту”&\hspace{1cm} Мнацаканов Антон Станіславович\\[0.5cm]
+$\underset{\text{(особистий підпис керівника)}}{\underline{\hspace{0.433\textwidth}}}$&\hspace{1cm}Залікова книжка № $\underset{}{\underline{\hspace{0.15\textwidth}}}$\\[0.5cm]
+Захищений з оцінкою $\underset{\text{(особистий підпис)}}{\underline{\hspace{0.15\textwidth}}}$&\text{}\\[0.5cm]
+$\underset{\text{(особистий підпис)(ПІБ)}}{\underline{\hspace{0.433\textwidth}}}$ &\text{}\\[0.5cm]
+$\underset{\text{(особистий підпис)(ПІБ)}}{\underline{\hspace{0.433\textwidth}}}$ &\text{}\\[0.5cm]
+$\underset{\text{(особистий підпис)(ПІБ)}}{\underline{\hspace{0.433\textwidth}}}$&\text{}
+\end{tabular}
+\end{center}
+
+\vfill
+
+\begin{center}
+Київ – 2021
+\end{center}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{ЗАВДАННЯ }
+  %\section{Подраздел}
+  \begin{enumerate}
+  \item  Вибрати тип тригерів відповідно до варіанта.
+\item Побудувати таблицю станів згідно з варіантом.
+\item Синтезувати лічильник згідно з таблицею станів. Забезпечити встановлення початкового стану за зовнішнім сигналом СКИДАННЯ (активний рівень «1»). Полярність сигналу синхронізації вибрати згідно з таблицею 3.
+\item Розробити важливу електричну схему лічильника.
+\item Провести аналіз роботи розробленої схеми, відобразити послідовності логічних рівнів кожного такту на виходах лічильника і виходах комбінаційних логічних елементів схеми.
+\item Побудувати часові діаграми, що відображають роботу лічильника з урахуванням затримок (проілюструвати всю лічильну послідовність).
+  \end{enumerate}
+Моя послідовність: 7 8 9 10 11 12 13 1 15 0 14 2 3 4 5 6.\\ 
+
+Згенерована послідовність містить 16 цифр, тому коефіцієнт $\text{К}_{\text{сч}} = 16$. Формула для розрахунку тригерів n, необхідна для синтезу лічильника є ніщо інше як двійковий логарифм $\text{К}_{\text{сч}}$, округлена в більшу сторону:
+
+\begin{equation}
+n = \log_2\text{К}_{\text{сч}}.
+\end{equation}
+
+З цієї рівності видно, що для синтезу лічильника нам знадобиться 4 тригери.
+Для підвищення швидкодії цифрового пристрою буде використовуватись синхронний паралельний лічильник, тобто він матиме одну спільну для всіх шину синхронізації, тому тригери будуть перемикатись синхронно по передньому фронту генератора лічильних імпульсів, як вказано в умові.\\
+
+
+
+ Для правильної роботи синхронного паралельного лічильника на всі синхровходи потрібно одночасно подавати синхроімпульс. На JK входи першого розряду потрібно подавати логічну одиницю, для цього ми буде використовувати джерело напруги (VCC). На JK входи другого розряду потрібно подати прямий вихід тригера першого розряду. На JK входи наступних розрядів потрібно подавати кон'юнкцію прямих виходів тригерів попередніх розрядів.
+
+\begin{figure}[h!]
+\img{0.7}{qwe.pdf}{Прототип лічильника}{s2}
+\end{figure}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{  ТАБЛИЦЯ СТАНIВ   }
+\begin{table}[h!]
+
+\begin{center}
+
+
+\begin{tabular}{c|ccccc|ccccc|c}
+K && $Q_{3}$ & $Q_{2}$ & $Q_{1}$ & $Q_{0}$ & $  y_{3}$ & $y_{2}$ & $y_{1}  $ & $y_{0}$& K\\
+ 0 && 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1   &&7 \\
+1 && 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 &&  8  \\
+2 && 0 & 0 & 1 & 0 & 1 & 0 & 0 & 1 &&  9  \\
+3 && 0 & 0 & 1 & 1 & 1 & 0 & 1 & 0 &&  10 \\
+4 && 0 & 1 & 0 & 0 & 1 & 0 & 1 & 1 &&  11 \\
+5 && 0 & 1 & 0 & 1 & 1 & 1 & 0 & 0 &&  12 \\
+6 && 0 & 1 & 1 & 0 & 1 & 1 & 0 & 1 &&  13 \\
+7 && 0 & 1 & 1 & 1 & 0 & 0 & 0 & 1 &&  1  \\
+8 && 1 & 0 & 0 & 0 & 1 & 1 & 1 & 1 &&  15 \\
+9 && 1 & 0 & 0 & 1 & 0 & 0 & 0 & 0 &&  0  \\
+10&& 1 & 0 & 1 & 0 & 1 & 1 & 1 & 0 &&  14 \\
+11&& 1 & 0 & 1 & 1 & 0 & 0 & 1 & 0 &&  2  \\
+12&& 1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 &&  3  \\
+13&& 1 & 1 & 0 & 1 & 0 & 1 & 0 & 0 &&  4  \\
+14&& 1 & 1 & 1 & 0 & 0 & 1 & 0 & 1 &&  5  \\
+15&& 1 & 1 & 1 & 1 & 0 & 1 & 1 & 0 &&  6  \\
+\end{tabular}
+
+\caption{Таблиця істинності }
+\end{center}
+\end{table}
+\vspace{1cm}
+Будуємо по цій таблиці карти Карно.\\ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      1        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{minipage}[h!]{0.4\linewidth} 
+    $y_0$ \fcolorbox{red}{white}{I}, \fcolorbox{green}{white}{II}, \fcolorbox{blue}{white}{III}, \fcolorbox{black}{white}{IV} \\[0.2 cm]
+   \begin{NiceTabular}{|p{1.2cm}|cccc|}
+  \hline
+   \diagbox{\footnotesize{$Q_3 Q_2$}}{\footnotesize{$Q_1 Q_0$}} & 00 & 01 & 00 & 10  \\\hline
+               00                                               &     & 0  &  0  &\\
+               01                                               &     & 0  &     &\\
+               11                                               &     & 0  &  0  &\\
+               10                                               &     & 0  &  0  & 0 \\ \hline
+
+  \CodeAfter 
+    \tikz \node [draw=red,rounded corners,fit=(5-4)(5-5)] {} ; %1
+    \tikz \node [draw=green,rounded corners,fit=(2-3)(2-4)] {} ; %2
+    \tikz \node [draw=blue,rounded corners,fit=(4-3)(5-4)] {} ; %3
+    \tikz \node [draw=black,rounded corners,fit=(2-3)(5-3)] {} ; %4
+
+  \end{NiceTabular}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[m]{0.4\linewidth}
+  \begin{align*}
+  y_0 &= (\bar Q_3 +Q_2+\bar Q_1)\times  \\
+  &\times (Q_2+\bar Q_0)\times (\bar Q_3 +\bar Q_0)\times \\ 
+   & \times(Q_1 + \bar Q_0)
+  \end{align*}
+  \end{minipage}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      2        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{minipage}[h!]{0.5\linewidth} 
+    $y_1$ \fcolorbox{red}{white}{I}, \fcolorbox{green}{white}{II}, \fcolorbox{blue}{white}{III}, \fcolorbox{black}{white}{IV} \\[0.2 cm]
+   \begin{NiceTabular}{|p{1.2cm}|cccc|}
+  \hline
+   \diagbox{\footnotesize{$Q_3 Q_2$}}{\footnotesize{$Q_1 Q_0$}} & 00 & 01 & 00  & 10  \\\hline
+               00                                               &     & 0  &    & 0\\
+               01                                               &     & 0  &  0 & 0\\
+               11                                               &     & 0  &    & 0\\
+               10                                               &     & 0  &    & 0 \\ \hline
+
+  \CodeAfter 
+    \tikz \node [draw=red,rounded corners,fit=(3-5)(4-5)] {} ; %1
+    \tikz \node [draw=green,rounded corners,fit=(2-5)(3-5)] {} ; %2
+    \tikz \node [draw=blue,rounded corners,fit=(3-4)(3-5)] {} ; %3
+    \tikz \node [draw=black,rounded corners,fit=(2-3)(5-3)] {} ; %4
+
+  \end{NiceTabular}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[m]{0.4\linewidth}
+  \begin{align*}
+  y_0 &= (\bar Q_1 +Q_0+\bar Q_2)\times  \\
+  &\times (\bar Q_1+Q_0+Q_3)\times (  Q_3 +\bar Q_2 + Q_1)\times  \\ 
+  &\times(Q_1 + \bar Q_0)
+  \end{align*}
+  \end{minipage}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      3        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{minipage}[h!]{0.4\linewidth} 
+    $y_2$ \fcolorbox{red}{white}{I}, \fcolorbox{green}{white}{II}, \fcolorbox{blue}{white}{III}, \fcolorbox{black}{white}{IV} \\[0.2 cm]
+   \begin{NiceTabular}{|p{1.2cm}|cccc|}
+  \hline
+   \diagbox{\footnotesize{$Q_3 Q_2$}}{\footnotesize{$Q_1 Q_0$}} & 00 & 01 & 00  & 10  \\\hline
+               00                                               &     & 0  & 0   & 0\\
+               01                                               &  0   &   &  0 &  \\
+               11                                               &  0   &   &    &  \\
+               10                                               &     & 0  &  0  &  \\ \hline
+
+  \CodeAfter 
+    \tikz \node [draw=red,rounded corners,fit=(2-4)(2-5)] {} ; %1
+    \tikz \node [draw=green,rounded corners,fit=(2-4)(3-4)] {} ; %2
+    \tikz \node [draw=blue,rounded corners,fit=(3-2)(4-2)] {} ; %3
+    \tikz \node [draw=black,rounded corners,fit=(2-3)(2-4)] {} ; %4
+    \tikz \node [draw=black,rounded corners,fit=(5-3)(5-4)] {} ; %4
+
+  \end{NiceTabular}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[m]{0.4\linewidth}
+  \begin{align*}
+  y_0 &= (  Q_3 + Q_2 + \bar Q_1)\times  \\
+  &\times (\bar Q_1+\bar Q_0+Q_3)\times (  Q_1 + Q_0 + \bar Q_2)\times \\ 
+  & \times(\bar Q_0 +Q_2 )
+  \end{align*}
+  \end{minipage}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      4        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{minipage}[h!]{0.4\linewidth} 
+    $y_3$ \fcolorbox{red}{white}{I}, \fcolorbox{green}{white}{II}, \fcolorbox{blue}{white}{III}, \fcolorbox{black}{white}{IV} \\[0.2 cm]
+   \begin{NiceTabular}{|p{1.2cm}|cccc|}
+  \hline
+   \diagbox{\footnotesize{$Q_3 Q_2$}}{\footnotesize{$Q_1 Q_0$}} & 00  & 01  & 00  & 10  \\\hline
+               00                                               &  0   &    &     & \\
+               01                                               &      &    &  0  &  \\
+               11                                               &  0   & 0  &  0  & 0 \\
+               10                                               &      & 0  &  0  &  \\ \hline
+
+  \CodeAfter 
+    \tikz \node [draw=red,rounded corners,fit=(2-2)] {} ; %1
+    \tikz \node [draw=green,rounded corners,fit=(4-2)(4-5)] {} ; %2
+    \tikz \node [draw=blue,rounded corners,fit=(3-4)(4-4)] {} ; %3
+    \tikz \node [draw=black,rounded corners,fit=(4-3)(5-4)] {} ; %4
+
+
+  \end{NiceTabular}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[m]{0.6\linewidth}
+  \begin{align*}
+  y_0 &= (  Q_3 + Q_2 +   Q_1 + Q_0)\times  \\
+  &\times (\bar Q_3+\bar Q_2)\times (  \bar Q_2 + \bar Q_1 + \bar Q_0) \times \\
+  & \times(\bar Q_3 + \bar Q_0 )
+  \end{align*}
+  \end{minipage}
+
+
+
+
+
+\chapter{  Результати   }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+Проведемо короткий аналіз отриманий залежностей. Основною елементною базою в нас виступатимуть диз'юнктори. Лише для розряду у3 нам знадобиться один чОтрирьохвходовий диз'юнктор, а так вцілому у нас для кожного тригера число пінів для диз'юнктора не перевищує трьох. Натомість для кожного розряду нам знадобиться по одному чотирьохвходовому кон'юнктору. Звісно це трохи громіздко, але варто зазначити, що деякі множники розрядів в нас повторюються, тому ми можемо не городити зайвий раз логічні вентилі, що безумовно нівелює недолік з чотриривходовими кон'юнкторами.
+
+\begin{figure}[h!]
+\img{0.9}{sxema.png}{Електрична схема лічильника}{s1}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{thebibliography}{9}
+///
+ 
+\end{thebibliography}
+
+
+
+
+
+
+%\chapter{   ДОДАТОК А  }
+
+
+
+\end{document}
