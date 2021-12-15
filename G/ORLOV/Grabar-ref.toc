@@ -1,0 +1,2 @@
+\babel@toc {ukrainian}{}
+\contentsline {chapter}{\numberline {1}ВСТУП}{3}{chapter.1}%

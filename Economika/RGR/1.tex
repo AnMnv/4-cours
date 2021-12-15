@@ -106,7 +106,7 @@
     \item Яскравiсть дисплея \dotfill 400кд
     \item Дiагональ \dotfill 20 inch
     \end{itemize}
-    Ціна за базовий виріб 19 500 грн.
+    Ціна за базовий виріб 22 000 грн.
 
 
 
@@ -251,7 +251,6 @@
 
 
 
-
     Розрахунок вагомості (пріоритетності) кожного параметра $\varphi_{i}$ проводимо за наступними формулами:
     $$
     \varphi_{i}=\frac{b_{i}}{\sum_{i=1}^{n} b_{i}}=\sum_{i=1}^{n} a_{i j}
@@ -386,52 +385,126 @@
     калькуляції, являє повну собівартість продукції.
 
  
-\begin{equation}
-C_{\text{з.г}}. = n_{\text{п.в}}\cdot C_{\text{з.o}} =  0.03\cdot  14319.03  = 429.57 \text{ грн}
-\end{equation}
+    \begin{equation}
+    C_{\text{з.г}}. = n_{\text{п.в}}\cdot C_{\text{з.o}} =  0.03\cdot  14319.03  = 429.57 \text{ грн}
+    \end{equation}
 
-\begin{figure}
- \centering
- \begin{tikzpicture}
- 
-\pie[
-    color = {
-        yellow!90!black, 
-        green!60!black, 
-        blue!60, 
-        red!70,
-        gray!70,
-        teal!20,
-        orange!50,
-        pink!90},
-    text = legend
-]
-{93.0/Bитрати на матеріали (93\%),
-    3.6/Bитрати на покупні вироби(3.6\%),
-    0.05/Основна зп (0.05\%),
-    0.018/Додаткова зп (0.018\%),
-    0.011/Відрахування на соціальне страхування (0.011\%),
-    0.01/Загальновиробничі витрати (0.01\%),
-    0.06/Адміністративні витрати (0.06\%),
-    2.3/Комерційні витрати (2.3\%)}
- 
-\end{tikzpicture}
-\caption{Калькуляція собівартості виробу.}
-\end{figure}
-
-
-\begin{itemize}
-\item Виробнича собівартість = 14 319.03
-\item Повна собівартість = 14 343.04
-\end{itemize}
+    \begin{figure}
+     \centering
+     \begin{tikzpicture}
+     
+    \pie[
+        color = {
+            yellow!90!black, 
+            green!60!black, 
+            blue!60, 
+            red!70,
+            gray!70,
+            teal!20,
+            orange!50,
+            pink!90},
+        text = legend
+    ]
+    {93.0/Bитрати на матеріали (93\%),
+        3.6/Bитрати на покупні вироби(3.6\%),
+        0.05/Основна зп (0.05\%),
+        0.018/Додаткова зп (0.018\%),
+        0.011/Відрахування на соціальне страхування (0.011\%),
+        0.01/Загальновиробничі витрати (0.01\%),
+        0.06/Адміністративні витрати (0.06\%),
+        2.3/Комерційні витрати (2.3\%)}
+     
+    \end{tikzpicture}
+    \caption{Калькуляція собівартості виробу.}
+    \end{figure}
 
 
- 
- 
- 
+    \begin{itemize}
+    \item Виробнича собівартість = 14 319.03
+    \item Повна собівартість = 14 343.04
+    \end{itemize}
+
 
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{ВИЗНАЧЕННЯ ЦІНИ ВИРОБУ}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ Серед різних методів ціноутворення на ранніх стадіях проектування досить поширений метод лімітних цін. При цьому визначається верхня і нижня межа ціни.
+
+ \section{Визначення нижньої межі ціни}
+ Нижня межа ціни ( Ц$_{H.M.}$ ) захищає інтереси виробника продукції і
+передбачає, що ціна повинна покрити витрати виробника, пов’язані з
+виробництвом і реалізацією продукції, і забезпечити рівень рентабельності не нижче тієї, що має підприємство при виробництві вже освоєної продукції:
+
+\[\text{Ц}_{\text{H. M.}}=\text{Ц}_{\text{ОПТ. П.}} \cdot\left(1+\frac{\alpha_{\text{ПДВ}}}{100}\right)\]
+\[\text{Ц}_{\text{ОПТ. П.}}=\text{С}_{\text{ПОВ.}} \cdot\left(1+\frac{P_{\text {Н}}}{100}\right)\]
+де $\text{Ц}_{\text{ОПТ. П.}}$ - оптова ціна підприємства, грн; $C_{\text {пов }}$ - повна собівартість виробу, грн; $P_{H}$ - нормативний рівень рентабельності, $\%\left(P_{H}=20 \%\right) ; \alpha_{\text {пдв }}$-податок на додану вартість, \% $\left(\alpha_{\text {Пдв }}=20 \%\right) ;$ Тоді маємо:
+ 
+ \FPset\cpovna{14 343.04}
+ \FPset\koef{1.2}
+
+ \FPmul\copt\cpovna\koef
+ \FPeval\copt{round(\copt:2)}
+
+ \FPmul\cnm\copt\koef
+ \FPeval\cnm{round(\cnm:2)}
+\begin{align*}
+&\text{Ц}_{\text{H. M.}}= 14 343.04 \cdot\left(1+\frac{20}{100}\right)=\copt  \text{ грн} \\
+&\text{Ц}_{\text{ОПТ. П.}}=\copt \cdot\left(1+\frac{20}{100}\right)= \cnm \text{ грн}
+\end{align*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Визначення нижньої межі ціни}
+Верхня межа ціни ($\text{Ц}_{\text{B. M.}}$) захищає інтереси споживача і визначається тією
+ціною, що споживач готовий заплатити за продукцію з кращою споживчою якістю.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Визначення договірної ціни}
+Договірну ціну ( $\text{Ц}_{\text{ДОГ}}$  ) встановлюємо за домовленістю між виробником та
+споживачем в інтервалі між нижньою та верхньою лімітними цінами.
+
+\[\text{Ц}_{\text{HM}}  < \text{Ц}_{\text{ДОГ}} < \text{Ц}_{\text{ВМ}} \]
+
+В нашому випадку: 20653 < $\text{Ц}_{\text{ДОГ}}$ < 22000 . Приймаємо договірну ціну нового
+виробу $\text{Ц}_{\text{ДОГ}}$ =  21300грн.
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Визначення мінімального обсягу виробництва продукції}
+Собівартість річного випуску продукції:
+\[ C_P = a\cdot \text{C}_{\text{ПOB.}} \cdot Q + b\cdot \text{C}_{\text{ПOB.}} \cdot \chi\]
+де С ПОВ – повна собівартість одиниці продукції, грн; a, b – відповідно змінні та
+умовно-постійні витрати у склад собівартості одиниці продукції ( а = 0,91; b = 0, 09 );
+$\chi$ – розрахункова виробнича потужність підприємства з випуску продукції шт./рік
+( $\chi = $ 7000шт./рік ); Q – річний обсяг випуску продукції, шт./рік ( Q = 5000шт./рік ).\\ 
+Тоді маємо:
+
+\[ C_P = a\cdot \text{C}_{\text{ПOB.}} \cdot Q + b\cdot \text{C}_{\text{ПOB.}} \cdot \chi = 74 296 740.0 \text{ грн}\]
+
+Вартість річного випуску продукції:
+
+\[ Q_P = \text{Ц}_{\text{ДОГ}} \cdot Q =  106 500 000\]
+
+Визначимо при якому обсязі продукції ( $Q_1$ ) виторг від реалізації продукції та
+її собівартість співпадають (прибуток дорівнює 0), що відповідає точці
+беззбитковості виробництва:
+\[ Q_1 = \dfrac{b\cdot \text{C}_{\text{ПOB.}} \cdot \chi}{\text{Ц}_{\text{ДОГ}}-a\cdot \text{C}_{\text{ПOB.}}}  = 1300 \text{ шт }\]
+
+Визначимо при якому обсязі продукції ( $Q_2$ ) буде досягнуто запланований
+рівень рентабельності:
+
+\[ Q_2 = \dfrac{b\cdot \text{C}_{\text{ПOB.}} \cdot \chi \cdot \left(1+\dfrac{P_H}{100}\right)}{\text{Ц}_{\text{ДОГ}   }-a\cdot \text{C}_{\text{ПOB.}} \cdot \left(1+\dfrac{P_H}{100}\right)}  = 2652 \text{ шт }\]\
+
+Річний прибуток при досягненні запланованого рівня рентабельності
+складає:
+
+\[ \text{П} = (\text{Ц}_{\text{ДОГ}} - \text{C}_{\text{ПOB.}})\cdot Q_{2} = 18 455 554.32 \text{грн}\]
+
+\begin{figure}[h!]
+\centering
+\img{0.9}{1111.png}{Визначення мінімального обсягу виробництва.}{}
+\end{figure}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -463,154 +536,22 @@ C_{\text{з.г}}. = n_{\text{п.в}}\cdot C_{\text{з.o}} =  0.03\cdot  14319.03
 
 
 \begin{center}
-\xmybox[green]{ МОНОБЛОК }
+\xmybox[green]{ ВИСНОВОК }
 \end{center}
+В даній розрахунково-графічній роботі обґрунтовано доцільність
+виробництва та виходу на ринок цифрового вимірювача температури, розраховано
+його собівартість, що складає 14 343 грн. З калькуляції видно, що 93\%
+собівартості становлять витрати на матеріали, покупні вироби та напівфабрикати.
+Їх можна скоротити за рахунок вибору оптимальних за ціною постачальників з
+оптовими цінами. А 3,6\% собівартості становлять витрати на покупнi вироби. Щоб оптимізувати витрати за цією
+складовою, варто автоматизувати виробництво, що скоротить витрати на ЗП та
+соціальні внески.\\ 
 
-\begin{center}
-\xmybox[red]{1. Аналіз ринку}
-\end{center}
-
-\begin{center}
-\xmybox[red]{2. Оцінка конкурентноспроможності}
-\end{center}
- 
-\[ K = \sum_{i=1}^{n} k_{\text{в}_i} + \rho, \]
-де $k_{\text{в}_i}$ -- коефіцієнт вагомості параметрів, a $\rho$ -- відносний показник якості.\\ 
-
-Відносні показники якості\\
-
- 
-
-
- 
-\begin{center}
-    \begin{spreadtab}{{tabular}{|l|c|c|c|}}
-    \hline%     A                             B           С            D
-    @Показник                           &@ Варіант   & @Варіант   & @$\rho$ \\ \hline
-                                        & @базовий   & @новий     &      \\ \hline
-    1) @Вага \hfill [кг]               &   4        &   3.5      &  round(b3/c3,2)    \\ \hline
-    2) @Діагональ\hfill [inch]         &    20      &  19.5      &  round(c4/b4,2)    \\ \hline
-    3) @Процесор \hfill [ГГц]          &    2.8     &   2.2      &  round(c5/b5,2)   \\ \hline
-    4) @Відеокарта\hfill [Тф]          &    2.2     &   3        &  round(c6/b6,2)   \\ \hline
-    5) @ОЗУ\hfill [Гб]                 &     12     &   16       &  round(c7/b7,2)   \\ \hline
-    6) @Яскравість дисплея \hfill [кд]  & 400        &   500      &  round(c8/b8,2)     \\ \hline
-    \end{spreadtab}
-\end{center} 
-
- 
- \begin{table}[ht]
- 
-\caption{Результат оцінки параметрів}
- \begin{center}
-    \begin{spreadtab}{{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}}
-    \hline%  A     B     С    D     e   f    g     h               i                j                              k
-                  & 1  & 2  & 3  & 4 &  5 &   6 &  7 & @$\sum \text{рівнів}$& @$\triangle$           &  @$\triangle^2$\\ \hline
-    @x1           & 5  & 4  & 4  & 5 &  6 & 5  &  6 & sum(b2:h2)               &   round( i2-(sum(i2:i7)/6),2) & j2*j2\\ \hline
-    @x2           & 6  & 6  & 5  & 3 &  4 &  4 &  4 &sum(b3:h3)                &    round(i3-(sum(i2:i7)/6),2)  & j3*j3\\ \hline
-    @x3           & 4  & 5  & 6  & 6 &  5 &  6 &  5 &sum(b4:h4)                &    round(i4-(sum(i2:i7)/6),2)  & j4*j4\\ \hline
-    @x4           & 1  & 2  & 1  & 1 &  1 &  3 &  1 &sum(b5:h5)                &    round(i5-(sum(i2:i7)/6),2)  & j5*j5\\ \hline
-    @x5           & 3  & 3  & 2  & 2 &  2 &  2 &  3 &sum(b6:h6)                &    round(i6-(sum(i2:i7)/6),2)  & j6*j6\\ \hline
-    @x6           & 2  & 1  & 3  & 4 &  3 &  1 &  2 &sum(b7:h7)                &    round(i7-(sum(i2:i7)/6),2)  & j7*j7\\ \hline
-                  &    &    &    &   &    &    &    &  sum(i2:i7)              &                                & sum(k2:k7) \\ \hline
-    \end{spreadtab}
-\end{center} 
- \end{table}
-
-
-
-
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
-\begin{table}[h]
-\begin{center}
-\caption{Попарне зрівняння параметрів}
-\begin{tabular}{|c|ccccccc|c|c|}
-\hline
-\multirow{2}{*}{} & \multicolumn{7}{c|}{Експерт}                                                                                                                            & \multirow{2}{*}{Підсумкова оцінка} & \multirow{2}{*}{Числове значення} \\ \cline{2-8}
-                  & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{2} & \multicolumn{1}{c|}{3} & \multicolumn{1}{c|}{4} & \multicolumn{1}{c|}{5} & \multicolumn{1}{c|}{6} & 7 &                                    &                                   \\ \hline
-x1 vs  x2         & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
-x1 vs x3          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & < & >                                  & 1.5                               \\ \hline
-x1 vs x4          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
-x1 vs x5          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
-x1 vs x6          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0,5                               \\ \hline
-x2 vs x3          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & > & >                                  & 1.5                               \\ \hline
-x2 vs x4          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
-x2 vs x5          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
-x2 vs x6          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
-x3 vs x4          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
-x3 vs x5          & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & < & >                                  & 1.5                               \\ \hline
-x3 vs x6          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
-x4 vs x5          & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & < & >                                  & 1.5                               \\ \hline
-x4 vs x6          & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & > & >                                  & 1.5                               \\ \hline
-x5 vs x6          & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{<} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{>} & \multicolumn{1}{c|}{<} & < & <                                  & 0.5                               \\ \hline
-\end{tabular}
-\end{center} 
-\end{table}
-
-
- 
-
-
- \begin{center}
-    \begin{spreadtab}{{tabular}{|l|c|c|c|c|c|c|c|c|}}
-\hline%A       B       С      D     e      f       g               h                     i
-             & @x1  & @x2  & @x3  &@x4  &@x5   &   @x6    & @I ітер             &  @ II ітер ($\beta$) \\ \hline
-    @x1      & 1    & 1.5  & 1.5  & 0.5 &  0.5 &  0.5     &    sum(b2:g2)       & round(h2/(sum(h2:h7)),2)\\ \hline
-    @x2      & 0.5  & 1    & 1.5  & 0.5 &  0.5 &  0.5     &    sum(b3:g3)       & round(h3/(sum(h2:h7)),2)\\ \hline
-    @x3      & 0.5  & 0.5  & 1    & 0.5 &  0.5 &  0.5     &    sum(b4:g4)       & round(h4/(sum(h2:h7)),2)\\ \hline
-    @x4      & 1.5  & 1.5  & 1.5  & 1   &  1.5 &  1.5     &    sum(b5:g5)       & round(h5/(sum(h2:h7)),2)\\ \hline
-    @x5      & 1.5  & 1.5  & 1.5  & 0.5 &  1   &  1.5     &    sum(b6:g6)       & round(h6/(sum(h2:h7)),2)\\ \hline
-    @x6      & 1.5  & 1.5  & 1.5  & 0.5 &  0.5 &   1      &    sum(b7:g7)       & round(h7/(sum(h2:h7)),2)\\ \hline
-    \end{spreadtab}
-\end{center} 
- 
-
-
- 
-
-
-  \begin{center}
-    \begin{spreadtab}{{tabular}{|c|c|c|c|}}
-\hline%A                  B                   С       
- @$\rho$        & @ I ітер ($\beta$)  &       & @$\sum$\\ \hline
-    1.14        & 0.15              &  a2*b2   &  \\ \hline
-    0.98        & 0.13                &  a3*b3  &  \\ \hline
-     0.79       & 0.1                 &  a4*b4   &  \\ \hline
-     1.36       & 0.24                 &  a5*b5 &    \\ \hline
-    1.33        & 0.21                &  a6*b6  &  \\ \hline
-    1.25        & 0.18                &  a7*b7  &   \\ \hline
-            &                       &  &  sum(c2:c7)    \\ \hline
-    \end{spreadtab}
- \end{center}
-
-
-
-
-
-
-
-
-\[ K_{\text{р.я.}} = 1.2 \]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Була встановлена ціна кінцевого пристрою, а саме 22 000 грн за шт., що є досить розумною
+ціною на ринку. Якщо порівнювати з базовою ціною подібного пристрою, то як
+бачимо, різниця становить 700 грн. Згідно з законом попиту, менша ціна сприяє
+більшому попиту, тому наш виріб буде користуватися попитом та складатиме
+значну конкуренцію на ринку.
 
 
 

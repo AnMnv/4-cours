@@ -1,0 +1,169 @@
+\documentclass[a4paper,14pt]{extreport}
+  \usepackage[left=1.5cm,right=1.5cm,
+      top=1.5cm,bottom=2cm,bindingoffset=0cm]{geometry}
+  \usepackage{scrextend}
+  \usepackage[T1,T2A]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage[english,russian,ukrainian]{babel}
+  \usepackage{tabularx}
+  \usepackage{amssymb}
+  \usepackage{color}
+  \usepackage{amsmath}
+  \usepackage{mathrsfs}
+  \usepackage{listings}
+  \usepackage{graphicx}
+  \usepackage{xcolor}
+  \usepackage{hyperref}
+
+  
+
+
+
+  
+  
+%}
+
+\newcommand{\img}[4]{\center{\includegraphics[width=#1\linewidth]{#2}}\captionof{figure}{#3}\label{#4}}
+\begin{document}
+  \pagecolor{white}
+
+  %----------------------------------------1
+\begin{titlepage}
+    \begin{center}
+    \large
+    Національний технічний університет України \\ "Київський політехнічний інститут імені Ігоря Сікорського"
+
+
+    Факультет Електроніки
+
+    Кафедра мікроелектроніки
+    \vfill
+
+    \textsc{ЗВІТ}\\
+
+    {\Large Про виконання лабораторної роботи\\
+    з дисципліни: «Мікропроцесори та мікроконтролери»\\[1cm]
+
+    %Резистивні сенсори температури
+
+
+    }
+    \bigskip
+    \end{center}
+    \vfill
+
+    \newlength{\ML}
+    \settowidth{\ML}{«\underline{\hspace{0.4cm}}» \underline{\hspace{2cm}}}
+    \hfill
+    \begin{minipage}{1\textwidth}
+    Виконавець:\\
+    Студент 4-го курсу \hspace{4cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm}Б.\,В.~Лищенко\\
+    \vspace{1cm}
+
+    Перевірив: \hspace{6.1cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm} Татарчук Д. Д.\\
+
+    \end{minipage}
+
+    \vfill
+
+    \begin{center}
+    2021
+    \end{center}
+\end{titlepage}
+
+
+
+\newpage
+\setcounter{page}{2}
+
+\begin{center}  Коди які були використаны в ході цієї лабораторної роботи\end{center}
+
+
+
+\begin{center}  І\end{center}
+
+
+
+\begin{verbatim}
+
+int but_prev = 0;
+int but_cur = 0;
+int a = 0;
+
+while (1)
+    {
+        
+        but_cur = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0);
+        
+
+        if ( (but_prev == 0) && (but_cur != 0) )
+            {    
+
+                a=a+1;
+                switch (a)
+                    {
+                        case 1:
+                            HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_6);
+                            HAL_Delay(2000);
+                            break;
+
+                        case 2:
+                            HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_6);
+                            HAL_Delay(3000);
+                            break;
+
+                        case 3:
+                            a=0;
+                            break;
+                    }
+            }
+        else
+            {      
+                switch (a)
+                    {
+                        case 0:
+                            HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_5);
+                            HAL_Delay(1000);
+                            break;
+
+                        case 1:
+                            HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_5);
+                            HAL_Delay(2000);
+                            break;
+
+                        case 2:
+                            HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_5);
+                            HAL_Delay(3000);                            
+                            break;
+                    }
+            }
+                but_prev = but_cur;    }
+\end{verbatim}
+
+
+\begin{center}  ІІ\end{center}
+
+\begin{verbatim}
+void StartGreen ( void const * argument )
+ {
+     for (;;)
+         {
+         HAL_GPIO_TogglePin ( GPIOC , GPIO_PIN_5 ) ;
+         osDelay (100) ;
+         }}
+ 
+ void StartBlue ( void const * argument )
+{
+for (;;)
+        {
+        HAL_GPIO_TogglePin ( GPIOB , GPIO_PIN_6 ) ;
+        osDelay (300) ;
+        }}
+\end{verbatim}
+
+\begin{center}
+Висновок 
+\end{center}
+В цій лабороторній роботі була написана програма, за якою обидва свiтлодiоди  мигати з рiзним пе-
+рiодом і при цьому використовувалась операцiйна система реального часу RTOS.
+\end{document}

@@ -1,0 +1,165 @@
+\documentclass[a4paper,14pt]{extreport}
+  \usepackage[left=1.5cm,right=1.5cm,
+      top=1.5cm,bottom=2cm,bindingoffset=0cm]{geometry}
+  \usepackage{scrextend}
+  \usepackage[T1,T2A]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage[english,russian,ukrainian]{babel}
+  \usepackage{tabularx}
+  \usepackage{amssymb}
+  \usepackage{color}
+  \usepackage{amsmath}
+  \usepackage{mathrsfs}
+  \usepackage{listings}
+  \usepackage{graphicx}
+  \usepackage{xcolor}
+  \usepackage{hyperref}
+ 
+
+
+
+  
+  
+%}
+
+\newcommand{\img}[4]{\center{\includegraphics[width=#1\linewidth]{#2}}\captionof{figure}{#3}\label{#4}}
+\begin{document}
+  \pagecolor{white}
+
+  %----------------------------------------1
+\begin{titlepage}
+    \begin{center}
+    \large
+    Національний технічний університет України \\ "Київський політехнічний інститут імені Ігоря Сікорського"
+
+
+    Факультет Електроніки
+
+    Кафедра мікроелектроніки
+    \vfill
+
+    \textsc{ЗВІТ}\\
+
+    {\Large Про виконання лабораторної роботи №4\\
+    з дисципліни: «Мікропроцесори та мікроконтролери»\\[1cm]
+
+    %Резистивні сенсори температури
+
+
+    }
+    \bigskip
+    \end{center}
+    \vfill
+
+    \newlength{\ML}
+    \settowidth{\ML}{«\underline{\hspace{0.4cm}}» \underline{\hspace{2cm}}}
+    \hfill
+    \begin{minipage}{1\textwidth}
+    Виконавець:\\
+    Студент 4-го курсу \hspace{4cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm}А.\,С.~Мнацаканов\\
+    \vspace{1cm}
+
+    Перевірив: \hspace{6.1cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm} Татарчук Д. Д.\\
+
+    \end{minipage}
+
+    \vfill
+
+    \begin{center}
+    2021
+    \end{center}
+\end{titlepage}
+
+
+
+\newpage
+\setcounter{page}{2}
+
+
+\begin{verbatim}
+ int but_prev = 0;
+ 
+ int but_cur = 0;
+ 
+ int a = 0;
+ 
+  while (1)
+ 
+ {
+ 
+ but_cur = HAL_GPIO_ReadPin (GPIOA , GPIO_PIN_0 ) ;
+ 
+ if ( ( b u t _ p r e v == 0) && ( but_cur != 0) )
+ 
+ {
+ 
+ a=a + 1 ;
+ 
+ switch (a)
+  {
+ 
+ case 1:
+ 
+ HAL_GPIO_TogglePin ( GPIOC , GPIO_PIN_8 ) ; 
+ HAL_Delay ( 2 0 0 0 ) ;
+ 
+ break ;
+ 
+ case 2:
+ 
+ HAL_GPIO_TogglePin ( GPIOC , GPIO_PIN_8 ) ;
+ 
+ HAL_Delay ( 3 0 0 0 ) ;
+ 
+ break ;
+ 
+ case 3:
+  a =0;
+  break ;
+ 
+ }
+ 
+ }
+
+ else
+{
+switch{(a)
+case 0:
+HAL_GPIO_TogglePin ( GPIOC ,HAL_Delay ( 1 0 0 0 ) ;
+break ;
+GPIO_PIN_8 ) ;
+case  1:
+HAL_GPIO_TogglePin ( GPIOC ,HAL_Delay ( 2 0 0 0 ) ;
+break ;
+GPIO_PIN_8 ) ;
+}
+case
+ 2:
+HAL_GPIO_TogglePin ( GPIOC ,HAL_Delay ( 3 0 0 0 ) ;
+break ;
+GPIO_PIN_8 ) ;
+}
+but_prev = but_cur ;}
+\end{verbatim}
+
+
+
+
+\begin{center}
+\textbf{Висновок}
+\end{center}
+
+Написана програма, в якiй за натисканням кнопки змiнюється перiод
+включення-виключення свiтлодiоду: 
+ При запуску перiод має складати 1 секунду.
+ 
+ Пiсля першого натискання 2 секунди.
+ 
+ Пiсля другого натискання 3 секунди.
+ 
+ Пiсля третього повертається перiод 1 секунда i т.д. циклiчно.
+
+
+
+
+\end{document}

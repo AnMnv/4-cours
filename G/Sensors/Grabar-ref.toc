@@ -1,0 +1,58 @@
+\babel@toc {ukrainian}{}
+\contentsline {chapter}{\numberline {1}Сенсори для роботів та їх характеристики.}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Що таке сенсори для робототехніки?}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Чому рецептори важливі для роботів?}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Характеристики датчиків у робототехніці}{4}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Точність}{4}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Калібрівка}{5}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Дозвіл}{5}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Лінійність}{5}{subsection.1.3.4}%
+\contentsline {subsection}{\numberline {1.3.5}Повторюваність}{5}{subsection.1.3.5}%
+\contentsline {subsection}{\numberline {1.3.6}Мертва зона та гістерезис}{6}{subsection.1.3.6}%
+\contentsline {subsection}{\numberline {1.3.7}Дрейфувати}{6}{subsection.1.3.7}%
+\contentsline {subsection}{\numberline {1.3.8}Температура}{6}{subsection.1.3.8}%
+\contentsline {subsection}{\numberline {1.3.9}Поле зору (FOV)}{6}{subsection.1.3.9}%
+\contentsline {subsection}{\numberline {1.3.10}Розмір плями}{8}{subsection.1.3.10}%
+\contentsline {subsection}{\numberline {1.3.11}Форма виходу}{8}{subsection.1.3.11}%
+\contentsline {subsection}{\numberline {1.3.12}Увімкнення}{8}{subsection.1.3.12}%
+\contentsline {subsection}{\numberline {1.3.13}Надійність}{8}{subsection.1.3.13}%
+\contentsline {section}{\numberline {1.4}Як класифікуються датчики? | Типи датчиків роботів}{9}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Пропріоцептивні та екстероцептивні датчики в робототехніці}{9}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Пропріоцептивні датчики Внутрішні датчики у робототехніці}{9}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Екстероцептивні датчики Зовнішні датчики у робототехніці}{9}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Активні та пасивні датчики в робототехніці}{9}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}Активні датчики у робототехніці}{9}{subsection.1.4.5}%
+\contentsline {subsection}{\numberline {1.4.6}Пасивні датчики у робототехніці}{9}{subsection.1.4.6}%
+\contentsline {section}{\numberline {1.5}Як роботи використовують датчики? | Які проблеми можуть вирішити роботи за допомогою датчиків?}{10}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Застосування датчиків у робототехніці}{10}{subsection.1.5.1}%
+\contentsline {section}{\numberline {1.6}Які датчики використовуються у роботах?}{11}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Типи датчиків зору, що використовуються у робототехніці | Візуальні датчики }{11}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}2D Imaging}{12}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}3D зондування}{12}{subsection.1.6.3}%
+\contentsline {subsection}{\numberline {1.6.4}Ультразвуковий}{12}{subsection.1.6.4}%
+\contentsline {subsection}{\numberline {1.6.5}Робот з інфрачервоним датчиком}{12}{subsection.1.6.5}%
+\contentsline {subsection}{\numberline {1.6.6}ІЧ-датчик, що працює в роботі-повідомнику лінії}{12}{subsection.1.6.6}%
+\contentsline {section}{\numberline {1.7}Датчики навігації роботів}{13}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Датчики сили у робототехніці}{14}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}Датчик сили руки робота}{14}{subsection.1.8.1}%
+\contentsline {section}{\numberline {1.9}Датчик температури в робототехніці}{15}{section.1.9}%
+\contentsline {section}{\numberline {1.10}Які датчики є у промислового робота?}{15}{section.1.10}%
+\contentsline {subsection}{\numberline {1.10.1}2D датчик технічного зору}{16}{subsection.1.10.1}%
+\contentsline {subsection}{\numberline {1.10.2}3D датчик технічного зору}{16}{subsection.1.10.2}%
+\contentsline {subsection}{\numberline {1.10.3}Датчик сил | Датчики крутного моменту в робототехніці}{16}{subsection.1.10.3}%
+\contentsline {subsection}{\numberline {1.10.4}Датчик виявлення зіткнення}{16}{subsection.1.10.4}%
+\contentsline {section}{\numberline {1.11}Які датчики мають допоміжні роботи?}{16}{section.1.11}%
+\contentsline {section}{\numberline {1.12}Датчик дальності у робототехніці | Робот із датчиком наближення}{17}{section.1.12}%
+\contentsline {section}{\numberline {1.13}Датчики положення у робототехніці}{17}{section.1.13}%
+\contentsline {subsection}{\numberline {1.13.1}Управління становищем руки робота}{18}{subsection.1.13.1}%
+\contentsline {subsection}{\numberline {1.13.2}Оптичний датчик положення у робототехніці}{18}{subsection.1.13.2}%
+\contentsline {section}{\numberline {1.14}Датчики швидкості у робототехніці}{18}{section.1.14}%
+\contentsline {subsection}{\numberline {1.14.1}Тахометр}{18}{subsection.1.14.1}%
+\contentsline {section}{\numberline {1.15}Датчики прискорення у робототехніці}{18}{section.1.15}%
+\contentsline {section}{\numberline {1.16}Датчики для роботів-пилососів}{19}{section.1.16}%
+\contentsline {subsection}{\numberline {1.16.1}Датчики перешкод}{20}{subsection.1.16.1}%
+\contentsline {subsection}{\numberline {1.16.2}Датчики обриву}{20}{subsection.1.16.2}%
+\contentsline {subsection}{\numberline {1.16.3}Настінні датчик}{20}{subsection.1.16.3}%
+\contentsline {subsection}{\numberline {1.16.4}Колісні датчики}{20}{subsection.1.16.4}%
+\contentsline {section}{\numberline {1.17}Датчики, що використовуються в роботизованому зварюванні}{20}{section.1.17}%
+\contentsline {subsection}{\numberline {1.17.1}Sensor Fusion Robotics}{20}{subsection.1.17.1}%

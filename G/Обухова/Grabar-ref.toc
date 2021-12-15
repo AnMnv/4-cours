@@ -1,0 +1,5 @@
+\babel@toc {ukrainian}{}
+\contentsline {chapter}{\numberline {1}ВСТУП}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2}ФУНКЦІОНАЛЬНІ СПІН-ХВИЛЬВІ ПРИСТРОЇ}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Спін-хвильові датчики}{11}{section.2.1}%
+\contentsline {chapter}{\numberline {3}ВИСНОВОК І ПЕРСПЕКТИВИ}{15}{chapter.3}%

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with "sPlan" (http://www.abacom-online.de) -->
+<svg version="1.1" baseProfile="full"
+xmlns="http://www.w3.org/2000/svg"
+width="682" height="456">
+<title>lab</title>
+<defs>
+<style type="text/css">
+<![CDATA[
+polyline {stroke-linecap:round; stroke-linejoin:round}
+polygon {stroke-linecap:round; stroke-linejoin:round}
+path {stroke-linecap:round; stroke-linejoin:round}
+circle {stroke-linecap:round; stroke-linejoin:round}
+]]>
+</style>
+</defs>
+<path fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="2" style="stroke-linecap:square; stroke-linejoin:miter" d=" M 86 81 L 156 81 156 111 86 111 86 81" />
+<polyline points="46.00 96.00 86.00 96.00" fill="none" stroke="rgb(0,0,0)" stroke-width="2" />
+<polyline points="156.00 96.00 196.00 96.00" fill="none" stroke="rgb(0,0,0)" stroke-width="2" />
+<text x="86.00" y="75.00" font-family ="ARIAL" font-size ="17pt" font-weight="normal" font-style="normal" fill="rgb(0,0,0)" transform=" rotate(0.000) scale(1.000,1.000)">R1</text>
+<text x="86.00" y="125.00" font-family ="ARIAL" font-size ="17pt" font-weight="normal" font-style="normal" fill="rgb(0,0,0)" transform=" rotate(0.000) scale(1.000,1.000)"></text>
+<path fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="2" style="stroke-linecap:square; stroke-linejoin:miter" d=" M 86 231 L 156 231 156 261 86 261 86 231" />
+<polyline points="46.00 246.00 86.00 246.00" fill="none" stroke="rgb(0,0,0)" stroke-width="2" />
+<polyline points="156.00 246.00 196.00 246.00" fill="none" stroke="rgb(0,0,0)" stroke-width="2" />
+<text x="86.00" y="225.00" font-family ="ARIAL" font-size ="17pt" font-weight="normal" font-style="normal" fill="rgb(0,0,0)" transform=" rotate(0.000) scale(1.000,1.000)">R2</text>
+<text x="86.00" y="275.00" font-family ="ARIAL" font-size ="17pt" font-weight="normal" font-style="normal" fill="rgb(0,0,0)" transform=" rotate(0.000) scale(1.000,1.000)"></text>
+<path fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="2" style="stroke-linecap:square; stroke-linejoin:miter" d=" M 86 371 L 156 371 156 401 86 401 86 371" />
+<polyline points="46.00 386.00 86.00 386.00" fill="none" stroke="rgb(0,0,0)" stroke-width="2" />
+<polyline points="156.00 386.00 196.00 386.00" fill="none" stroke="rgb(0,0,0)" stroke-width="2" />
+<text x="86.00" y="365.00" font-family ="ARIAL" font-size ="17pt" font-weight="normal" font-style="normal" fill="rgb(0,0,0)" transform=" rotate(0.000) scale(1.000,1.000)">R3</text>
+<text x="86.00" y="420.00" font-family ="ARIAL" font-size ="17pt" font-weight="normal" font-style="normal" fill="rgb(0,0,0)" transform=" rotate(0.000) scale(1.000,1.000)"></text>
+<circle cx="46" cy="96" r="6" fill="rgb(0,0,0)" stroke="none" stroke-width="2" />
+<circle cx="46" cy="246" r="6" fill="rgb(0,0,0)" stroke="none" stroke-width="2" />
+<circle cx="46" cy="386" r="6" fill="rgb(0,0,0)" stroke="none" stroke-width="2" />
+<polyline points="196.00 96.00 286.00 96.00 286.00 246.00" fill="none" stroke="rgb(0,0,0)" stroke-width="2" />
+<polyline points="196.00 246.00 286.00 246.00" fill="none" stroke="rgb(0,0,0)" stroke-width="2" />
+<polyline points="196.00 386.00 286.00 386.00 286.00 246.00 446.00 246.00" fill="none" stroke="rgb(0,0,0)" stroke-width="2" />
+<circle cx="286" cy="246" r="6" fill="rgb(0,0,0)" stroke="none" stroke-width="2" />
+<circle cx="446" cy="246" r="6" fill="rgb(0,0,0)" stroke="none" stroke-width="2" />
+<circle cx="636" cy="246" r="6" fill="rgb(0,0,0)" stroke="none" stroke-width="2" />
+<polyline points="446.00 246.00 636.00 246.00" fill="none" stroke="rgb(0,0,0)" stroke-width="2" />
+<polyline points="446.00 246.00 446.00 196.00 446.00 286.00" fill="none" stroke="rgb(0,0,0)" stroke-width="2" />
+<path fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="2" style="stroke-linecap:square; stroke-linejoin:miter" d=" M 431 86 L 461 86 461 156 431 156 431 86" />
+<polyline points="446.00 46.00 446.00 86.00" fill="none" stroke="rgb(0,0,0)" stroke-width="2" />
+<polyline points="446.00 156.00 446.00 196.00" fill="none" stroke="rgb(0,0,0)" stroke-width="2" />
+<text x="466.00" y="115.00" font-family ="ARIAL" font-size ="17pt" font-weight="normal" font-style="normal" fill="rgb(0,0,0)" transform=" rotate(0.000) scale(1.000,1.000)">R4</text>
+<text x="466.00" y="135.00" font-family ="ARIAL" font-size ="17pt" font-weight="normal" font-style="normal" fill="rgb(0,0,0)" transform=" rotate(0.000) scale(1.000,1.000)"></text>
+<polygon points="446 346 426 316 466 316" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="2" />
+<polyline points="446.00 376.00 446.00 286.00" fill="none" stroke="rgb(0,0,0)" stroke-width="2" />
+<path fill="rgb(0,0,0)" stroke="rgb(0,0,0)" stroke-width="2" style="stroke-linecap:square; stroke-linejoin:miter" d=" M 426 349 L 426 347 466 347 466 349 426 349" />
+<text x="-346.00" y="420.00" font-family ="ARIAL" font-size ="17pt" font-weight="normal" font-style="normal" fill="rgb(0,0,0)" transform=" rotate(-90.000) scale(1.000,1.000)">D1</text>
+<text x="-346.00" y="485.00" font-family ="ARIAL" font-size ="17pt" font-weight="normal" font-style="normal" fill="rgb(0,0,0)" transform=" rotate(-90.000) scale(1.000,1.000)"></text>
+<path fill="rgb(0,0,0)" stroke="rgb(0,0,0)" stroke-width="2" style="stroke-linecap:square; stroke-linejoin:miter" d=" M 426 406 L 466 406 466 416 426 416 426 406" />
+<polyline points="446.00 376.00 446.00 406.00" fill="none" stroke="rgb(0,0,0)" stroke-width="2" />
+<circle cx="446" cy="46" r="6" fill="rgb(0,0,0)" stroke="none" stroke-width="2" />
+</svg>

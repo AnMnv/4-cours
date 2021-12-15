@@ -1,0 +1,5 @@
+\babel@toc {ukrainian}{}
+\contentsline {chapter}{\numberline {1}Вступ}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Піроелектричний електронно-оптичний перетворювач}{5}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Проблеми створення ПОЕП}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Конструткивно-технологічні особливості ПЕОП}{11}{chapter.4}%
