@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="2">
+      <Unit0>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="26"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="lab3.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="41"/>
+        <CursorPos X="10" Y="62"/>
+        <FoldState Value=" T3jA031m"/>
+        <UsageCount Value="26"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+    </Units>
+    <JumpHistory Count="23" HistoryIndex="22">
+      <Position1>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="4" Column="34"/>
+      </Position1>
+      <Position2>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="24" Column="32"/>
+      </Position2>
+      <Position3>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="39" Column="3" TopLine="6"/>
+      </Position3>
+      <Position4>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="14" TopLine="6"/>
+      </Position4>
+      <Position5>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="60" Column="34" TopLine="29"/>
+      </Position5>
+      <Position6>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="72" Column="2" TopLine="31"/>
+      </Position6>
+      <Position7>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="33" Column="10" TopLine="15"/>
+      </Position7>
+      <Position8>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="35" Column="8" TopLine="15"/>
+      </Position8>
+      <Position9>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="46" Column="6" TopLine="13"/>
+      </Position9>
+      <Position10>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="33" Column="38" TopLine="19"/>
+      </Position10>
+      <Position11>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="50" Column="10" TopLine="19"/>
+      </Position11>
+      <Position12>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="37" Column="21" TopLine="19"/>
+      </Position12>
+      <Position13>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="70" Column="13" TopLine="48"/>
+      </Position13>
+      <Position14>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="71" Column="52" TopLine="22"/>
+      </Position14>
+      <Position15>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="68" Column="15" TopLine="39"/>
+      </Position15>
+      <Position16>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="74" Column="19" TopLine="43"/>
+      </Position16>
+      <Position17>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="60" Column="11" TopLine="43"/>
+      </Position17>
+      <Position18>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="41" Column="15" TopLine="35"/>
+      </Position18>
+      <Position19>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="42" Column="15" TopLine="36"/>
+      </Position19>
+      <Position20>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="44" Column="15" TopLine="38"/>
+      </Position20>
+      <Position21>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="89" Column="13" TopLine="68"/>
+      </Position21>
+      <Position22>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="69" Column="9" TopLine="35"/>
+      </Position22>
+      <Position23>
+        <Filename Value="lab3.pas"/>
+        <Caret Line="56" Column="5" TopLine="36"/>
+      </Position23>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

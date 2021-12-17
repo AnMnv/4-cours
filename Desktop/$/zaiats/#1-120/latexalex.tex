@@ -1,0 +1,102 @@
+\documentclass[a4paper,14pt]{article}
+
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+\usepackage{icomma}
+\usepackage{euscript}
+\usepackage{mathrsfs}
+\usepackage{mathtext}
+\date{29 жовтня 2020 року}
+\title{Тема: Виведення формул похибок величин і параметрів що розраховуються в ЛР №1}
+\author{Робота Кузьмінського О.Р, групи дп-82}
+
+\begin{document}
+\maketitle
+\section{Виведення формули похибки напруги на діоді }
+Формула напруги  на діоді $U_D=U-U_R$ 
+
+\begin{equation}\label{eq:formula1}
+\Delta{U_D}=\sqrt{(U-U_R)_U'^2\times{\Delta{U}^2}+(U-U_R)_{U_R}'^2\times{\Delta{U_R}^2 }           }  ;
+\end{equation}
+
+Порахувавши похідні, маємо:
+\begin{equation}
+  \boxed{   \Delta{U_D}=\sqrt{\Delta{U}^2+\Delta{U_R}^2}  }
+\end{equation}
+
+\section{Виведення формули похибки зворотнього струму через діод }
+Формула зворотнього струму через діод  $I_D=\frac{U_R}{R}=f(R,U_R)$ 
+
+\begin{equation}\label{eq:formula2}
+\Delta{I_D}=\sqrt{\left(\frac{U_R}{R}\right)_{U_R}'^2\times{\Delta{U_R}^2}+\left(\frac{U_R}{R}\right)_{R}'^2\times{\Delta{R}^2}                                        }=
+\end{equation}
+
+
+\begin{equation}\label{eq:formula3}
+=\sqrt{\frac{\Delta{U_R^2}}{R^2}+\frac{\Delta{R^2}\times{U_R^2}}{R^4}   };
+\end{equation}
+
+
+\begin{equation}\label{eq:formula4}
+ \Delta{I_D} = \boxed{     \frac{1}{R^2}\times{ \sqrt{      (R\times{\Delta{U_R}})^2+(U_R\times{\Delta{R}})^2               }                 }                                                          }
+\end{equation}
+
+\section{Виведення формули похибки струму виродження }
+Формула струму виродження  $I_{\text{вир}}=\frac{\varphi}{r_b}$ 
+
+\begin{equation}
+\Delta{ I_{\text{вир}}   }=\boxed{\frac{1}{r_b^2}\times{ \sqrt{(r_b\times{\Delta{\varphi}})^2+(\varphi\times{\Delta{r_b}})^2    }}}
+\end{equation}
+
+
+\section{Виведення формули похибки опору бази }
+Формула опору бази $r_b\approx{\frac{U_{\text{пр}}-\varphi{_0}}{I_{\text{пр}}}  }$
+
+\begin{equation}
+\Delta{r_b}=\sqrt{  \left(\frac{U_{\text{пр}}-\varphi{_0}}{I_{\text{пр}}}\right)'^2_{U_{\text{пр}}}\times{\Delta{U}^2}+\left(\frac{U_{\text{пр}}-\varphi{_0}}{I_{\text{пр}}}\right)'^2_{\varphi{_0}}\times{\varphi{_0}^2}+\left(\frac{U_{\text{пр}}-\varphi{_0}}{I_{\text{пр}}}\right)'^2_{I_{\text{пр}}}\times{\Delta{I}^2}  }=
+\end{equation}
+
+
+\begin{equation}
+=\sqrt{\frac{\Delta{U^2}}{I^2}+\frac{\Delta{\varphi^2}}{I^2}+\frac{\Delta{I^2}\times{(\varphi-U)^2}}{I^4}                }
+\end{equation}
+
+\begin{equation}
+\Delta{r_b}=\boxed{ \frac{1}{I_{\text{пр}}^2}\times{\sqrt{I_{\text{пр}}^2\times{(\Delta{U}^2+\Delta{\varphi}^2)}+\Delta{I_{\text{пр}}^2}\times{(\varphi-U)^2}        }   }}
+\end{equation}
+
+
+\section{Виведення формули похибки температурної чутливості прямої напруги }
+\text{ТЧН}=$\frac{U_2-U_1}{T_2-T_1}$
+
+
+\begin{equation}
+\text{ТЧН}=\sqrt{\left(\frac{U_2-U_1}{T_2-T_1}\right)'^2_{U_1}\times{\Delta{U_1}^2}+\left(\frac{U_2-U_1}{T_2-T_1}\right)'^2_{U_2}\times{\Delta{U_2}^2}+\left(\frac{U_2-U_1}{T_2-T_1}\right)'^2_{T_1}\times{\Delta{T_1}^2}\left(\frac{U_2-U_1}{T_2-T_1}\right)'^2_{T_2}\times{\Delta{T_2}^2}                                  }
+\end{equation}
+
+\begin{equation}
+\text{ТЧН}=\sqrt{ \frac{\Delta{U_1}^2}{(T_2-T_1)^2}+\frac{\Delta{U_2}^2}{(T_2-T_1)^2}+\frac{\Delta{T_1}^2\times{(U_2-U_1)^2}}{(T_2-T_1)^4}+\frac{\Delta{T_2}^2\times{(U_2-U_1)^2}}{(T_2-T_1)^4}}
+\end{equation}
+
+
+\begin{equation}
+ \text{ТЧН}=\boxed{  \frac{1}{(T_2-T_1)^2}\times{\sqrt{(\Delta{U_1}^2+\Delta{U_2}^2)\times{(T_2-T_1)^2}+(\Delta{T_1}^2+\Delta{T_2}^2)\times{(U_2-U_1)^2}}  }  }
+\end{equation}
+
+\section{Виведення формули похибки температурної чутливості зворотнього струму }
+\text{ТКІ}=$e^{\alpha\times{(T_2-T_1)}}$
+
+
+\begin{equation}
+\Delta{\text{ТКІ}}=\sqrt{(e^{\alpha\times{(T_2-T_1)}})'^2_{\alpha}\times{\Delta{\alpha}^2}+(e^{\alpha\times{(T_2-T_1)}})'^2_{T_1}\times{\Delta{T_1}^2}+(e^{\alpha\times{(T_2-T_1)}})'^2_{T_2}\times{\Delta{T_2}^2}  }
+\end{equation}
+
+\begin{equation}
+\Delta{\text{ТКІ}}=e^{\alpha\times{(T_2-T_1)}}\times{\sqrt{[\Delta{\alpha}\times{(T_2-T_1)}]^2+\alpha^2\times{(\Delta{T_1}^2+\Delta{T_2}^2)}          }                    }
+\end{equation}
+
+
+\end{document}

@@ -1,0 +1,142 @@
+\documentclass[a4paper,14pt]{extreport}
+\usepackage[left=1.5cm,right=1.5cm,
+    top=1.5cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\usepackage{scrextend}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian,ukrainian]{babel}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{wrapfig,boxedminipage,lipsum}
+\mdfdefinestyle{MyFrame}{%
+linecolor=blue,outerlinewidth=2pt,roundcorner=20pt,innertopmargin=\baselineskip,innerbottommargin=\baselineskip,innerrightmargin=20pt,innerleftmargin=20pt,backgroundcolor=gray!50!white}
+ \usepackage{csvsimple}
+ \usepackage{supertabular}
+\usepackage{pdflscape}
+\usepackage{fancyvrb}
+%\usepackage{comment}
+\usepackage{array,tabularx}
+\usepackage{colortbl}
+
+\usepackage{varwidth}
+\tcbuselibrary{skins}
+\usepackage{fancybox}
+
+
+\usepackage{tikz}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{xcolor}
+\usetikzlibrary{calc}
+\makeatletter
+\newlength{\mylength}
+\xdef\CircleFactor{1.1}
+\setlength\mylength{\dimexpr\f@size pt}
+\newsavebox{\mybox}
+\newcommand*\circled[2][draw=blue]{\savebox\mybox{\vbox{\vphantom{WL1/}#1}}\setlength\mylength{\dimexpr\CircleFactor\dimexpr\ht\mybox+\dp\mybox\relax\relax}\tikzset{mystyle/.style={circle,#1,minimum height={\mylength}}}
+\tikz[baseline=(char.base)]
+\node[mystyle] (char) {#2};}
+\makeatother
+
+\definecolor{ggreen}{rgb}{0.4,1,0}
+\definecolor{rred}{rgb}{1,0.1,0.1}
+\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+\definecolor{asparagus}{rgb}{0.53, 0.66, 0.42}
+\definecolor{chartreuse}{rgb}{0.5, 1.0, 0.0}
+\definecolor{darkorchid}{rgb}{0.6, 0.2, 0.8}
+
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{framed}
+%for nice Code{
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\small\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+\lstset{escapechar=@,style=customc}
+%}
+
+
+\begin{document}
+\pagecolor{white}
+
+%----------------------------------------1
+\newtcbox{\xmybox}[1][red]{on line, arc=7pt,colback=#1!10!white,colframe=#1!50!black, before upper={\rule[3pt] {0pt}{10pt}},boxrule=1pt,boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
+
+\begin{center}\xmybox[amber]{Mnatsakanov Anton} \xmybox[amber]{DP-82} \xmybox[amber]{Variant №5}\end{center}
+\vspace{1cm}
+
+\circled[fill=babyblue, draw=black]{1} Скільки елементарних моделей поляризації розглядається у книзі?
+\vspace{0.2cm}
+
+\xmybox[darkorchid]{bias polarization}     \\
+All particles are involved in this polarization process, and its essence is that in the electric field applied to the dielectric, the associated electric charges shift relative to each other $ \Rightarrow $ the dielectric becomes polarized. \\
+
+
+
+\xmybox[darkorchid]{Dipole elastic polarization} (simplified mechanism) \\
+The essence of this mechanism is that the applied external electric field changes the orientation of each of the dipoles and the entire polar structure as a whole, so the dielectric electric moment also changes, that is, there is an electric field-induced change in polarization. \\
+
+
+\xmybox[darkorchid]{ion elastic polarization} \\
+This polarization occurs when an ionic crystal has no external electric field and the cations and anions are in the nodes of the crystal lattice. This system of charges is electrically neutral and there is no polarization. But in an external electric field cations and anions move under the action of Coulomb forces, forming a polarized lattice with elementary electric moments $q^+ – q^-$. \\
+
+
+
+\xmybox [darkorchid] {electronic thermal polarization} \\
+This polarization is caused by weakly bound electrons, such as, electrons electrically compensating structural defects. These are defects such as anion vacancies, this is when some of the negative ions are missing. Compensation is due to the fact that the crystal lattice is always electrically neutral, that is, the number of negative charges = the number of positive charges.
+
+
+\xmybox [darkorchid] {ion thermal polarization} \\
+Positive ions with a small ionic radius are located in the interstices of the lattice, and their charge compensation is due to an increase in the charge of neighboring anions. In the vicinity of such an ion, the impurity ion makes thermal jumps across the potential barrier and these jumps are complicated by the change in localization, so that the impurity ion has to overcome the repulsive forces of the electron shells of neighboring ions, and the dipole moment is created between the impurity ion and the stationary anion (larger radius), which compensates its charge.
+
+
+\xmybox [darkorchid] {dipole thermal polarization} \\
+If an electric field is applied from outside, it leads to preferential orientation in the system of dipoles (before that there are already existing dipoles distributed chaotically without an external field), that is, to the volume electric moment (polarizability).
+
+
+\xmybox [darkorchid] {migration polarization} \\
+Characteristic of some active dielectrics. The accumulation of electric charges at the boundaries of inhomogeneities (e.g. crystallites, layers, pores, inclusions) causes "volumetrically charged" polarization. Such a volume charge significantly increases the electrical capacitance of an electric capacitor containing an inhomogeneous dielectric.
+
+
+
+
+
+
+
+
+
+\begin{tcolorbox}[colback=babyblue!10,colframe=babyblue!50!black,title=****]
+На які технічні параметри діелектричних пристроїв впливає міграційна поляризація?
+\tcblower
+Діелетрич­ний внесок \hfill $10-10^4$\\
+Частота дисперсії, за Т = 300 К \hfill $10^{-3}-10^3$ Гц\\
+Концентрація частинок  у 1 м$^3$ \hfill $10^{25}$\\
+Зміщення частинок, нм \hfill $10^6$\\
+\end{tcolorbox}
+
+
+
+
+\end{document}

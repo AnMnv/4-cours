@@ -1,0 +1,343 @@
+\documentclass[14pt,a4paper]{scrartcl}
+\usepackage[left=1.5cm,right=1.5cm,
+    top=1.5cm,bottom=1cm,bindingoffset=0cm]{geometry}
+
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian,ukrainian]{babel}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+%\usepackage{draftwatermark} не будет лезть на картинки
+\usepackage[printwatermark]{xwatermark}%будет лезть на картинки
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+ \usepackage{csvsimple}
+ \usepackage{supertabular}
+\usepackage{pdflscape}
+\usepackage{fancyvrb}
+
+\begin{document}
+\pagecolor{white}
+\begin{titlepage}
+  \begin{center}
+    \large
+    Національний технічний університет України \\ "Київський політехнічний інститут імені Ігоря Сікорського"
+     
+       
+    Факультет Електроніки
+     
+    Кафедра мікроелектроніки
+    \vfill
+      
+    \textsc{ЗВІТ}\\
+     
+    {\Large Про виконання пактичної роботи №2\\
+      з дисципліни: «Твердотільна електроніки-1»\\[1cm]
+      
+   Розрахунок ширини плавного (лінійно-градієнтного) p-n переходу\\
+    
+    }
+  \bigskip
+\end{center}
+\vfill
+ 
+\newlength{\ML}
+\settowidth{\ML}{«\underline{\hspace{0.4cm}}» \underline{\hspace{2cm}}}
+\hfill
+\begin{minipage}{1\textwidth}
+Виконавець:\\
+Студент 3-го курсу \hspace{4cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm}О.\,О.~Грабар\\
+\vspace{1cm}
+
+Превірив: \hspace{6.1cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm}Л.\,М.~Королевич\\
+
+\end{minipage}
+
+\vfill
+
+\begin{center}
+2020
+\end{center}
+\end{titlepage}
+
+
+Задані величини:\\
+
+$N'_A=3.8\cdot10^{20}$ -- Градiєнт кон-цiї в р-областi \par
+$N'_D=2.2\cdot10^{22}$ -- Градiєнт кон-цiї в n-областi \par
+ $n_i=1.45\cdot10^{10}$ -- Концентрацiя власних носiїв заряду \par
+ $\varepsilon=11.9$ -- Вiдносна дiелектрична проникнiсть \par
+  $\varepsilon_0=8.85\cdot10^{-14}$ -- Електрична стала\par
+   при Т = 300К $\varphi_T=0.025875 $-- Температурний потенцiал\par 
+  $q=1.6\cdot10^{-19}$ -- Заряд електрона\par
+
+\vspace{1cm}
+Спочатку потрібно знайти електричне поле E(x) і потенціал $\varphi(x)$, тому порібно використати (проінтегрувати) рівняння Пуассона. 
+\begin{equation}
+\dfrac{d^2\varphi}{dx^2}=-\dfrac{\xi}{\varepsilon\varepsilon_0}=-\dfrac{dE}{dx}
+\label{eq:ref}
+\end{equation}
+
+
+Будемо вважати, що розподіл густини заряду в областях р іn буде пропорційним градіен там концентрації домішок, тоді розподіл густини заряду в областях p і n буде пропорційним градієнтам концентрації домішок:
+\begin{equation}
+\xi_p=qN'_Ax;\text{ }\xi_n=qN'_Dx,
+\label{eq:ref}
+\end{equation}
+де $N'_A, N'_D$-- градієнти концентрації акцепторних і донорних домішок.
+
+
+Підствивши рівняння (2) в (1) проінтегруємо його та отримаємо наступне:\\
+
+Спочатку для $E_p(x)$ потім для $E_n(x)$:
+\begin{align}
+\dfrac{d^2\varphi_p}{dx^2}=-\dfrac{-qN'_Ax}{\varepsilon\varepsilon_0}=-\dfrac{dE_p}{dx}\\
+E_p(x) = \int \dfrac{qN'_Ax}{\varepsilon\varepsilon_0}=\dfrac{qN'_Ax^2}{2\varepsilon\varepsilon_0}+C_1
+\end{align}
+
+\begin{align}
+\dfrac{d^2\varphi_n}{dx^2}=-\dfrac{-qN'_Dx}{\varepsilon\varepsilon_0}=-\dfrac{dE_n}{dx}\\
+E_n(x) = \int \dfrac{qN'_Dx}{\varepsilon\varepsilon_0}=\dfrac{qN'_Dx^2}{2\varepsilon\varepsilon_0}+C_2
+\end{align}
+
+
+Тепер знайдемо $C_1$ та $C_2$ за умови що
+\begin{equation*}
+\begin{cases}
+\dfrac{d\varphi_p}{dx}=0, & \text{якщо x = $-l_p$;} \\
+\dfrac{d\varphi_n}{dx}=0, & \text{якщо x = $l_n$.} 
+\end{cases}
+\end{equation*}
+
+Тоді сталі інтегрування:
+\begin{align}
+C_1=-\dfrac{qN'_Al_p^2}{2\varepsilon\varepsilon_0} \\
+C_2 =-\dfrac{qN'_Dl_n^2}{2\varepsilon\varepsilon_0}
+\end{align}
+
+Після всіх підстановок та перестановок маємо:
+\begin{align}
+E_p(x) = \dfrac{qN'_A}{2\varepsilon\varepsilon_0} \cdot (x^2-l_p^2)\\
+E_n(x) = \dfrac{qN'_D}{2\varepsilon\varepsilon_0}\cdot(x^2-l_n^2)
+\end{align}
+
+Тепер треба знайти розподіл потенціалу p та n областях, запишемо загальну формулу для багатовимірного випадку:
+\begin{equation}
+E=-\left(\dfrac{d\varphi}{dx}i+\dfrac{d\varphi}{dy}j+\dfrac{d\varphi}{dz}k \right)
+\label{eq:ref}
+\end{equation}
+
+Наш випадок є одномірним тому останні два доданки ми ігноруємо, також оскільки  Е = $-grad\varphi$, то
+\begin{equation}
+E= -grad \varphi = -\dfrac{d\varphi}{dx} \Longleftrightarrow \varphi = \int E dx
+\label{eq:ref}
+\end{equation}
+
+Проінтегрувавши рівняння (9) та (10) знайдемо розподіл потенціалу в p та n областях:
+\begin{align}
+-\int E_p (x)dx =-\int  \dfrac{qN'_A}{2\varepsilon\varepsilon_0} \cdot (x^2-l_p^2)\Rightarrow \varphi_p(x)=\dfrac{qN'_Al_p^2x}{2\varepsilon\varepsilon_0} -\dfrac{qN'_Ax^3}{6\varepsilon\varepsilon_0}+C_3\\
+-\int E_n (x)dx =-\int  \dfrac{qN'_D}{2\varepsilon\varepsilon_0}\cdot(x^2-l_n^2)\Rightarrow \varphi_n(x)=\dfrac{qN'_Dl_n^2x}{2\varepsilon\varepsilon_0}-\dfrac{qN'_Dx^3}{6\varepsilon\varepsilon_0}+C_4
+\end{align}
+
+За умови що $\varphi_p=\varphi_0,  \text{ якщо x = $-l_p$;}$ та $\varphi_n=0,  \text{ якщо x = $l_n$.}$ можна знайти невідомі константи $C_3$ та $C_4$ таким чином:
+
+\begin{align}
+C_3=\varphi_0+ \dfrac{qN'_Al_p^3}{3\varepsilon\varepsilon_0}\\
+C_4= -\dfrac{qN'_Dl_n^3}{3\varepsilon\varepsilon_0}
+\end{align}
+
+Підставляєючи отримаємо вираз для розподілу потенціала:
+\begin{align}
+\varphi_p(x)=\varphi_0+\dfrac{qN'_A}{6\varepsilon\varepsilon_0} \cdot (3l_p^2x-x^3+2l_p^3)\\
+\varphi_n(x)= \dfrac{qN'_D}{6\varepsilon\varepsilon_0}\cdot (3l_n^2x-x^3-2l_n^3)
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+
+Тепер  можна знайти $\varphi_0$:
+\begin{equation}
+\varphi_0-\dfrac{q\cdot(N'_Al_p^3 +N'_Dl_n^3 )}{3\varepsilon\varepsilon_0}=0
+\label{eq:ref}
+\end{equation}
+
+Прирівняємо вирази для розподілу електричних полів за умови що $E_p(0)=E_n(0)$ і вираз:
+\begin{equation}
+\dfrac{l_n^2}{l_p^2}=\dfrac{N'^2_A}{N'^2_D}
+\label{eq:ref}
+\end{equation}
+
+
+
+Знаючи (15) можемо знайти вирази для товщини області просторового заряду в p та n-області:
+\begin{equation}
+N'_Al_p^3 +N'_Dl_n^3= \dfrac{3\varepsilon\varepsilon_0\varphi_0}{q}
+\label{eq:ref}
+\end{equation}
+
+\begin{equation}
+N'_D \left(\dfrac{N'^2_A}{N'^2_D} \cdot l_n^2+l_p^2\right)= \dfrac{3\varepsilon\varepsilon_0\varphi_0}{q}\\
+\end{equation}
+
+
+\begin{equation}
+N'_D \left(\dfrac{l_n^2}{l_p^2} \cdot l_n^2+l_p^2\right)= \dfrac{3\varepsilon\varepsilon_0\varphi_0}{q}
+\end{equation}
+
+
+\begin{equation}
+l_n^2(l_p+l_p)= \dfrac{3\varepsilon\varepsilon_0\varphi_0}{l_0 q N'_D}
+\end{equation}
+
+Знаючи що $l_0=l_p+l_n$ можемо запишемо вираз для$l_p$ та виконавши аналогічні перетворбвання для $l_n$:
+\begin{align}
+l_n=\sqrt{\dfrac{3\varepsilon\varepsilon_0\varphi_0}{l_0qN'_D}}\\
+l_p=\sqrt{\dfrac{3\varepsilon\varepsilon_0\varphi_0}{l_0qN'_A}}
+\end{align}
+
+
+Підставивши e (19) отримані  $l_p$ та $l_n$ отримаємо наступне:
+\begin{equation}
+\left(\dfrac{3\varepsilon\varepsilon_0\varphi_0}{l_0 q}\right)^{\dfrac{2}{3}}  \left(   \dfrac{N_A}{(N_A)^{\frac{2}{3}}} +\dfrac{N_D}{(N_D)^{\frac{2}{3}}} \right)=\dfrac{3\varepsilon\varepsilon_0\varphi_0}{q}
+\end{equation}
+\begin{center}
+$\Downarrow$
+\end{center}
+
+\begin{equation}
+\dfrac{\sqrt{N'_A}+\sqrt{N'_D}}{\sqrt{N'_A\cdot N'_D}}\cdot \sqrt{\dfrac{3\varepsilon\varepsilon_0\varphi_0}{q}}=\l_0^{\frac{3}{2}}
+\end{equation}
+
+
+\begin{equation}
+\l_0^{\frac{3}{2}}= \dfrac{(\sqrt{N'_A}+\sqrt{N'_D})^2}{N'_A\cdot N'_D}\cdot \dfrac{3\varepsilon\varepsilon_0\varphi_0}{q}
+\end{equation}
+
+
+\begin{equation}
+\l_0= \sqrt[\text{\large{3}}] {\dfrac{N'_A+ 2\sqrt{N'_A\cdot N'_D}+ N'_D}{N'_A\cdot N'_D} \cdot \dfrac{3\varepsilon\varepsilon_0\varphi_0}{q}}
+\end{equation}
+
+
+\begin{equation}
+l_0 = \sqrt[\text{\large{3}}] {\dfrac{3\varepsilon\varepsilon_0\varphi_0}{q} \left(\dfrac{1}{N'_A}+ \dfrac{2}{\sqrt{N'_A N'_D}}+\dfrac{1}{N'_D}\right)}
+\label{eq:ref}
+\end{equation}
+
+\vspace{2cm}
+
+Тепер треба вивести формулу самої висоти потенціального бар’єра р-n переходу, тобто $\varphi_0$\\, яку можна знайти з знаючи формулу для ступінчатого p-n переходу:
+\begin{equation}
+\varphi_0=\varphi_T\cdot ln\dfrac{N_A\cdot N_D}{n_i^2},
+\label{eq:ref}
+\end{equation}
+де $\varphi_T$ -- температурний коефіцієнт, $N_A N_D$ -- концентрація акцепторних і донорних домішок відповідно та $n_i^2$ -- квадрат власної концентрації носіїв заряду.
+
+
+
+Запишемо зв'язок між самою концентрацією та градієнтом концентрації:
+\begin{align}
+N_A= N'_A\cdot l_p\\
+N_D= N'_D\cdot l_n
+\end{align}
+
+Підставляючи це в (30) отримаємо:
+\begin{equation}
+\varphi_0=\varphi_T\cdot ln\dfrac{N'_A\cdot l_p\cdot  N'_D\cdot l_n}{n_i^2}
+\label{eq:ref}
+\end{equation}
+
+Тепер маємо:
+\begin{equation}
+l_0 = \sqrt[\text{\large{3}}] {\dfrac{3 \varepsilon \varepsilon_0 \varphi_T ln\dfrac{N'_A l_p\cdot  N'_D l_n}{n_i^2}}{q} \left(\dfrac{1}{N'_A}+ \dfrac{2}{\sqrt{N'_A N'_D}}+\dfrac{1}{N'_D}\right)}
+\label{eq:ref}
+\end{equation}
+
+З виразу (18) знайдемо $l_n$:
+\begin{equation}
+l^2_n=l^2_p\cdot\dfrac{N'_A}{N'_D}
+\end{equation}
+
+\begin{equation}
+l_n=l_p\cdot\sqrt{\dfrac{N'_A}{N'_D}}
+\end{equation}
+
+Знаючи що $l_0=l_n+l_p$ підставляємо (38) в (39)
+\begin{small}
+\begin{equation}
+l_p+l_p\cdot\sqrt{\dfrac{N'_A}{N'_D}}
+= \sqrt[\text{\large{3}}] {\dfrac{3\cdot \varepsilon\cdot \varepsilon_0\cdot \varphi_T\cdot ln\dfrac{N'_A\cdot l^2_p\cdot  N'_D\cdot\sqrt{\dfrac{N'_A}{N'_D}}}{n_i^2}}{q} \left(\dfrac{1}{N'_A}+ \dfrac{2}{\sqrt{N'_A N'_D}}+\dfrac{1}{N'_D}\right)}
+\label{eq:ref}
+\end{equation}
+\end{small}
+
+Тепер можемо підставити задані значення розв'язати  нелінійне рівняння чісельним методом і в результаті отримаємо:
+
+\begin{equation}
+1.2\cdot10^{12}l^3_p = 2\cdot ln(l_p) + 71.99 
+\label{eq:ref}
+\end{equation}
+
+Таким чином наближено наближено отримали $l_p$:
+\begin{equation}
+l_p= 0.0001
+\label{eq:ref}
+\end{equation}
+
+Тому 
+\begin{equation}
+l_n= 0.001\cdot\sqrt{\dfrac{N'_A}{N'_D}}= 1.31425748\cdot 10^{-5}
+\label{eq:ref}
+\end{equation}
+
+
+\begin{center}
+\vspace{0.3cm}
+$l_0=l_n+l_p=0.00011314$ см
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

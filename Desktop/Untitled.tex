@@ -1,0 +1,78 @@
+\documentclass[a4paper,14pt,russian]{report}
+\usepackage{extsizes}
+\usepackage{cmap} % для кодировки шрифтов в pdf
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst} 
+\setlength\parindent{5ex} 
+\linespread{1.3} 
+\renewcommand{\rmdefault}{ftm} % Times New Roman
+\frenchspacing 
+  
+% chapter
+\makeatletter 
+\renewcommand{\@makechapterhead}[1]{%
+   {\parindent=0pt
+   %   \centering \thechapter{} #1\par
+      \centering \bfseries \thechapter{} #1\par %<<<<<<<<<<< not bold????
+      \nopagebreak 
+      \vspace{2em} 
+   }%
+}%
+\makeatother
+
+% chapter*
+\makeatletter 
+\renewcommand{\@makeschapterhead}[1]{
+   {\parindent=0pt
+      \centering  #1\par
+      \nopagebreak 
+      \vspace{2em} 
+   }% 
+}%
+\makeatother
+
+% section
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{5ex}% 
+   {-3.5ex plus -1ex minus -.2ex}%
+   {2.3ex plus.2ex}% 
+%   {\normalfont\Large\bfseries}} % in extreport.cls
+   {\normalfont\normalsize\itshape}} %<<<<<<<<<<<<<<<<<<<<<<  not italic ????
+\makeatother
+
+  % subsection
+  \makeatletter
+\renewcommand{\subsection}{\@startsection{subsection}{2}{5ex}%
+   {-3.5ex plus -1ex minus -.2ex}%
+   {1ex}% {0ex}%-название будет вподбор с текстом 
+   {\normalfont}}
+\makeatother
+
+%===============================================
+
+\begin{document}
+   
+\renewcommand{\contentsname}{CONTENTS}%
+\tableofcontents
+
+\chapter[Title chapter one]{TITLE CHAPTER ONE}
+\section{Section one}
+Text text. Text text. Text text. Text text. Text text. Text text. Text text. Text text. Text text. Text text.
+
+Text text. Text text. Text text. Text text. Text text. Text text. Text text. Text text. Text text. Text text. Text text. Text text.
+
+\section{Section two}
+
+\subsection{Subsection. Title. Title. Title. Title. Title. Title. Title. Title. Title. Title. Title. Title. Title}
+
+Subsection text. Subsection text. Subsection text. Subsection text. Subsection text. Subsection text.
+
+\subsection{Subsection two}
+Subsection text. Subsection text. Subsection text. Subsection text. Subsection text.
+
+\chapter[Title chapter two. Title chapter two. Title chapter two]{TITLE CHAPTER TWO. TITLE CHAPTER TWO. TITLE CHAPTER TWO}
+
+\section{Section in chapter two}
+
+\end{document}

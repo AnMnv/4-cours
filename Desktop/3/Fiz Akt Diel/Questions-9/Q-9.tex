@@ -1,0 +1,107 @@
+\documentclass[a4paper,14pt]{extreport}
+	\usepackage[left=1.5cm,right=2cm,
+	    top=1.5cm,bottom=2cm,bindingoffset=0cm]{geometry}
+	\usepackage{scrextend}
+	\usepackage[T1,T2A]{fontenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage[russian,ukrainian,english]{babel}
+	\usepackage{tabularx}
+	\linespread{1.5}
+	\usepackage{amssymb}
+	\usepackage{color}
+	\usepackage{amsmath}
+	\usepackage{mathrsfs}
+	\usepackage{listings}
+	\usepackage{graphicx}
+	\graphicspath{ {./images/} }
+	\usepackage{lipsum}
+	\usepackage{xcolor}
+	\usepackage{hyperref}
+	\usepackage{tcolorbox}
+	\usepackage{tikz}
+	\usepackage[framemethod=TikZ]{mdframed}
+	\usepackage{wrapfig,boxedminipage,lipsum}
+	\mdfdefinestyle{MyFrame}{%
+	linecolor=blue,outerlinewidth=2pt,roundcorner=20pt,innertopmargin=\baselineskip,innerbottommargin=\baselineskip,innerrightmargin=20pt,innerleftmargin=20pt,backgroundcolor=gray!50!white}
+	 \usepackage{csvsimple}
+	 \usepackage{supertabular}
+	\usepackage{pdflscape}
+	\usepackage{fancyvrb}
+	%\usepackage{comment}
+	\usepackage{array,tabularx}
+	\usepackage{colortbl}
+
+	\usepackage{varwidth}
+	\tcbuselibrary{skins}
+	\usepackage{fancybox}
+
+
+	\usepackage{tikz}
+	\usepackage[framemethod=TikZ]{mdframed}
+	\usepackage{xcolor}
+	\usetikzlibrary{calc}
+	\makeatletter
+	\newlength{\mylength}
+	\xdef\CircleFactor{1.1}
+	\setlength\mylength{\dimexpr\f@size pt}
+	\newsavebox{\mybox}
+	\newcommand*\circled[2][draw=blue]{\savebox\mybox{\vbox{\vphantom{WL1/}#1}}\setlength\mylength{\dimexpr\CircleFactor\dimexpr\ht\mybox+\dp\mybox\relax\relax}\tikzset{mystyle/.style={circle,#1,minimum height={\mylength}}}
+	\tikz[baseline=(char.base)]
+	\node[mystyle] (char) {#2};}
+	\makeatother
+
+	\definecolor{ggreen}{rgb}{0.4,1,0}
+	\definecolor{rred}{rgb}{1,0.1,0.1}
+	\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+	\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+	\definecolor{asparagus}{rgb}{0.53, 0.66, 0.42}
+	\definecolor{chartreuse}{rgb}{0.5, 1.0, 0.0}
+	\definecolor{darkorchid}{rgb}{0.6, 0.2, 0.8}
+
+	\usepackage{float}
+	\usepackage{wrapfig}
+	\usepackage{framed}
+	%for nice Code{
+	\lstdefinestyle{customc}{
+	  belowcaptionskip=1\baselineskip,
+	  breaklines=true,
+	  frame=L,
+	  xleftmargin=\parindent,
+	  language=C,
+	  showstringspaces=false,
+	  basicstyle=\small\ttfamily,
+	  keywordstyle=\bfseries\color{green!40!black},
+	  commentstyle=\itshape\color{purple!40!black},
+	  identifierstyle=\color{blue},
+	  stringstyle=\color{orange},
+	}
+	\lstset{escapechar=@,style=customc}
+%}
+
+
+\begin{document}
+\pagecolor{white}
+
+%----------------------------------------1
+\newtcbox{\xmybox}[1][red]{on line, arc=7pt,colback=#1!10!white,colframe=#1!50!black, before upper={\rule[3pt] {0pt}{10pt}},boxrule=1pt,boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
+
+\begin{center}\xmybox[green]{Mnatsakanov Anton} \xmybox[amber]{DP-82} \xmybox[blue]{Variant №5}
+\vspace{1cm}
+
+\end{center}
+
+
+\begin{center}Як реалізується теорія Ландау для аналізу сегнетоелектричних переходів першого роду?\end{center}
+
+
+
+In solids, phase transitions can be not only of the second kind (FP-II) but also close to transitions of the first kind (FP-I). FP-II is characterized by the fact that the energy at the transition point changes continuously, there is no temperature hysteresis, but the jump changes the derivatives of energy functions. In the case of FP-I, the main energy characteristics of the crystal change by a jump, and temperature hysteresis is observed in the vicinity of the transition. \\
+Spontaneous polarization in $ BaTiO_3 $ in the case of AF occurs by a jump, as predicted by the theory of AF-I. The jump decreases at the Curie point and the dielectric constant. Thus, the most important changes in the dielectric properties of ferroelectrics as a result of AF of both the first and second kind are successfully explained by thermodynamic theory. \par
+The choice of the order parameter according to Landau's phenomenological theory is based on the separation of the most important property of the crystal. In the case of ferroelectrics, the choice of polarization as a parameter of order allows us to explain not only the temperature dependence of Pc, but also the large maximum of dielectric constant in the vicinity of the AF. However, there are known cases of spontaneous polarization during AF without a noticeable maximum depending on $\varepsilon $ (T), for example, in gadolinium molybdate $ Gd_2 (MoO_4) _3 $. \par
+Ferroelectrics in which the anomaly in the temperature course $\varepsilon $ (T) is vaguely expressed are called improper. In them, polarization is not a parameter of AF. In the case of $ Gd_2 (MoO_4) _3 $, the cause of structural ordering at the Curie point is mechanical deformation, and spontaneous polarization occurs during AF as one of the properties of the ordered phase. \\
+Phase transitions with a temperature maximum of $\varepsilon $ do not necessarily cause the appearance of the polar phase. Examples of the dependences $\varepsilon $ (T) of several crystals, which are called antisegnoelectrics. The jump in the dielectric constant at the transition point may be large (in the case of lead zirconate $ PbZrО_3 $), or not at all (for example, in lead magnesium tungstate $ PbMg_ {1/2} W_ {1/2} O_3 $). Accordingly, the AF from the nonpolar phase to the antipolar can be close to AF-I or AF-II. Among the anti-ferroelectrics, both oxides with a perovskite structure and crystals containing hydrogen (for example, ammonium dihydrogen phosphate $ NH_4H_2PO_4 $) are known.
+
+
+
+
+\end{document}

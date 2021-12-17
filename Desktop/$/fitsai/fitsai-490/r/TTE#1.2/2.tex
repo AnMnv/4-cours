@@ -1,0 +1,122 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[left=1.5cm,right=1.5cm,
+    top=1cm,bottom=1.5cm,bindingoffset=0cm]{geometry}
+    
+\usepackage[warn]{mathtext}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian,ukrainian]{babel}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+%\usepackage{draftwatermark} не будет лезть на картинки
+\usepackage[printwatermark]{xwatermark}%будет лезть на картинки
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+
+\definecolor{lgreen}{rgb}{0.5,1,1}
+\definecolor{n}{rgb}{1,0.5,0.5}
+\definecolor{n1}{rgb}{1,1,0.5}
+\definecolor{n3}{rgb}{1,0.7,0.9}
+
+
+
+
+\begin{document}
+\pagecolor{white}
+Фіцай Р.П. ДП-81\\
+
+Варіант №10\\
+
+Виведення формули для знаходження електропровідності провідника з донорними домішками:\\
+
+\large
+Запишемо закон діючих мас:
+
+\begin{equation}
+n\cdot p = n_i^2
+\label{eq:ref}
+\end{equation}
+
+Повний заряд електронів дорівнює сумі заряду дірок та заряду іонів донорів:
+\begin{equation}
+ q\cdot n = q\cdot p + q\cdot N_D^+ 
+\label{eq:ref}
+\end{equation}
+\begin{center}
+$ \Downarrow$\\
+\end{center}
+\begin{equation}
+n = p + N_D^+
+\label{eq:ref}
+\end{equation}
+
+
+Підставивши вираз (3) у вираз (1) отримаємо:
+\begin{align}
+ n_i^2 = p^2 + p\cdot N_D^+\\
+ p^2 + p\cdot N_D^+ -n_i^2 = 0
+\end{align}
+
+
+Розв'яжемо квадратне рівняння та знайдемо його корені.\\
+
+Від'ємним корінем знехтуємо:
+\begin{equation}
+p = \dfrac {-N_D^+ \sqrt{(N_D^+)^2 + 4\cdot n_i^2}}{2}\text{   } D = (N_D^+)^2 + 4\cdot n_i^2\\
+\label{eq:ref}
+\end{equation}
+
+Підставляємо у (3) вираз та отримуємо:\\
+\begin{equation}
+p = \dfrac {N_D^+ \sqrt{(N_D^+)^2 + 4\cdot n_i^2}}{2}
+ \end{equation}
+ %-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+ Отримали формулу для розрахунку електропровідності провідника з донорними домішками:\\
+ \begin{equation}
+\sigma =  q\cdot \dfrac {-N_D^+ +\sqrt{(N_D^+)^2 + 4\cdot n_i^2}}{2} \cdot \mu_n + q\cdot \dfrac {N_D^+ +\sqrt{(N_D^+)^2 + 4\cdot n_i^2}}{2} \cdot \mu_p,
+ \end{equation}
+ де $N_D^+ = 10\cdot 10^{14}\text{$\text{см}^{-1}$}$ --- концентрація донорної домішки; 
+ $n_i = 1.45\cdot 10^{10}\text{$\text{см}^{-3}$}$ --- концентрація власних носіїв; 
+ $\mu_n = 1500 \frac{\text{$\text{ см}^{-3}$}}{B\cdot c}$ --- рухливість електронів; 
+ $\mu_p = 450\frac{\text{$\text{ см}^{-3}$}}{B\cdot c}$ --- рухливість дірок; 
+ $q=1.6\cdot10^{-19} \text{ Кл}$ --- заряд електрона. 
+ \vspace{1cm}
+
+Підставляємо дані, у формулу провідності та отримаємо:\\
+\begin{center}
+$\sigma = 1.6\cdot10^{-19}\cdot \dfrac {-10\cdot 10^{14} +\sqrt{(10\cdot 10^{14})^2 + 4\cdot n_i^2}}{2} \cdot 1500 + $ \\
+\vspace{0.3cm}
+$+ 1.6\cdot10^{-19}\cdot \dfrac {10\cdot 10^{14} +\sqrt{(10\cdot 10^{14})^2 + 4\cdot n_i^2}}{2} \cdot 450 = 0.072$
+\end{center}
+
+\textbf{Відповідь:} 
+$\sigma = 0.072 \dfrac{ \text{См}} {\text{см}}. $
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

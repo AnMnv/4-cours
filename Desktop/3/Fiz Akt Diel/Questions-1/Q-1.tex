@@ -1,0 +1,87 @@
+\documentclass[a4paper,14pt]{extreport}
+\usepackage[left=1.5cm,right=1.5cm,
+    top=1.5cm,bottom=1.5cm,bindingoffset=0cm]{geometry}
+\usepackage{scrextend}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian,ukrainian]{babel}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{wrapfig,boxedminipage,lipsum}
+\mdfdefinestyle{MyFrame}{%
+linecolor=blue,outerlinewidth=2pt,roundcorner=20pt,innertopmargin=\baselineskip,innerbottommargin=\baselineskip,innerrightmargin=20pt,innerleftmargin=20pt,backgroundcolor=gray!50!white}
+ \usepackage{csvsimple}
+ \usepackage{supertabular}
+\usepackage{pdflscape}
+\usepackage{fancyvrb}
+%\usepackage{comment}
+\definecolor{ggreen}{rgb}{0.4,1,0}
+\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+\usepackage{array,tabularx}
+\usepackage{colortbl}
+
+\usepackage{varwidth}
+\tcbuselibrary{skins}
+\usepackage{fancybox}
+
+\usetikzlibrary{calc}
+\makeatletter
+\newlength{\mylength}
+\xdef\CircleFactor{1.1}
+\setlength\mylength{\dimexpr\f@size pt}
+\newsavebox{\mybox}
+\newcommand*\circled[2][draw=blue]{\savebox\mybox{\vbox{\vphantom{WL1/}#1}}\setlength\mylength{\dimexpr\CircleFactor\dimexpr\ht\mybox+\dp\mybox\relax\relax}\tikzset{mystyle/.style={circle,#1,minimum height={\mylength}}}
+\tikz[baseline=(char.base)]
+\node[mystyle] (char) {#2};}
+\makeatother
+
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{framed}
+
+
+\begin{document}
+\pagecolor{white}
+
+\fcolorbox{black}{ggreen}{Mnatsakanov Anton DP-82\hspace{2cm} Variant №5}\par
+\vspace{1cm}
+
+\fcolorbox{black}{amber}{1} Які явища виникають під впливом на діелектрик  зміни його температури?\par
+\fcolorbox{black}{babyblue}{2} Як вибирати комірку Браве?\\
+\vspace{1cm}
+
+
+\begin{center}\circled[fill=amber,draw=black]{1}\end{center}
+Some types of dielectrics, when exposed to temperature, can start to conduct electricity, in fact, thus becoming a conductor and often when reaching a peak temperature there is a \underline{breakdown} of the dielectric itself (note that the electrical conductivity increases very sharply up to 10 orders of magnitude). \\
+It can also be argued that the \underline{conductivity} of a dielectric is entirely dependent on temperature, because as it increases, the thermal motion of atoms and molecules leads to the activation of new free carriers.\\
+Also when a dielectric is heated or cooled asymmetrically the following phenomenon occurs which is called \underline{thermal conductivity} i.e. the transfer of heat through a given material and as a consequence (or not) there may be a phenomenon called \underline{thermal} \underline{deformation} which occurs due to asymmetric vibrations of atoms and ions.\\
+In spontaneously polarized dielectric crystals, when heated, an interesting phenomenon can arise -- an \underline{electric voltage} which polarity changes depending on the heating or cooling of the crystal.
+
+
+\begin{center}\circled[fill=babyblue,draw=black]{2}\end{center}
+In general, the primitive Bravais cells (cell with a minimum volume) are those basic cells that allow us to classify crystals with crystallographic syngonies.\\
+The three\footnote{The significance of the conditions is plotted in descending order.} main concepts that guided Bravais in selecting the cell:\\
+\begin{itemize}
+  \item symmetry of unit cell must correspond to highest symmetry of crystal;
+  \item unit cell should have largest possible number of identical angles,
+        or corners and edges;
+  \item unit cell should have the minimal volume.
+\end{itemize}
+As I understand, from tables and literature the ideal Bravais cell consist of Cubic crystal system (a = b = c and $\alpha = \beta = \gamma = 90^{\circ}$).
+
+
+
+\end{document}

@@ -1,0 +1,9 @@
+\babel@toc {ukrainian}{}
+\contentsline {section}{1.Вступ}{3}%
+\contentsline {section}{2.Біологічні компоненти крові}{4}%
+\contentsline {section}{3.Методи спектрального аналізу крові}{5}%
+\contentsline {subsection}{3.1. Метод Дервіза-Воробйова}{5}%
+\contentsline {subsection}{3.2. Геміглобінціанідний метод}{6}%
+\contentsline {subsection}{3.3. Геміхромний метод}{8}%
+\contentsline {subsection}{3.4.Метод багатокомпонентного спектрального аналізу}{10}%
+\contentsline {section}{4.Висновок}{14}%

@@ -1,0 +1,75 @@
+object Form1: TForm1
+  Left = 982
+  Height = 240
+  Top = 205
+  Width = 320
+  Caption = 'Form1'
+  ClientHeight = 240
+  ClientWidth = 320
+  Color = clTeal
+  Position = poDesktopCenter
+  LCLVersion = '2.0.10.0'
+  object OK: TButton
+    Left = 184
+    Height = 25
+    Top = 176
+    Width = 75
+    Caption = 'OK'
+    OnClick = OKClick
+    TabOrder = 0
+  end
+  object t: TEdit
+    Left = 96
+    Height = 22
+    Top = 10
+    Width = 80
+    Color = clBtnHighlight
+    DoubleBuffered = False
+    ParentDoubleBuffered = False
+    TabOrder = 1
+    Text = '0.1'
+  end
+  object t1: TLabel
+    Left = 10
+    Height = 16
+    Top = 16
+    Width = 62
+    Caption = 'Точность:'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 96
+    Height = 22
+    Top = 96
+    Width = 208
+    Color = clHighlight
+    OnChange = Edit1Change
+    ReadOnly = True
+    TabOrder = 2
+  end
+  object r1: TLabel
+    Left = 10
+    Height = 16
+    Top = 102
+    Width = 74
+    Caption = 'РЕЗУЛЬТАТ:'
+    ParentColor = False
+  end
+  object Label1: TLabel
+    Left = 10
+    Height = 16
+    Top = 56
+    Width = 67
+    Caption = 'Введите х:'
+    ParentColor = False
+  end
+  object x1: TEdit
+    Left = 96
+    Height = 22
+    Top = 50
+    Width = 80
+    Color = clBtnHighlight
+    TabOrder = 3
+    Text = '0.2'
+  end
+end

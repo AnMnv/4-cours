@@ -1,0 +1,120 @@
+\documentclass[a4paper,14pt]{extreport}
+\usepackage[left=1.5cm,right=1.5cm,
+    top=1.5cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\usepackage{scrextend}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian,ukrainian]{babel}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{wrapfig,boxedminipage,lipsum}
+\mdfdefinestyle{MyFrame}{%
+linecolor=blue,outerlinewidth=2pt,roundcorner=20pt,innertopmargin=\baselineskip,innerbottommargin=\baselineskip,innerrightmargin=20pt,innerleftmargin=20pt,backgroundcolor=gray!50!white}
+ \usepackage{csvsimple}
+ \usepackage{supertabular}
+\usepackage{pdflscape}
+\usepackage{fancyvrb}
+%\usepackage{comment}
+\usepackage{array,tabularx}
+\usepackage{colortbl}
+
+\usepackage{varwidth}
+\tcbuselibrary{skins}
+\usepackage{fancybox}
+
+
+\usepackage{tikz}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{xcolor}
+\usetikzlibrary{calc}
+\makeatletter
+\newlength{\mylength}
+\xdef\CircleFactor{1.1}
+\setlength\mylength{\dimexpr\f@size pt}
+\newsavebox{\mybox}
+\newcommand*\circled[2][draw=blue]{\savebox\mybox{\vbox{\vphantom{WL1/}#1}}\setlength\mylength{\dimexpr\CircleFactor\dimexpr\ht\mybox+\dp\mybox\relax\relax}\tikzset{mystyle/.style={circle,#1,minimum height={\mylength}}}
+\tikz[baseline=(char.base)]
+\node[mystyle] (char) {#2};}
+\makeatother
+
+\definecolor{ggreen}{rgb}{0.4,1,0}
+\definecolor{rred}{rgb}{1,0.1,0.1}
+\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+\definecolor{amethyst}{rgb}{0.6, 0.4, 0.8}
+
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{framed}
+%for nice Code{
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\small\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+\lstset{escapechar=@,style=customc}
+%}
+
+
+\begin{document}
+\pagecolor{white}
+
+%----------------------------------------1
+\newtcbox{\xmybox}[1][red]{on line, arc=7pt,colback=#1!10!white,colframe=#1!50!black, before upper={\rule[-3pt]{0pt}{10pt}},boxrule=1pt, boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
+
+\begin{center}
+  \fbox{\fbox{Advantages and disadvantages of digital camera}}
+\end{center}
+
+
+
+\begin{itemize}
+  \item Number of Photos\\
+  As of 2013, camera memory cards come with capacities of up to 64 gigabytes. This means one memory card can store thousands of photos. This is in stark contrast with film photography, where you were limited to 36 photos on a roll of film. When film got damaged, the photographer would lose 36 photos. However, if your memory card gets corrupted before you have had a chance to download the photos, you could potentially lose thousands of images at once.\\
+  \item Technological Advancement\\
+  Digital technology is developing rapidly, so much so that digital cameras become outdated very quickly. The models are updated continually, each with a larger number of megapixels and a better capacity to store large images quickly. The other problem with rapid technological advancement is that smart phones' cameras have improved to such an extent that their photo quality is virtually indistinguishable from that of many compact digital cameras. The convenience of having the phone with you at all times, its multi-functionality and the fact that you can upload photos and videos to social media sites immediately, make it a real threat to the point-and-shoot digital camera.
+  \item Editing\\
+  Digital photography allows you to edit your images after uploading them to a computer. This allows for very creative effects, and gives you the freedom to correct faults in photos that are, for instance, underexposed. It is now possible to turn an image to grey scale digitally or to remove elements from the background. The downside of this is that, once again, people tend to be less critical about their photos because it could be corrected through editing. Instead of getting the shot right from the start, a lot of time is spent editing away mistakes. Photos are also often over-edited, taking away from their natural beauty.
+  \item Printing\\
+  Previously, film had to be developed and printed in a darkroom or with a special photo processing unit. It required a lot of chemicals and was an expensive process, making photography an expensive hobby. Today, images shot with a digital camera can easily be printed at home with a standard inkjet printer, which is a lot cheaper and gives you more control over the final result.
+
+  \noindent{\color{red} \rule{\linewidth}{1mm} }
+
+  Cause everything works with energy, these small gadgets also consume. And you may say that the old ones were also working on batteries. The fact is that these new digital one need more energy in order to use all those functions. And this is sometimes expensive when you need to make many pictures.\\
+
+  Another disadvantage would be the price that is higher for the digital cameras. They do more so they cost more. But for those who are truly in love with the pictures this is not a barrier.
+
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

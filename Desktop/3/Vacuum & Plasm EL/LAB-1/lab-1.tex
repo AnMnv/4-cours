@@ -1,0 +1,189 @@
+\documentclass[a4paper,14pt]{extreport}
+\usepackage[left=1.5cm,right=1.5cm,
+    top=1.5cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\usepackage{scrextend}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian,ukrainian]{babel}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{wrapfig,boxedminipage,lipsum}
+\mdfdefinestyle{MyFrame}{%
+linecolor=blue,outerlinewidth=2pt,roundcorner=20pt,innertopmargin=\baselineskip,innerbottommargin=\baselineskip,innerrightmargin=20pt,innerleftmargin=20pt,backgroundcolor=gray!50!white}
+ \usepackage{csvsimple}
+ \usepackage{supertabular}
+\usepackage{pdflscape}
+\usepackage{fancyvrb}
+%\usepackage{comment}
+\definecolor{ggreen}{rgb}{0.4,1,0}
+\definecolor{rred}{rgb}{1,0.1,0.1}
+\definecolor{aquamarine}{rgb}{0.5, 1.0, 0.83}
+\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+\usepackage{array,tabularx}
+\usepackage{colortbl}
+
+\usepackage{varwidth}
+\tcbuselibrary{skins}
+\usepackage{fancybox}
+
+\usetikzlibrary{calc}
+\makeatletter
+\newlength{\mylength}
+\xdef\CircleFactor{1.1}
+\setlength\mylength{\dimexpr\f@size pt}
+\newsavebox{\mybox}
+\newcommand*\circled[2][draw=blue]{\savebox\mybox{\vbox{\vphantom{WL1/}#1}}\setlength\mylength{\dimexpr\CircleFactor\dimexpr\ht\mybox+\dp\mybox\relax\relax}\tikzset{mystyle/.style={circle,#1,minimum height={\mylength}}}
+\tikz[baseline=(char.base)]
+\node[mystyle] (char) {#2};}
+\makeatother
+
+
+
+
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{framed}
+%for nice Code{
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\small\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+\lstset{escapechar=@,style=customc}
+%}
+
+
+\begin{document}
+\pagecolor{white}
+\begin{titlepage}
+  \begin{center}
+    \large
+    Національний технічний університет України \\ "Київський політехнічний інститут імені Ігоря Сікорського"
+
+
+    Факультет Електроніки
+
+    Кафедра мікроелектроніки
+    \vfill
+
+    \textsc{ЗВІТ}\\
+
+    {\Large Про виконання лабораторної роботи №1\\
+      з дисципліни: «Вакуумна та плазмова електроніка»\\[1cm]
+
+        ДОСЛІДЖЕННЯ ФОТОЕФЕКТУ
+
+
+    }
+  \bigskip
+\end{center}
+\vfill
+
+\newlength{\ML}
+\settowidth{\ML}{«\underline{\hspace{0.4cm}}» \underline{\hspace{2cm}}}
+\hfill
+\begin{minipage}{1\textwidth}
+Виконавець:\\
+Студент 3-го курсу \hspace{4cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm}А.\,С.~Мнацаканов\\
+\vspace{1cm}
+
+Перевірив: \hspace{5.9cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm}О.\,М.~Бевза\\
+
+\end{minipage}
+
+\vfill
+
+\begin{center}
+2021
+\end{center}
+\end{titlepage}
+
+
+
+\textbf{Мета роботи}: Дослідження вольт-амперних і світлових характеристик фотоелементів для
+видимого спектру світла.
+\begin{center}\textbf{Завдання}\end{center}\par
+\newtcbox{\xmybox}[1][red]{on line, arc=7pt,colback=#1!10!white,colframe=#1!50!black, before upper={\rule[-3pt]{0pt}{10pt}},boxrule=1pt, boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
+
+\fcolorbox{black}{amber}{1} Зняти ВАХ для 4-х значень довжин хвиль вибравши з набору: \xmybox[amber]{200} нм, \xmybox[amber]{400} нм, 440 нм, 470
+нм, 520 нм, 580 нм, 610 нм, \xmybox[amber]{650} нм, \xmybox[amber]{700} нм, 750 нм на вибір при інтенсивності 50\% та 100\%. Побудувати окремо два сімейства кривих для 50\% та 100\% інтенсивності для 3-х різних матеріалів мішені (на вибір). Значення для графіків брати з показань у вікнах «Напруга зміщення» та «Струм».\\
+
+\fcolorbox{black}{babyblue}{2} Зняти світлові характеристики. Побудувати сімейство кривих залежності
+Струм(інтенсивність світла) для довжин хвиль 200 нм, 400 нм, 440 нм для мішені з натрія (або іншого матеріалу фотомішені на вибір). Значення для графіків брати з показань у вікнах «Струм» та «Інтенсивність».\\
+
+\fcolorbox{black}{aquamarine}{3} Побудувати сімейство кривих залежності Енергія(частота) при будь-якій інтенсивності (\xmybox[amber]{50\%}) на
+всьому інтервалі частот для матеріалів мішені: натрій, цинк, мідь, платина, кальцій, магній.\\
+
+\vspace{1cm}
+
+\begin{center}\circled[fill=amber,draw=black]{1}\end{center}
+\begin{figure}[h]
+\center{\includegraphics[width=0.8\linewidth]{50-100_Na.png}}
+\caption{Сiмейства кривих для 50\% та 100\% iнтенсивностi для Натрію.}
+\label{ris1}
+\end{figure}
+
+\begin{figure}[h]
+\center{\includegraphics[width=0.8\linewidth]{50-100_Zn.png}}
+\caption{Сiмейства кривих для 50\% та 100\% iнтенсивностi для Цинку.}
+\label{ris1}
+\end{figure}
+
+
+\begin{figure}[h]
+\center{\includegraphics[width=0.8\linewidth]{50-100_Cu.png}}
+\caption{Сiмейства кривих для 50\% та 100\% iнтенсивностi для Міді.}
+\label{ris1}
+\end{figure}
+
+
+
+
+
+% #######################################
+%###                2                ###
+%######################################
+\clearpage
+\newpage
+\begin{center}\circled[fill=babyblue,draw=black]{2}\end{center}
+
+\begin{figure}[h]
+\center{\includegraphics[width=0.9\linewidth]{2Na.png}}
+\caption{сiмейство кривих залежностi Струм(iнтенсивнiсть свiтла) для довжин хвиль 200 нм, 400 нм, 440 нм для мiшенi з натрiя.}
+\label{ris7}
+\end{figure}
+
+
+\begin{center}\circled[fill=aquamarine,draw=black]{3}\end{center}
+\begin{figure}[h]
+\center{\includegraphics[width=0.9\linewidth]{3part.png}}
+\caption{Ciмейство кривих залежностi Енергiя(частота) при iнтенсивностi 50\% на всьому iнтервалi частот для матерiалiв мiшенi: натрiй, цинк, мiдь, платина, кальцiй, магнiй.}
+\label{ris8}
+\end{figure}
+\newpage
+Висновок:\\
+в даній лабораторній роботі можна наочно змоделювати і переконається в існуванні внутрішнього фотоефекта (хоч і на екрані комп'ютера), як показують дослідження сьогодення це явище часто застосовується в напівпровідникових фотоелементах (фоторезистори, сонячні панелі, фотодіоді, фототранзисторами). При порівнянні ВАХ металів
+фотомішені, я помитів, що найбільше значення фотоструму
+характерне для натрію (напевно це через те що натрій має найменшу роботу виходу), а найменше значення має мідь. Виходячи з теоретичних відомостей основним параметром фотоелемента є його чутлівість, яка дуже добре спостерігається в материалі на короткій довжині хвилі і, напевно, при збільшенні самої інтенсивності. Також я помитів, що для кожен матеріал має своє граничне значення частоти та довжина хвилі світла, від яких залежить відбуватиметься сам фотоефект чи ні. За допомогою останнього сімейства можна зробити висновок, що при збільшенні частоти світла, енергія яку набувають електрони буде поступово збільшуватись. Також проаналізувавши рис.\ref{ris8} можна визначити роботу виходу яка безпосередньо впливає на величину самого фотоструму. Виходячи з того, що  чим більше робота виходу, тим менше енергія електрона тому виходить, що В моєму випадку найбільше значення роботи виходу має платина, потім мідь, цинк, магній, кальцій та натрій.
+\end{document}

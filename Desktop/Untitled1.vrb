@@ -1,0 +1,2 @@
+\frametitle{test}
+\def\boxthree{\tcbox[nobeforeafter,minipage,width=0.7in]{this is a very long box}

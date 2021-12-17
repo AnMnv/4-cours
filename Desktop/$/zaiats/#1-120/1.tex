@@ -1,0 +1,183 @@
+\documentclass[a4paper,14pt]{article}
+\usepackage[left=1cm,right=1cm,
+    top=1cm,bottom=1.5cm,bindingoffset=0cm]{geometry}
+    
+\usepackage[warn]{mathtext}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian,ukrainian]{babel}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+%\usepackage{draftwatermark} не будет лезть на картинки
+\usepackage[printwatermark]{xwatermark}%будет лезть на картинки
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+
+\definecolor{lgreen}{rgb}{0.5,1,1}
+\definecolor{n}{rgb}{1,0.5,0.5}
+\definecolor{n1}{rgb}{1,1,0.5}
+\definecolor{n3}{rgb}{1,0.7,0.9}
+
+
+\begin{document}
+\normalsize
+\pagecolor{white}
+\vspace{0.3cm}
+\begin{center}
+\fcolorbox{pink}{n3}{\large{Дар'я Заєць ДМ-81}}\par
+\end{center}
+
+
+
+
+
+\vspace{0.5cm}
+$\blacktriangleright \text{\textbf{\large{Виведення формули похибки напруги на діоді:}}}  $
+\vspace{0.5cm}
+\vspace{0.3cm}
+%1------------------------------------------------------------------------------------------------------------------------------------------
+\begin{equation}
+\triangle U_D = \sqrt{(U-U_R)_U'^{2} \cdot \triangle U^2 + (U-U_R)_UR'^{2}\cdot \triangle U_R^2} = \sqrt{\triangle U^2 +\triangle U_R^2 },
+\label{eq:ref}
+\end{equation}
+
+де U -- сумарна напруга на діоді і резисторі; $U_R$ -- спад напруги на резисторі
+\begin{center}
+\fcolorbox{black}{n}{$U_D = U-U_R$}\par
+\end{center}
+
+
+
+
+\vspace{3cm}
+$\blacktriangleright \text{\textbf{\large{Виведення формули похибки зворотнього струму через діод: }}}  $
+\vspace{0.3cm}
+%2------------------------------------------------------------------------------------------------------------------------------------------
+\begin{equation}
+\triangle I_D = \sqrt{\left(\dfrac {U_R} {R} \right)_{UR}^{'2} \cdot \triangle U_R^2 +\left(\dfrac{U_R}  {R}\right)_R^{'2} \cdot \triangle R^2} 
+= \sqrt{ \frac{\triangle U_R^2} {R^2} + \dfrac{\triangle U_R^2} {R^4} \cdot \triangle R^2} = \dfrac 1{R^2} \cdot \sqrt {(R\triangle U_R)^2 + (U_R\triangle R)^2} ,
+\label{eq:ref}
+\end{equation}
+
+де R -- опір резистора.
+\begin{center}
+\fcolorbox{black}{n}{$I_D = \dfrac{U_R}R$}\par
+\end{center}
+
+
+
+
+
+
+\vspace{3cm}
+$\blacktriangleright \text{\textbf{\large{Виведення формули похибки струму виродження:}}}  $
+\vspace{0.3cm}
+%3------------------------------------------------------------------------------------------------------------------------------------------
+\begin{large}
+\begin{equation}
+\triangle I_{Bup} = \dfrac{1} {r_b^2} \cdot \sqrt{(r_b\triangle \varphi_T)^2 + (\varphi_T\triangle r_b)^2} ,
+\label{eq:ref}
+\end{equation}
+\end{large}
+\vspace{0.5cm}
+
+де $\varphi_T$ --  тепловий потенціал; $r_b$ -- опір бази
+\begin{center}
+\fcolorbox{black}{n}{$I_{Bup} = \dfrac{ \varphi_T}{r_b}$}\par
+\end{center}
+
+
+
+
+\vspace{3cm}
+$\blacktriangleright \text{\textbf{\large{Виведення формули похибки опору бази:}}}  $
+\vspace{0.3cm}
+%4------------------------------------------------------------------------------------------------------------------------------------------
+\begin{large}
+\begin{equation}
+\begin{gathered}
+\triangle r_b = \sqrt{   {\left(\dfrac{ U_{np}-\varphi_0} {I_{np}} \right)}'^2_{U_{np}}    \cdot \triangle {U^2_{np}}  +  {\left(\dfrac{ U_{np}-\varphi_0} {I_{np}} \right)}'^2_{\varphi_{0}}    \cdot \triangle {\varphi^2_{0}}   
++  {\left(\dfrac{ U_{np}-\varphi_0} {I_{np}} \right)}'^2_{I_{np}}    \cdot \triangle {I^2_{np}} }= \\
+ =\sqrt{\dfrac{\triangle U_{np}^2 }{I_{np}^2}    +   \dfrac{\triangle {\varphi^2_{0}}}{I_{np}^2}  
+ + \dfrac{(\varphi_{0})-U_{np}}{I_{np}^2}\cdot \triangle I_{np}^4}=
+  \dfrac{1}{I_{np}^2}\sqrt{ I_{np}^2 \cdot (\triangle U_{np}^2  + \triangle \varphi^2_{0}) + 
+  \triangle I_{np}^2 \cdot   (\varphi_0-U_{np})^2  }  , 
+ \end{gathered}
+\label{eq:ref}
+\end{equation}
+\end{large}
+
+де $I_np$ -- прямий струм
+\begin{center}
+\fcolorbox{black}{n}{$r_{b} = \dfrac{ U_{np} - \varphi_0}{I_{np}}$}\par
+\end{center}
+
+
+
+
+
+
+\vspace{3cm}
+$\blacktriangleright \text{\textbf{\large{Виведення формули похибки температурної чутливості прямої напруги:}}}  $
+\vspace{0.3cm}
+%5------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{large}
+\begin{equation}
+\begin{gathered}
+\triangle\text{ТЧН}=\sqrt{\left(\frac{U_2-U_1} {T_2-T_1}\right)_{U_1}^2 \cdot\triangle U_1^{'2} 
++ \left(\dfrac{U_2-U_1} {T_2-T_1}\right)_{U_2}^{'2} \cdot\triangle U_2^2 
++ \left(\dfrac{U_2-U_1} {T_2-T_1}\right)_{T_1}^{'2} \cdot\triangle T_1^2
++ \left(\dfrac{U_2-U_1} {T_2-T_1}\right)_{T_2}^{'2}\cdot\triangle T_2^2} =  \\
+ = \sqrt{ \dfrac{\triangle U_1^2} {(T_2-T_1)^2} 
+           + \dfrac{\triangle U_2^2} {(T_2-T_1)^2} 
+           + \dfrac{(U_2-U_1)^2 \cdot\triangle T_1^2}{(T_2-T_1)^4} 
+           + \dfrac{(U_2-U_1)^2 \cdot\triangle T_2^2}{(T_2-T_1)^4}} = \\
+ =\dfrac {\sqrt{ (\triangle U_1^2+\triangle U_2^2)\cdot (T_2-T_1)^2 
+ +(\triangle T_1^2+\triangle T_2^2)\cdot (U_2-U_1)^2 }}{(T_2-T_1)^2}  ,
+ \end{gathered}
+\label{eq:ref}
+\end{equation}
+\end{large}
+
+де $U_1, U_2$ -- значення прямої напруги; $T_1, T_2$значення температури; $\triangle T$ -- зміна температури; 
+\begin{center}
+\fcolorbox{black}{n}{ТЧН = $\dfrac{ U_{np} - \varphi_0}{I_{np}}$}\par
+\end{center}
+
+де $U_{np}$ -- зміна прямої напруги. 
+
+
+
+
+\vspace{3cm}
+$\blacktriangleright \text{\textbf{\large{Виведення формули похибки температурної чутливості зворотнього струму: }}}  $
+\vspace{0.3cm}
+%6------------------------------------------------------------------------------------------------------------------------------------------
+\begin{large}
+\begin{equation}
+\begin{gathered}
+\triangle TKI = \sqrt{  (e^{\alpha \cdot (T_2-T_1)})^{'2} _\alpha \cdot \alpha^2
++(e^{\alpha \cdot (T_2-T_1)})^{'2} _{T_1} \cdot T_1^2
++(e^{\alpha \cdot (T_2-T_1)})^{'2} _{T_2} \cdot T_2^2}  = \\
+=e^{\alpha \cdot (T_1+T_2)} \cdot \sqrt{ (\triangle \alpha(T_2-T_1))^2 +\alpha^{2}(\triangle T_2^{2}+\triangle T_1^{2}) }
+ \end{gathered}
+\label{eq:ref}
+\end{equation}
+\end{large}
+\begin{center}
+\fcolorbox{black}{n}{TKI$ = e^{\alpha \cdot (T_2-T_1)}$}\par
+\end{center}
+
+
+
+
+\end{document}

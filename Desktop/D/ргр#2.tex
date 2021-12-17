@@ -1,0 +1,109 @@
+\documentclass[fontsize=14pt,a4paper]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian,ukrainian]{babel}
+\usepackage{indentfirst}
+\usepackage{misccorr}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{cmap}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+\usepackage{icomma}
+\usepackage{euscript}
+\usepackage{mathrsfs}
+\usepackage{mathtext}
+
+\usepackage{listings}
+\setlength{\parindent}{5ex}
+\begin{document}
+\renewcommand{\baselinestretch}{1.5}
+\setlength{\leftskip}{1em}
+ \setlength{\rightskip}{1em}
+\pagecolor{white}
+\begin{titlepage}
+  \begin{center}
+    \large
+    Національний технічний університет України \\ "Київський політехнічний інститут імені Ігоря Сікорського"
+     
+       
+    Факультет Електроніки
+     
+    Кафедра мікроелектроніки
+    \vfill
+      
+    \textsc{ЗВІТ}\\
+     
+    {\large Про виконання розрахунково-графічної роботи №2\\
+      з дисципліни: «Теорія поля»\\[1cm]
+       
+    }
+  \bigskip
+\end{center}
+\vfill
+ 
+\newlength{\ML}
+\settowidth{\ML}{«\underline{\hspace{0.4cm}}» \underline{\hspace{2cm}}}
+\hfill
+\begin{minipage}{1\textwidth}
+Виконав:\\
+Студент 3-го курсу \hspace{4cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm}Кузьмінський О.Р.\\
+\vspace{1cm}
+
+Перевірила: \hspace{6.1cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1 cm}Саурова Т.А.\\
+
+\end{minipage}
+
+\vfill
+
+\begin{center}
+2020
+\end{center}
+\end{titlepage}
+%\includegraphics[width=0.5\textwidth]{lablub}
+\begin{center}
+\Large 1. Мета роботи\\
+\end{center}
+
+ Засвоєння розрахунків найпростіших параметрів для довгих ліній та засвоєння принципу узгодження навантаження.
+
+\begin{center}
+\Large 2. Завдання\\
+\end{center}
+\begin{enumerate}
+\item Для коаксіального кабеля з діелектричним заповненням, діаметрами провідників $D$ і $d$, довжиною $l$, збудженого на частоті $f$, навантаженого на опір $Z_{\text{н}}$, розрахувати КСХ, коефіцієнт відбивання і вхідний опір. Побудувати графіки розподілу амплітуд струму і напруги вздовж кабеля.
+\item Розрахувати місце підключення та велечину реактивності (наприклад, довжину шлейфа), необхіднлї для узгодження лінії з даним навантаженням.
+\end{enumerate}
+
+\begin{center}
+\Large 3. Вхідні дані\\
+\end{center}
+
+\begin{itemize}
+\item № вар.---9;
+\item $\varepsilon=2$ (фторопласт);
+\item $f=2$ ГГц;
+\item $d=0,85$ мм;
+\item $D=4,6$ мм;
+\item $l=60$ см;
+\item $\dot Z_{\text{н}}=100$ Ом.
+\end{itemize}
+\newpage
+
+\begin{center}
+\Large 4. Обробка даних\\
+\end{center}
+
+Лінії передач за своїми параметрами аналогічні коливальним контурам, тобто вони мають індуктивність L, ємність С, активний опір провідників R, провідність лінії діелектрика G, але на відміну від коливальних контурів вони рівномірно розподілені по всій довгій лінії. Параметри L, C характеризують резонансні властивості лінії, в той час як R,G характеризують втрати (згасання) в ній.\\
+
+Залежно від харктеру і величини опору навантаження, лінія передачі може працювати в декількох режимах стоячої хвилі, біжучої хвилі або в змішаному режимі. Режим біжучої хвилі виникає, коли опір навантаження $\dot Z_{\text{н}}$ дорівнює опору лінії $\dot Z_0$ і відбивання не відбувається. Стоячі хвилі виникають коли $\dot Z_{\text{н}}$ не рівне  $\dot Z_0$.\\
+
+Розрахуємо опір лінії $\dot Z_0$, вважаючи що теплових втрат у діелектрику немає:
+\begin{equation}
+\dot Z_0=\sqrt{\dfrac{L_0}{C_0}},
+\end{equation}
+де: $L_0$---погонна індуктивність, $C_0$---погонна ємність, які в свою чергу розраховуються за такими формулами:
+
+
+
+
+
+\end{document}

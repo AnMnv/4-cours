@@ -1,0 +1,16 @@
+n=1;
+Rp=6; %dB
+Rs=22; %dB
+fp=4e+3;
+fs=1.33e+3;
+wp=2*pi*fp;
+ws=2*pi*fs;
+[n,wn]=buttord(wp,ws,Rp,Rs,'s');
+disp(n);
+[b,a]=butter(n,wp,'high','s');
+disp(b(1));
+disp(b(2));
+disp(b(3));
+disp(a(1));
+disp(a(2));
+disp(a(3));

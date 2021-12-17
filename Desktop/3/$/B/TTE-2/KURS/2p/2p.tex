@@ -1,0 +1,271 @@
+\documentclass[a4paper,14pt]{extreport}
+\usepackage[left=1.5cm,right=1.5cm,
+    top=1.5cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\usepackage{scrextend}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian,ukrainian]{babel}
+\linespread{1.5}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{wrapfig,boxedminipage,lipsum}
+\mdfdefinestyle{MyFrame}{%
+linecolor=blue,outerlinewidth=2pt,roundcorner=20pt,innertopmargin=\baselineskip,innerbottommargin=\baselineskip,innerrightmargin=20pt,innerleftmargin=20pt,backgroundcolor=gray!50!white}
+ \usepackage{csvsimple}
+ \usepackage{supertabular}
+\usepackage{pdflscape}
+\usepackage{fancyvrb}
+%\usepackage{comment}
+\usepackage{array,tabularx}
+\usepackage{colortbl}
+
+\usepackage{varwidth}
+\tcbuselibrary{skins}
+\usepackage{fancybox}
+
+
+\usepackage{tikz}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{xcolor}
+\usetikzlibrary{calc}
+\makeatletter
+\newlength{\mylength}
+\xdef\CircleFactor{1.1}
+\setlength\mylength{\dimexpr\f@size pt}
+\newsavebox{\mybox}
+\newcommand*\circled[2][draw=blue]{\savebox\mybox{\vbox{\vphantom{WL1/}#1}}\setlength\mylength{\dimexpr\CircleFactor\dimexpr\ht\mybox+\dp\mybox\relax\relax}\tikzset{mystyle/.style={circle,#1,minimum height={\mylength}}}
+\tikz[baseline=(char.base)]
+\node[mystyle] (char) {#2};}
+\makeatother
+
+\definecolor{ggreen}{rgb}{0.4,1,0}
+\definecolor{rred}{rgb}{1,0.1,0.1}
+\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+\definecolor{amethyst}{rgb}{0.6, 0.4, 0.8}
+
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{framed}
+%for nice Code{
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\small\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+\lstset{escapechar=@,style=customc}
+%}
+
+
+\begin{document}
+\pagecolor{white}
+
+
+%----------------------------------------1
+\begin{titlepage}
+  \begin{center}
+    \large
+    Національний технічний університет України \\ "Київський політехнічний інститут імені Ігоря Сікорського"
+
+
+    Факультет Електроніки
+
+    Кафедра мікроелектроніки
+    \vfill
+
+    \textsc{ЗВІТ}\\
+
+    {\Large Про виконання курсової роботи \\
+      з дисципліни: «Твердотільна електроніка-2»\\[1cm]
+
+        Варіант №22
+
+
+    }
+  \bigskip
+\end{center}
+\vfill
+
+\newlength{\ML}
+\settowidth{\ML}{«\underline{\hspace{0.4cm}}» \underline{\hspace{2cm}}}
+\hfill
+\begin{minipage}{1\textwidth}
+Виконавець:\\
+Студент 3-го курсу \hspace{4cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm}Б.\,В.~Лищенко\\
+\vspace{1cm}
+
+Превірив: \hspace{6.1cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm}Л.\,М.~Королевич\\
+
+\end{minipage}
+
+\vfill
+
+\begin{center}
+2021
+\end{center}
+\end{titlepage}
+
+
+
+\newpage
+\setcounter{page}{2}
+\begin{center}
+    \textbf{Завдання}
+\end{center}
+Розрахувати порогові напруги транзисторів мікросхеми
+
+
+\begin{center}
+  \textbf{Виконання завдання}
+\end{center}
+
+Треба записати формулу для пошуку порогової напруги. За варіантом  у мене КЕФ, тому формула буде наступною:
+\begin{equation}
+U_{n o p}^{0}=\phi_{M S}-\dfrac{q \cdot N_{S S}}{C_{o x}}-2 \cdot \phi_{F}-\dfrac{\sqrt{2 \cdot q \cdot \varepsilon_{0} \cdot \varepsilon_{S} \cdot N_{B}}}{C_{o x}} \cdot \sqrt{\left|2 \cdot \phi_{F}+U_{n}\right|}
+\end{equation}
+
+У цій формулі
+дано майже все, а точніше: $\quad N_{S S}=5,6 \cdot 10^{11} \text{см}^{-3}$
+$\varepsilon_{0}=8,85 \cdot 10^{-14} \text{ }\Phi / \text{см}$
+$q=1,6 \cdot 10^{-19}\text{Кл}$
+$k_{B}=1,38 \cdot 10^{-23}$ Дж/К $, T=300 K,$ $ n_{i}=1,45 \cdot 10^{10} \\
+\text{см}^{-3},$ $ \varepsilon_{S}=11.8,$ $ \rho = 3$  Ом$\cdot$м, $U_0 = -0,6 $ B, $U_1 = -0,6 $ B, $\mu_n = 1500 \text{ }\ddfrac{\text{см}^2}{B \cdot c}$
+
+
+Питома ємність шукається як
+\begin{equation}
+C_{o x}=\varepsilon_{0} \cdot \varepsilon_{o x} / d_{o x}=\dfrac{8,85 \cdot 10^{-14} \cdot 3,9}{0,5\cdot 10^{-5}}=6,903 \cdot 10^{-8}\text{ } \dfrac{\Phi}{\text{см}^{2}}
+\end{equation}
+
+Рівень Фермі у об'ємі кремнію:
+\begin{equation}
+\phi_{F}=\left(\dfrac{k_{B} \cdot T}{q}\right) \cdot \ln \left(\dfrac{N_{B}}{n_{i}}\right)
+\end{equation}
+
+
+
+
+\vspace{0.5 cm}
+$\sigma=\dfrac{1}{\rho}=q \cdot  N_{B} \cdot \mu_{n} \Rightarrow  N_{B}=\dfrac{1}{\rho \cdot q \cdot \mu_{n}}=\dfrac{1}{3 \cdot 1,6 \cdot 10^{-19} \cdot 1500} = 1,39 \cdot 10^{15} \text{ }$ см $^{-3}$
+\vspace{0.5 cm}
+
+
+Рівень Фермі тоді буде:
+$$\phi_{F}=\left(\dfrac{k_{B} \cdot T}{q}\right) \cdot \ln \left(\dfrac{N_{B}}{n_{i}}\right)=\dfrac{1,38 \cdot 10^{-23} \cdot 300}{1,6 \cdot 10^{-19}} \cdot \ln \left(\dfrac{1,39 \cdot 10^{15}}{1,45 \cdot 10^{10}}\right)=0,297\text{ } B$$\\
+
+Напруги між витоком і підкладкою для кожного транзистора, маємо за умовою,
+що $U_0 = -0,6 $ B $U_1 = -6 $ B
+3а умовою з +, але так як підкладка КЕФ, то беремо з мінусом.\\
+
+
+Для $Т_1, T_2, T_3, T_6, T_8: U_{n}=0;\text{ }U_{\text {nop }}=-2,14 $ В\\
+Для  $T_4, T_5, T_7: U_{n}=-0,6 B;\text{ } U_{\text {nop }} = -2,19$ В\\
+
+
+
+Далі порахуємо «ідеальну» порогову напругу:
+$$
+U_{\text {\text{ідеал} nop }}=\left(U^{1}+U^{0}\right) / 2=(-6-0,6) / 2=-3,3 \mathrm{~B}
+$$
+
+Шукаємо абсолютні похибки:\\
+$U_{n}=0$\\
+$\Delta U_{n o p}=-3,3+2,41=-0,89 \mathrm{~B}$\\
+$\delta=100 \cdot|0,89 / 2,41|=37 \%$\\
+$U_{n}=-0,6$\\
+$\Delta U_{n o p}=--3,3+2,19=-1,1 \mathrm{~B}$\\
+$\delta=100 \cdot|-1,11 / 2,19|=50 \%$\\
+
+
+
+
+Підлеговування треба, тому шукаємо дозу легування за ф-ю $D=\Delta U_{n o p} \cdot C_{o x}$\\
+$U_{n}=0$\\
+$D=0,89 \cdot 6,903 \cdot 10^{-8} \approx 0,06 \text{ } \text{мкКл} / \text{см}^{2}$\\
+$U_{n}=-0,6$\\
+$D=1,11 \cdot 6,903 \cdot 10^{-8} \approx 0,08 \text{ } \text{мкКл}  / \text{см}^{2}$\\
+
+
+Ну і далі підлеговуємо. Для цього додаємо до обрахованої порогової доданок:\\
+$U_{n}=0$\\
+$U_{\text {nop }}^{\prime}=U_{\text {nop }}+\dfrac{D}{C_{o x}}=-2,41-\dfrac{0,06}{6,9 \cdot 10^{-8}}=-3,28 \mathrm{~B}$\\
+$U_{n}=-0,6$\\
+$U_{\text {nop }}^{\prime}=U_{\text {nop }}+\dfrac{D}{C_{o x}}=-2,19-\dfrac{0,08}{6,9 \cdot 10^{-8}}=-3,35 \mathrm{~B}$\\
+
+
+Для того аби зекономити на процесі виготовлення, замість того аби робити два підлегування (з 0.06 і 0.08), можемо зробити одне, для чого візьмемо дозу 0.07, і знову порахуємо напруги (якщо похибка буде менше 10\%, то тоді так і залишаємо, якщо більше, то тоді робимо два підлегування).
+
+$
+\begin{array}{l}
+U_{n}=0: \\
+U_{n o p}^{\prime}=U_{n o p}+\dfrac{D_{c e p}}{C_{o x}}=-2,41-\dfrac{0,07}{6,903 \cdot 10^{-8}}=-3,43 \mathrm{~B} ; \\
+\delta=100 \cdot|(-3,3+3,43) /(-3,43)| \approx 3,7 \% ; \\
+U_{n}=-0,6: \\
+U_{n o p}^{\prime}=U_{n o p}+\dfrac{D_{c e p} .}{C_{o x}}=-2,19-\dfrac{0,07}{6,903 \cdot 10^{-8}}=-3,21 \mathrm{~B} ; \\
+\delta=100 \cdot|(-3,3+3,21) /(-3,21)| \approx 2,9 \% .
+\end{array}
+$
+
+
+Похибка менше $10 \%$ для всіх трьох напруг, тобто достатньо і одного підлегування, що значно спростить технологію виготовлення.
+
+\begin{center}
+  \textbf{Висновок}
+\end{center}
+Стосовно легування, то доза легування не може бути від’ємною, але знак напруги визначатиметься від того, якою домішкою я буду підлеговувати. Тобто, у даннму випадку напруги були менші за «ідеальну» порогову напругу, тобто вони були недостатньо «електронні», якщо так можна сказати. Якби у мене порогова напруга була менша за ту, яка вийшла, тоді я мав би підлеговувати акцепторними домішками (p-тип), а оскільки навпаки, то треба n-тип. Поширеними є фосфор і мишьяк, але в даннму випадку обираю фосфор, оскільки він більш поширений.
+
+
+
+  \begin{table}[h]
+  \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    Транзистор &Порогова напруга, \text{[B]} 	& D(фосфор),	\text{мкКл} / \text{см}$^{2}$ \\ \hline
+    T1            & -3,43               	& 0,07	\\ \hline
+    T2            & -3,43               	& 0,07	\\ \hline
+    T3            & -3,43               	& 0,07	\\ \hline
+    T4            & -3,21               	& 0,07	\\ \hline
+    T5            & -3,21               	& 0,07	\\ \hline
+    T6            & -3,43               	& 0,07	\\ \hline
+    T7            & -3,21               	& 0,07	\\ \hline
+    T8            & -3,43               	& 0,07	\\ \hline
+    \end{tabular}
+    \end{center}
+  \end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

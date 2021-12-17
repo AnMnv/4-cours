@@ -1,0 +1,12 @@
+\babel@toc {ukrainian}{}
+\contentsline {chapter}{\numberline {1}ВСТУП}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}ТЕХНІЧНЕ ЗАВДАННЯ НА ПРОЕКТУВАННЯ}{2}{chapter.2}%
+\contentsline {chapter}{\numberline {3}АНАЛІЗ СХЕМИ}{3}{chapter.3}%
+\contentsline {chapter}{\numberline {4}РОЗРАХУНОК ПОРОГОВОЇ НАПРУГИ ІНТЕГРАЛЬНИХ КОМПОНЕНТІВ СХЕМИ}{9}{chapter.4}%
+\contentsline {chapter}{\numberline {5}РОЗРАХУНОК РОЗМІРІВ ІНТЕГРАЛЬНИХ КОМПОНЕНТІВ СХЕМИ }{13}{chapter.5}%
+\contentsline {chapter}{\numberline {6}РОЗРАХУНОК РОЗМІРІВ ПРИСТРОЮ ЗАХИСТУ ІНТЕГРАЛЬНИХ КОМПОНЕНТІВ СХЕМИ }{16}{chapter.6}%
+\contentsline {chapter}{\numberline {7}ТЕХНОЛОГІЯ ВИГОТОВЛЕННЯ МДН ІС}{20}{chapter.7}%
+\contentsline {chapter}{\numberline {8}ВИСНОВОК}{22}{chapter.8}%
+\contentsline {chapter}{\numberline {9}СПИСОК ВИКОРИСТАНОЇ ЛІТЕРАТУРИ }{23}{chapter.9}%
+\contentsline {chapter}{\numberline {10}ДОДАТОК А }{24}{chapter.10}%
+\contentsline {chapter}{\numberline {11}ДОДАТОК Б}{25}{chapter.11}%

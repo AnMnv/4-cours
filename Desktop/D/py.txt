@@ -1,0 +1,33 @@
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.ticker import (MultipleLocator, FormatStrFormatter,AutoMinorLocator)
+import matplotlib.pyplot as mp
+import random
+from scipy import signal
+
+fig,ax=plt.subplots()
+
+plt.grid()#координатная сетка
+plt.xlabel("t, s") # ось абсцисс
+plt.ylabel("f(t), V") # ось ординат
+ax.xaxis.set_minor_locator(AutoMinorLocator())
+ax.yaxis.set_minor_locator(AutoMinorLocator())
+ax.tick_params(which='major', length=10, width=2)
+ax.tick_params(which='minor', length=5, width=1)
+
+ax.grid(which="major", linewidth=1.2)
+ax.grid(which="minor", linestyle="--", color="gray", linewidth=0.5)
+
+T=10
+
+shift = 1/4   # number of cycles to shift (1/4 cycle in your example)
+x = np.linspace(0, 10, 256, endpoint=False)
+y=0.5*signal.square(2 * np.pi * (1/T) * x - 2*shift*np.pi)+0.5
+plt.plot(x,y)
+
+
+
+
+plt.show()
+
+

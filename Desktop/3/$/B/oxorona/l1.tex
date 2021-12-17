@@ -1,0 +1,205 @@
+\documentclass[a4paper,14pt]{extreport}
+\usepackage[left=1.5cm,right=1.5cm,
+    top=1.5cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\usepackage{scrextend}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian,ukrainian]{babel}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{wrapfig,boxedminipage,lipsum}
+\mdfdefinestyle{MyFrame}{%
+linecolor=blue,outerlinewidth=2pt,roundcorner=20pt,innertopmargin=\baselineskip,innerbottommargin=\baselineskip,innerrightmargin=20pt,innerleftmargin=20pt,backgroundcolor=gray!50!white}
+ \usepackage{csvsimple}
+ \usepackage{supertabular}
+\usepackage{pdflscape}
+\usepackage{fancyvrb}
+%\usepackage{comment}
+\usepackage{array,tabularx}
+\usepackage{colortbl}
+
+\usepackage{varwidth}
+\tcbuselibrary{skins}
+\usepackage{fancybox}
+\usepackage{multirow}
+
+
+\usepackage{tikz}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{xcolor}
+\usetikzlibrary{calc}
+\makeatletter
+\newlength{\mylength}
+\xdef\CircleFactor{1.1}
+\setlength\mylength{\dimexpr\f@size pt}
+\newsavebox{\mybox}
+\newcommand*\circled[2][draw=blue]{\savebox\mybox{\vbox{\vphantom{WL1/}#1}}\setlength\mylength{\dimexpr\CircleFactor\dimexpr\ht\mybox+\dp\mybox\relax\relax}\tikzset{mystyle/.style={circle,#1,minimum height={\mylength}}}
+\tikz[baseline=(char.base)]
+\node[mystyle] (char) {#2};}
+\makeatother
+
+\definecolor{ggreen}{rgb}{0.4,1,0}
+\definecolor{rred}{rgb}{1,0.1,0.1}
+\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+\definecolor{amethyst}{rgb}{0.6, 0.4, 0.8}
+
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{framed}
+%for nice Code{
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\small\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+\lstset{escapechar=@,style=customc}
+%}
+
+
+\begin{document}
+\pagecolor{white}
+
+%----------------------------------------1
+\newtcbox{\xmybox}[1][red]{on line, arc=7pt,colback=#1!10!white,colframe=#1!50!black, before upper={\rule[-3pt]{0pt}{10pt}},boxrule=1pt, boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
+
+\begin{titlepage}
+  \begin{center}
+    \large
+    Національний технічний університет України \\ "Київський політехнічний інститут імені Ігоря Сікорського"
+
+
+    Факультет Електроніки
+
+    Кафедра мікроелектроніки
+    \vfill
+
+    \textsc{ЗВІТ}\\
+
+    {\Large Про виконання лабораторної роботи №1\\
+      з дисципліни: «Охорона праці та цивільний захист»\\[1cm]
+
+        «ДОСЛІДЖЕННЯ ПАРАМЕТРІВ ВИРОБНИЧОГО ШУМУ ТА ВИЗНАЧЕННЯ ЕФЕКТИВНОСТІ ЗВУКОІЗОЛЯЦІЇ»
+
+
+    }
+  \bigskip
+\end{center}
+\vfill
+
+\newlength{\ML}
+\settowidth{\ML}{«\underline{\hspace{0.4cm}}» \underline{\hspace{2cm}}}
+\hfill
+\begin{minipage}{1\textwidth}
+Виконавець:\\
+Студент 3-го курсу \hspace{4cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm}Б.\,В.~Лищенко
+\vspace{1cm}
+
+Перевірив: \hspace{6.1cm} $\underset{\text{(підпис)}}{\underline{\hspace{0.2\textwidth}}}$  \hspace{1cm}В.\,В.~Калінчик\\
+
+\end{minipage}
+
+\vfill
+
+\begin{center}
+2021
+\end{center}
+\end{titlepage}
+
+
+\textbf{Мета роботи}: засвоїти методику вимірювання основних параметрів виробничого шуму, набути навичок і компетенції оцінювання виробничого шуму з точки зору санітарно-гігієнічних умов, ризиків і рівня безпеки праці; використовуючи положення законодавчих актів та нормативно-правових документів.\\
+
+
+\textbf{Методика вимірювання та оцінювання шуму на робочих місцях та звукоізолюючих властивостей захисних засобів.}\\
+Суть вимірювання шуму полягає у визначенні рівня звуку LА та рівнів звукових тисків LР у фіксованих смугах частот (звичайно, октавних) нормованого діапазону (20...10000 Гц).\\
+
+Основний прилад для вимірювання шуму - шумовимірювач, датчиком якого є мікрофон. Звуковий тиск, що сприймається мембраною мікрофона, перетворюється в пропорційну йому змінну напругу і далі трансформується в значення.\\
+Шум на робочих місцях вимірюється під час вмикання не менше ніж 2/3 діючих у приміщенні джерел шуму, які повинні працювати в нормальному режимі, характерному для даного приміщення. При проведенні вимірювань мікрофон слід розташовувати на висоті 1,5 м над рівнем підлоги чи робочого майданчика (якщо робота виконується стоячи) чи на висоті і відстані 15 см від вуха людини, на яку діє шум (якщо робота виконується сидячи чи лежачи). Мікрофон повинен бути зорієнтований у напрямку максимального рівня шуму та віддалений не менш ніж на 0,5 м від оператора, який проводить вимірювання. Якщо робоче місце не зафіксовано, то шум вимірюється в кількох характерних точках (не менше трьох).\\
+
+Шум нормується за характером виконуваних робіт.
+
+\begin{center}\textbf{Хід роботи}\end{center}
+\par
+1.1. Підготувати джерела шуму.\\
+
+1.2.Увімкнути перше джерело шуму.\\
+
+1.3.Виміряти створюваний джерелом шуму $\mathrm{L}_{1}$ рівень звуку. Для цього на робочому місці на рівні вуха людини направити шумовимірювач В сторону джерела шуму. Отримані результати записати до таблиці Д2.1 результатів лабораторної роботи (додаток 2). Вимкнути джерело шуму $\mathrm{L}_{1} .$\\
+
+1.4. Аналогічно п.п. $1.2-1.3$ виміряти рівень звуку, який створюється
+джерелом шуму $L_{2},$ а потім $-L_{3} .$ Результати вимірювань занести в таблицю Д2.1 (додаток 2). \\
+
+1.5. Також виміряти рівень звуку, який створюється одночасно такими комбінаціями джерел шуму $L_{1}+L_{2}, L_{1}+L_{3}, L_{2}+L_{3}, L_{1}+L_{2}+L_{3} .$ Результати вимірювання занести до таблиці Д2.1 (додаток 2).\\
+
+1.6. Розрахувати сумарний рівень звуку методом енергетичного підсумовування результатів вимірювань рівнів звуку, який створюється кожним джерелом окремо (значення $L_{1}, L_{2}, L_{3},$) за допомогою номограми, яка дана у вигляді таблиці для спрощеного розрахунку суми рівня джерел:
+\vspace{1cm}
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline$L_{1}-L_{2}$ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 15 & 20 \\
+\hline$\Delta L$ & 3,0 & 2,5 & 2,0 & 1,8 & 1,5 & 1,2 & 1,0 & 0,8 & 0,6 & 0,5 & 0,4 & 0,2 & 0 \\
+\hline
+\end{tabular}
+\vspace{1cm}
+
+1.7. 3 таблиці Д1 (додаток 1 ) обрати допустимі рівні звуків для робочих місць обраного виду трудової діяльності (наприклад, пов'язаний з майбутньою професією, або навчанням) та занести значення в табл. Д2.1.\\
+
+1.8. Зробити висновок про відповідність результатів вимірювання рівнів звуку $L_{1}, L_{2}, L_{3}, L_{1+2}, L_{1+3}, L_{2+3}, L_{1+2+3}$ допустимим значенням згідно $Д \mathrm{CH}$ 3.3.6.037-99 «Санітарні норми виробничого шуму, ультразвуку та інфразвуку».\\
+
+1.9. Обчислити абсолютну та відносну похибку розрахункових та виміряних значень сумарних рівнів звуку. Результати занести до таблиці Д2.1. Зробити висновок про точність методу енергетичного підсумовування рівнів звуку, що створюються різними джерелами.
+
+
+\newpage
+\begin{landscape}
+\begin{table}[h]
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{}      & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Джерело\\ шуму\end{tabular}} & \multicolumn{4}{c|}{Рівень звуку, дБА}                   & \multicolumn{2}{c|}{Похибка}
+& \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Висновок про\\ точність  методу \\ вимірювання\end{tabular}} \\ \cline{3-8}
+                       &                                                                         & Експеримент & Розрахунок &  \begin{tabular}[c]{@{}c@{}}Допустиме\\ значення\end{tabular} & Висновок & абсолютна, дБА & відносна, \% &                                                                                                         \\ \hline
+п.2.5                  & $L_1$                                                                       &      42       & X          & \multirow{7}{*}{20 - 120}  &    $\blacksquare$      & X              & X            & X  \\ \cline{1-4} \cline{6-9}
+\multirow{2}{*}{п.2.6} & $L_2$                                                                       &      58       & X          &                   &      $\blacksquare$     & X              & X            & X        \\ \cline{2-4} \cline{6-9}
+                       & $L_3$                                                                       &      63       & X          &                   &     $\blacktriangledown$      & X              & X            & X    \\ \cline{1-4} \cline{6-9}
+\multirow{4}{*}{п.2.7} & \multirow{4}{*}{\begin{tabular}[c]{@{}c@{}}$L_1+L_2$\\ $L_1+L_3$\\ $L_2+L_3$\\ $L_1+L_2+L_3$\end{tabular}}  &   59        &     16        &                  &     $\blacksquare$       &       0,4         &          0,67    &    ***   \\ \cline{3-4} \cline{6-9}
+                       &                                                                               &     64      &    21        &                    &   $\blacktriangledown$      &       0,4         &             0,62 &  ***                    \\ \cline{3-4} \cline{6-9}
+                       &                                                                     &     65     &      59,2      &                    &      $\blacktriangledown$     &    0,5            &             0,61 &    ***                            \\ \cline{3-4} \cline{6-9}
+                       &                                                                       &     69     &      47      &                    &    $\blacklozenge$   &       0,9         &             0,57 &  ***      \\ \hline
+\end{tabular}
+\end{table}
+\par
+$\blacksquare$  -- допустиме значення для наукової діяльністі, конструювання, викладання, проектно-конструкторського бюро, програмування ЕОМ.\\
+
+$\blacktriangledown$ -- допустиме значення для висококваліфікованої роботи, вимірювальна та аналітична робота в лабораторіях.\\
+
+$\blacklozenge$ -- допустиме значення для роботи з акустичними сигналами, приміщенні диспетчерських служб, машинописних бюро. \\
+
+*** -- дивлячись на те, що похибка лежить в межах допустимого, тобто < 1\%, то вона є незначною.\\
+
+Формула для обчислення відносної похибки:
+\begin{align}
+  \delta = \dfrac{\triangle}{x}\cdot 100\%,
+\end{align}
+де $x$ -- результат вимірювання.
+
+\end{landscape}
+
+\end{document}
