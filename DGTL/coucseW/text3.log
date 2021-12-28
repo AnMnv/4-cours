@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.4.22)  10 DEC 2021 18:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.4.22)  28 DEC 2021 10:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1393,7 +1393,14 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \mc@col@check@num=\count361
 )
 \c@tcb@cnt@caja=\count362
-) (./text3.aux)
+) (./text3.aux
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `h' multiply defined.
+
+)
 \openout1 = `text3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -1540,7 +1547,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--75
 [2
 
 ]
-<qwe.pdf, id=76, 1168.365pt x 548.0475pt>
+<qwe.pdf, id=91, 1168.365pt x 548.0475pt>
 File: qwe.pdf Graphic file (type pdf)
 <use qwe.pdf>
 Package pdftex.def Info: qwe.pdf  used on input line 81.
@@ -1578,57 +1585,125 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--116
 \l__nicematrix_final_i_int=\count379
 \l__nicematrix_final_j_int=\count380
 
-Overfull \hbox (45.32024pt too wide) detected at line 172
+Overfull \hbox (45.32024pt too wide) detected at line 173
 []
  []
 
 
-Overfull \hbox (18.29408pt too wide) in paragraph at lines 148--174
+Overfull \hbox (18.29408pt too wide) in paragraph at lines 149--175
 []$[]$  $[]$ 
  []
 
 [4
 
 ]
-Overfull \hbox (45.32024pt too wide) detected at line 203
+Overfull \hbox (45.32024pt too wide) detected at line 204
 []
  []
 
 
-Overfull \hbox (24.19193pt too wide) in paragraph at lines 209--236
+Overfull \hbox (24.19193pt too wide) in paragraph at lines 210--237
 []$[]$  $[]$ 
  []
 
 [5]
 {\cyrillictext \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 3.
-<sxema.png, id=152, 823.57687pt x 605.26125pt>
+<sxema.png, id=167, 823.57687pt x 605.26125pt>
 File: sxema.png Graphic file (type png)
 <use sxema.png>
-Package pdftex.def Info: sxema.png  used on input line 247.
+Package pdftex.def Info: sxema.png  used on input line 248.
 (pdftex.def)             Requested size: 460.93153pt x 338.75003pt.
 [6
 
  <./sxema.png>]
+{\cyrillictext \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 4.
+<12.jpg, id=176, 2264.46pt x 1042.89626pt>
+File: 12.jpg Graphic file (type jpg)
+<use 12.jpg>
+Package pdftex.def Info: 12.jpg  used on input line 257.
+(pdftex.def)             Requested size: 460.93153pt x 212.28336pt.
+<123.jpg, id=177, 2252.415pt x 1042.89626pt>
+File: 123.jpg Graphic file (type jpg)
+<use 123.jpg>
+Package pdftex.def Info: 123.jpg  used on input line 261.
+(pdftex.def)             Requested size: 460.93153pt x 213.4132pt.
 
-LaTeX Warning: Empty `thebibliography' environment on input line 265.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7
 
-] (./text3.aux)
+ <./12.JPG>] [8 <./123.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
+[]\T2A/cmr/m/n/14.4 https://drive.google.com/file/d/1ZPkrN6ysmc060UY2x5C1yw-
+ []
 
-Package rerunfilecheck Warning: File `text3.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
 
-Package rerunfilecheck Info: Checksums for `text3.out':
-(rerunfilecheck)             Before: DE4E2BB69BB616A2EEC39AB4210C99B1;475
-(rerunfilecheck)             After:  D5B798749BA44056D15E61E35D198BE6;422.
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
+[]\T2A/cmr/m/n/14.4 https://drive.google.com/drive/folders/1GqdPdiKwwk-
+ []
+
+[9
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.h}) has 
+been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.277 \chapter
+              {   ВИСНОВОК }]
+{\cyrillictext \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
+
+ []
+
+[10
+
+]
+{\cyrillictext \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 6.
+
+
+pdfTeX warning: pdflatex.exe (file ./sx.pdf): PDF inclusion: found PDF version 
+<1.7>, but at most version <1.5> allowed
+<sx.pdf, id=200, 597.55246pt x 845.07718pt>
+File: sx.pdf Graphic file (type pdf)
+<use sx.pdf>
+Package pdftex.def Info: sx.pdf  used on input line 288.
+(pdftex.def)             Requested size: 512.14963pt x 724.35378pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11
+
+]
+
+LaTeX Warning: Text page 12 contains only floats.
+
+
+Overfull \vbox (8.89156pt too high) has occurred while \output is active []
+
+
+[12 <./sx.pdf>] (./text3.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `text3.out' has not changed.
+(rerunfilecheck)             Checksum: AAE3ECF35F7F79BD62E1BD87996BAA69;849.
  ) 
 Here is how much of TeX's memory you used:
- 35256 strings out of 478994
- 715139 string characters out of 5862207
- 1188787 words of memory out of 5000000
- 52084 multiletter control sequences out of 15000+600000
+ 35566 strings out of 478994
+ 720793 string characters out of 5862207
+ 1209109 words of memory out of 5000000
+ 52378 multiletter control sequences out of 15000+600000
  415537 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,13n,119p,1066b,1026s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1645,10 +1720,10 @@ xlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx3583.pfb><c:/texlive/2021
 t/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2021/texmf-dist/fonts/ty
 pe1/public/cm-super/sfrm1728.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public
 /cm-super/sfrm2074.pfb>
-Output written on text3.pdf (8 pages, 255689 bytes).
+Output written on text3.pdf (13 pages, 721773 bytes).
 PDF statistics:
- 217 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 143 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 347 PDF objects out of 1000 (max. 8388607)
+ 227 compressed objects within 3 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 182 words of extra memory for PDF output out of 10000 (max. 10000000)
 

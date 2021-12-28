@@ -1,4 +1,7 @@
 \babel@toc {ukrainian}{}
 \contentsline {chapter}{\numberline {1}ЗАВДАННЯ }{2}{chapter.1}%
 \contentsline {chapter}{\numberline {2} ТАБЛИЦЯ СТАНIВ }{4}{chapter.2}%
-\contentsline {chapter}{\numberline {3} Результати }{6}{chapter.3}%
+\contentsline {chapter}{\numberline {3} РЕЗУЛЬТАТИ }{6}{chapter.3}%
+\contentsline {chapter}{\numberline {4} ЧАСОВI ДIАГРАМИ }{7}{chapter.4}%
+\contentsline {chapter}{\numberline {5} ВИСНОВОК }{10}{chapter.5}%
+\contentsline {chapter}{\numberline {6} ДОДАТОК А }{11}{chapter.6}%
